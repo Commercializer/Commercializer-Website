@@ -11,8 +11,16 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     "@nuxt/fonts",
     "@nuxtjs/seo",
-    "@nuxt/image"
+    "@nuxt/image",
+    'nuxt-gtag'
   ],
+
+
+  gtag: {
+    id: 'G-KR2BR1LMHX'
+  },
+
+
   devtools: { enabled: false },
   css: ['bootstrap/dist/css/bootstrap.min.css', "~/assets/scss/theme.scss",],
   nitro: {
