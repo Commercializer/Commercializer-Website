@@ -10,8 +10,15 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
     "@nuxt/fonts",
-    "@nuxtjs/seo"
+    "@nuxtjs/seo",
+    "@nuxt/image"
   ],
   devtools: { enabled: false },
-  css: ['bootstrap/dist/css/bootstrap.min.css', "~/assets/scss/theme.scss",]
+  css: ['bootstrap/dist/css/bootstrap.min.css', "~/assets/scss/theme.scss",],
+  nitro: {
+    compressPublicAssets: {
+      brotli: true,
+      gzip: true,
+    }
+  }
 })

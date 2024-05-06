@@ -13,13 +13,13 @@ import LeftArrowIcon from '@iconify/icons-bx/right-arrow-alt';
                     <ParralaxWrapper custom-class="parallax mx-auto ms-md-0 me-md-n5"
                         :custom-style="{ maxWidth: '100%' }">
                         <div class="parallax-layer zindex-2" data-depth="0.1">
-                            <img src="/images/logo.png" alt="Ca" :style="{ width: '100%' }" />
+                            <nuxt-img src="/images/logo.png" alt="Ca" :style="{ width: '100%' }" />
                         </div>
                         <!-- <div class="parallax-layer zindex-3" data-depth="0.25">
-                            <img src="/images/logo.png" alt="Bubble" />
+                            <nuxt-img src="/images/logo.png" alt="Bubble" />
                         </div>
                         <div class="parallax-layer" data-depth="-0.15">
-                            <img src="/images/logo.png" alt="Bubble" />
+                            <nuxt-img src="/images/logo.png" alt="Bubble" />
                         </div> -->
                     </ParralaxWrapper>
                 </b-col>
@@ -42,15 +42,15 @@ import LeftArrowIcon from '@iconify/icons-bx/right-arrow-alt';
                         <div class="d-flex me-3">
                             <div class="d-flex align-items-center justify-content-center bg-light rounded-circle"
                                 style="width: 52px; height: 52px">
-                                <img :src="avatar14Img" class="rounded-circle" width="48" alt="Avatar" />
+                                <nuxt-img :src="avatar14Img" class="rounded-circle" width="48" alt="Avatar" />
                             </div>
                             <div class="d-flex align-items-center justify-content-center bg-light rounded-circle ms-n3"
                                 style="width: 52px; height: 52px">
-                                <img :src="avatar8Img" class="rounded-circle" width="48" alt="Avatar" />
+                                <nuxt-img :src="avatar8Img" class="rounded-circle" width="48" alt="Avatar" />
                             </div>
                             <div class="d-flex align-items-center justify-content-center bg-light rounded-circle ms-n3"
                                 style="width: 52px; height: 52px">
-                                <img :src="avatar15Img" class="rounded-circle" width="48" alt="Avatar" />
+                                <nuxt-img :src="avatar15Img" class="rounded-circle" width="48" alt="Avatar" />
                             </div>
                         </div>
                         <div class="text-light"><strong>400k+</strong> users already with us</div>
@@ -60,19 +60,19 @@ import LeftArrowIcon from '@iconify/icons-bx/right-arrow-alt';
             </b-row>
             <div class="country-list mt-4">
                 <div class="country">
-                    <img src="/images/flags/usa.svg" />
+                    <nuxt-img src="/images/flags/usa.svg" />
                     <span>
                         Delaware, USA
                     </span>
                 </div>
                 <div class="country">
-                    <img src="/images/flags/qatar.svg" />
+                    <nuxt-img src="/images/flags/qatar.svg" />
                     <span>
                         Doha, Qatar
                     </span>
                 </div>
                 <div class="country">
-                    <img src="/images/flags/sri_lanka.svg" />
+                    <nuxt-img src="/images/flags/sri_lanka.svg" />
                     <span>
                         Colombo, Sri Lanka
                     </span>
@@ -102,7 +102,6 @@ import LeftArrowIcon from '@iconify/icons-bx/right-arrow-alt';
     align-items: center;
     justify-content: space-between;
     margin-top: 2rem;
-    background-color: red
 }
 
 

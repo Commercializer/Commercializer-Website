@@ -12,7 +12,7 @@
     }">
         <div class="container px-3">
             <router-link class="navbar-brand pe-3" to="/">
-                <img src="/images/logo.png" alt="Silicon" width="47" />
+                <nuxt-img src="/images/logo.png" alt="Silicon" width="47" />
                 Commercializer
             </router-link>
 
@@ -33,7 +33,7 @@
                                         <div v-if="item.image"
                                             class="mega-dropdown-column d-flex justify-content-center align-items-center rounded-3 rounded-end-0 px-0"
                                             style="margin: -1px; background-color: #f3f6ff">
-                                            <img :src="item.image" alt="" />
+                                            <nuxt-img :src="item.image" alt="" />
                                         </div>
 
                                         <div v-for="(link, idx) in makeChunk(item.links)" class="mega-dropdown-column">
