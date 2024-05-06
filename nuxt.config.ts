@@ -17,7 +17,10 @@ export default defineNuxtConfig({
 
 
   gtag: {
-    id: 'G-KR2BR1LMHX'
+    id: 'G-KR2BR1LMHX',
+    config: {
+      page_title: "Commercializer",
+    }
   },
 
 
