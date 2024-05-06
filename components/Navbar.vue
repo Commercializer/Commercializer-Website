@@ -62,13 +62,7 @@
             <button class="navbar-toggler" type="button" @click="showMobileNav = !showMobileNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="btn btn-brand btn-sm fs-sm rounded d-none d-lg-inline-flex"
-                href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/"
-                rel="noopener" target="_blank">
-                Get Commercialized
-                &nbsp;
-                <Icon :icon="LeftArrowIcon" class="fs-4 lh-1 me-1" />
-            </a>
+            <GetCommercializedBtn header />
         </div>
     </header>
 
@@ -109,16 +103,7 @@
 
         <template v-slot:footer>
             <div class="px-3 py-3">
-                <a class="btn w-100"
-                    href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/"
-                    rel="noopener" target="_blank" :style="{
-        backgroundColor: '#fff',
-        color: '#121212'
-    }">
-                    Get Commercialized
-                    &nbsp;
-                    <Icon :icon="LeftArrowIcon" class="fs-4 lh-1 me-1" />
-                </a>
+                <GetCommercializedBtn />
             </div>
         </template>
     </b-offcanvas>
