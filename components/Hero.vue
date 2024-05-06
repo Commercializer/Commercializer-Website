@@ -2,17 +2,17 @@
     <section class="bg-dark bg-size-cover bg-repeat-0 bg-position-center position-relative overflow-hidden py-5 mb-4"
         data-bs-theme="dark">
         <b-container class="position-relative zindex-2 pt-5 pb-md-2 pb-lg-4 pb-xl-5">
-            <b-row class="pt-3 pb-2 py-md-4 flex-md-row-reverse gap-5 gap-lg-0 justify-content-between pe-lg-4">
+            <b-row class="pt-3 pb-2 py-md-4 flex-lg-row-reverse gap-5 gap-lg-0 justify-content-between pe-lg-4">
 
-                <b-col xl="5" md="5" class="d-flex align-items-center justify-content-center">
+                <b-col lg="5" class="d-flex align-items-center justify-content-center">
                     <nuxt-img src="/images/logo.png" alt="Ca" class="hero-image" />
                 </b-col>
-                <b-col xl="7" md="7" class="pt-lg-5 text-center text-md-start mb-4 mb-md-0">
+                <b-col lg="7" class="pt-lg-5 text-center text-lg-start mb-4 mb-md-0">
                     <h1 class="display-3 pb-2 pb-sm-3 brand-gradient-text">Commercializing Innovations</h1>
                     <p class="d-xl-block pb-2 pb-md-0 mb-4 mb-md-5 description">
                         Transforming groundbreaking ideas into market-leading products
                     </p>
-                    <div class="d-flex justify-content-center justify-content-md-start pb-2 pt-lg-2 pt-xl-0">
+                    <div class="d-flex justify-content-center justify-content-lg-start pb-2 pt-lg-2 pt-xl-0">
                         <GetCommercializedBtn in-hero />
                     </div>
                 </b-col>
@@ -100,7 +100,7 @@
     margin-inline: auto;
 
     @media (min-width: 768px) {
-        width: 100%;
+        width: 55%;
     }
 
     @media (min-width: 992px) {
