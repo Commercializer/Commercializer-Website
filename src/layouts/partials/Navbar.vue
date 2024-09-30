@@ -20,7 +20,7 @@
         Commercializer
       </router-link>
 
-      <div id="navbarNav" style="background-color: red;">
+      <div id="navbarNav">
         <div v-if="!isMobileView">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li v-for="(item, idx) in navbarLinkData" :key="item.title" class="nav-item dropdown">
