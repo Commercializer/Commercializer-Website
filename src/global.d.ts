@@ -1,0 +1,5 @@
+declare module '@lottiefiles/vue-lottie-player'
+declare module 'vue-the-mask'
+declare module 'vue3-clipboard'
+declare module 'vue-prism-component'
+declare module 'vanilla-tilt'

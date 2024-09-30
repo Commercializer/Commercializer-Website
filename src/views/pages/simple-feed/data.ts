@@ -1,0 +1,188 @@
+import type { FeedType, BlogsType } from '@/views/pages/simple-feed/type'
+
+const categories: string[] = [
+  'Tech',
+  'Strategy',
+  'Software',
+  'Startups',
+  'Technology',
+  'Digital',
+  'Marketing'
+]
+
+export const feedData: FeedType[] = [
+  {
+    category: categories[0],
+    time: '1 day ago',
+    title: 'How the Millennial Lifestyle Changes as Service Prices Rise',
+    description:
+      'Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet. Mauris duis eleifend faucibus amet sagittis.',
+    link: { name: 'pages.single-post' },
+    like: 2,
+    comment: 0,
+    share: 3
+  },
+  {
+    category: categories[1],
+    time: '12 hours ago',
+    title: 'Mobile App Generates Data for the Energy Management',
+    description:
+      'Sociis sit risus id. Sit facilisis dolor arcu, fermentum vestibulum arcu ele. Pulvinar at maecenas maecenas pharetra, tincidunt sollicitudin in in.',
+    link: { name: 'pages.single-post' },
+    like: 8,
+    comment: 4,
+    share: 2
+  },
+  {
+    category: categories[2],
+    time: 'May 24, 2023',
+    title: 'What the Software Stock Slump Means for the Market',
+    description:
+      'Id mollis consectetur congue egestas egestas suspendisse blandit justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.',
+    link: { name: 'pages.single-post' },
+    like: 6,
+    comment: 1,
+    share: 5
+  },
+  {
+    category: categories[3],
+    time: 'Sep 3, 2023',
+    title: '5 Bad Landing Page Examples & How We Would Fix Them',
+    description:
+      'Totam, soluta placeat hic adipisci reprehenderit iusto est nulla dolorum doloremque inventore suscipit consequuntur distinctio id.',
+    link: { name: 'pages.single-post' },
+    like: 8,
+    comment: 7,
+    share: 3
+  },
+  {
+    category: categories[4],
+    time: 'Aug 19, 2023',
+    title: 'Why UX Design Matters and How it Affects Ranking',
+    description:
+      'Quaerat quos assumenda numquam dolorem, repellendus est, itaque sint et odio perferendis laudantium laboriosam.',
+    link: { name: 'pages.single-post' },
+    like: 5,
+    comment: 3,
+    share: 9
+  }
+]
+
+export const blogData: BlogsType[] = [
+  {
+    category: categories[5],
+    blogs: [
+      {
+        title: '5 Bad Landing Page Examples & How We Would Fix Them',
+        link: { name: 'pages.single-post' },
+        date: '12 hours ago',
+        like: 8,
+        comment: 4,
+        share: 2
+      },
+      {
+        title: 'How Agile is Your Forecasting Process?',
+        link: { name: 'pages.single-post' },
+        date: 'Sep 3, 2023',
+        like: 4,
+        comment: 1,
+        share: 0
+      },
+      {
+        title: 'Inclusive Marketing: Why and How Does it Work?',
+        link: { name: 'pages.single-post' },
+        date: 'Oct 9, 2023',
+        like: 5,
+        comment: 1,
+        share: 2
+      }
+    ]
+  },
+  {
+    category: categories[4],
+    blogs: [
+      {
+        title: 'This Long-Awaited Technology May Finally Change the World',
+        link: { name: 'pages.single-post' },
+        date: 'Sep 3, 2023',
+        like: 8,
+        comment: 7,
+        share: 3
+      },
+      {
+        title: 'This Week in Search: New Limits and Exciting Features',
+        link: { name: 'pages.single-post' },
+        date: 'Sep 16, 2023',
+        like: 4,
+        comment: 7,
+        share: 2
+      },
+      {
+        title: 'Why UX Design Matters and How it Affects Ranking',
+        link: { name: 'pages.single-post' },
+        date: 'Aug 19, 2023',
+        like: 2,
+        comment: 0,
+        share: 0
+      }
+    ]
+  },
+  {
+    category: categories[6],
+    blogs: [
+      {
+        title: 'Five Effective Lead Generation Techniques For Your Business',
+        link: { name: 'pages.single-post' },
+        date: 'Sep 10, 2023',
+        like: 0,
+        comment: 4,
+        share: 1
+      },
+      {
+        title: 'Your Guide to Optimising A JavaScript-enabled Website',
+        link: { name: 'pages.single-post' },
+        date: '1 day ago',
+        like: 3,
+        comment: 4,
+        share: 2
+      },
+      {
+        title: 'A Study on Smartwatch Design Qualities and People’s Preferences',
+        link: { name: 'pages.single-post' },
+        date: '12 hours ago',
+        like: 8,
+        comment: 1,
+        share: 3
+      }
+    ]
+  },
+  {
+    category: categories[3],
+    blogs: [
+      {
+        title: 'Does Brand Activism Impact Earning Potential?',
+        link: { name: 'pages.single-post' },
+        date: 'Sep 3, 2023',
+        like: 3,
+        comment: 9,
+        share: 1
+      },
+      {
+        title: 'The Ultimate Guide to On-Page SEO',
+        link: { name: 'pages.single-post' },
+        date: 'Aug 19, 2023',
+        like: 8,
+        comment: 4,
+        share: 2
+      },
+      {
+        title: 'Brand Analysis: Second Step to the Brand Identity',
+        link: { name: 'pages.single-post' },
+        date: 'May 24, 2023',
+        like: 5,
+        comment: 0,
+        share: 3
+      }
+    ]
+  }
+]

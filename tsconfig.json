@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "module": "ESNext",
+    "types": ["node"],
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+  },
+  // "include": ["env.d.ts", "src/*/", "src/*/.vue", "src/*/*.vue",  "src/*/.json"],
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ],
+  "include": ["components.d.ts"],
+  "exclude": ["node_modules/**"],
+
+}

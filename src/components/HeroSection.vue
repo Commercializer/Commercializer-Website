@@ -1,0 +1,84 @@
+<template>
+  <!-- Hero -->
+  <section class="position-relative overflow-hidden zindex-2 pt-4 pt-md-5">
+    <b-container>
+      <b-row class="justify-content-center align-items-center">
+        <!-- Parallax gfx -->
+        <b-col xl="6" lg="7" md="6" sm="8" class="col-10 offset-xl-1 order-md-2">
+          <Parallax custom-class="parallax mx-auto" :custom-style="{ maxWidth: '556px' }">
+            <div class="parallax-layer" data-depth="0.1">
+              <img :src="layer1Img" alt="Bubble" />
+            </div>
+            <div class="parallax-layer" data-depth="-0.2">
+              <img :src="layer2Img" alt="Bubble" />
+            </div>
+            <div class="parallax-layer" data-depth="-0.3">
+              <img :src="layer3Img" alt="Bubble" />
+            </div>
+            <div class="parallax-layer" data-depth="0.4">
+              <img :src="layer4Img" alt="Bubble" />
+            </div>
+            <div class="parallax-layer" data-depth="-0.1">
+              <img :src="layer5Img" alt="Screen" />
+            </div>
+            <div class="parallax-layer" data-depth="0.2">
+              <img :src="layer6Img" alt="Screen" />
+            </div>
+          </Parallax>
+        </b-col>
+
+        <!-- Text -->
+        <b-col lg="5" md="6" class="text-center text-md-start order-md-1">
+          <h1 class="display-5 mb-lg-4">Commercializing Innovations</h1>
+          <p class="fs-xl pb-3 pb-lg-0 mb-4 mb-lg-5">
+            Transforming groundbreaking ideas into market-leading products.
+          </p>
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-4"
+            style="margin-top: 100px"
+          >
+            <p
+              style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.2rem"
+            >
+              <span style="font-size: 24px">🇺🇸</span>
+              Delaware, USA
+            </p>
+            <p
+              style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.2rem"
+            >
+              <span style="font-size: 24px">🇶🇦</span>
+              Doha, Qatar
+            </p>
+            <p
+              style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.2rem"
+            >
+              <span style="font-size: 24px"> 🇱🇰 </span>
+              Colombo, Sri Lanka
+            </p>
+          </div>
+          <div class="d-flex align-items-center gap-4">
+            <span
+              style="padding: 10px; border-radius: 500px; aspect-ratio: 1;background-color: rgba(255, 255, 255, 0.15)"
+            >
+              <Icon :icon="ChevronIcon" style="font-size: 24px" />
+          </span>
+            <span> Discover More </span>
+          </div>
+        </b-col>
+      </b-row>
+    </b-container>
+  </section>
+</template>
+
+<script lang="ts" setup>
+import layer1Img from '@/assets/img/landing/app-showcase-3/hero/layer01.png'
+import layer2Img from '@/assets/img/landing/app-showcase-3/hero/layer02.png'
+import layer3Img from '@/assets/img/landing/app-showcase-3/hero/layer03.png'
+import layer4Img from '@/assets/img/landing/app-showcase-3/hero/layer04.png'
+import layer5Img from '@/assets/img/landing/app-showcase-3/hero/layer05.png'
+import layer6Img from '@/assets/img/landing/app-showcase-3/hero/layer06.png'
+import Parallax from '@/components/Parallax.vue'
+import PlayIcon from '@iconify/icons-bx/bx-play'
+import ChevronIcon from '@iconify/icons-bx/bx-chevrons-down'
+import { Icon } from '@iconify/vue'
+</script>
