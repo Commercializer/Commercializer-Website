@@ -1,0 +1,24 @@
+$breakpoints: (
+  xs: 384px,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  2xl: 1536px
+);
+
+@mixin mq($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @if type-of($breakpoint) == number {
+      @media (max-width: $breakpoint) {
+        @content;
+      }
+    } @else {
+      @warn "Unknown breakpoint #{$breakpoint}.Please either one of the following: #{map-keys($breakpoints)} or a custom value in pixels.";
+    }
+  }
+}
