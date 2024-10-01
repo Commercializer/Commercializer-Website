@@ -151,14 +151,64 @@
             Well Optimized, Affordable, Simple & Easy business management toolkit for micro and
             small businesses.
           </p>
-          <img
-            src="/images/products/billable.png"
-            alt="Billable 1"
-            class="product-img"
-          />
+          <img src="/images/products/billable.png" alt="Billable 1" class="product-img" />
         </div>
-        <div class="box box-2">2</div>
-        <div class="box box-3">3</div>
+        <div class="box box-2">
+          <img
+            src="/images/products/billable-2-1.png"
+            alt="Commercial Prime 3"
+            style="bottom: 0; left: 2rem; width: 40%; position: absolute"
+          />
+          <img
+            src="/images/products/billable-2-2.png"
+            alt="Commercial Prime 3"
+            style="top: 0; right: 2rem; width: 42%; position: absolute"
+          />
+          <button
+            style="
+              border: none;
+              outline: none;
+              background-color: #fff;
+              color: #000;
+              margin-inline: auto;
+              display: block;
+              padding: 10px 24px;
+              border-radius: 8px;
+              font-weight: 500;
+              position: absolute;
+              bottom: 1rem;
+              right: 50%;
+              font-size: 14px;
+              transform: translateX(50%);
+              width: 70%;
+            "
+          >
+            Visit Billable
+          </button>
+        </div>
+        <div class="box box-3">
+          <img
+            src="/images/products/billable-2.png"
+            alt="Commercial Prime 2"
+            style="
+              top: 2rem;
+              right: 50%;
+              transform: translateX(50%);
+              width: calc(100% - 2rem);
+              position: absolute;
+            "
+          />
+          <div style="position: absolute; bottom: 0; left: 1rem; color: #fff">
+            <h4 style="font-size: 24px; font-weight: 700; margin: 0">Made For</h4>
+            <p style="font-size: 14px">
+              Retail
+              <span style="color: #22c55e">.</span>
+              Enterprise
+              <span style="color: #22c55e">.</span>
+              Service
+            </p>
+          </div>
+        </div>
         <div
           class="box box-4"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
@@ -183,7 +233,30 @@
             <p style="font-size: 14px; margin: 0">Products</p>
           </div>
         </div>
-        <div class="box box-6">6</div>
+        <div class="box box-6">
+          <img
+            src="/images/products/billable-4.png"
+            alt="Commercial Prime 2"
+            style="bottom: 0.5rem; right: 0.5rem; width: 75%; position: absolute"
+          />
+          <div
+            style="
+              position: absolute;
+              top: 1rem;
+              left: 1rem;
+              color: #fff;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            "
+          >
+            <img src="/images/logos/building.svg" style="width: 50px" />
+            <div>
+              <h4 style="font-size: 26px; font-weight: 700; margin: 0; text-align: right">1200+</h4>
+              <p style="font-size: 14px; text-align: right; margin: 0">MSMEs</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row-3">
         <div class="box box-1">1</div>
@@ -306,9 +379,10 @@ import UserIcon from '@iconify/icons-bx/bx-user'
 
         .product-img {
           position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 55%;
+          bottom: 3rem;
+          right: 50%;
+          transform: translateX(50%);
+          width: 75%;
         }
       }
 
