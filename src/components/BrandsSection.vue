@@ -82,6 +82,20 @@ const brandData: BrandType[] = [
   &__heading {
     font-size: 32px;
     font-weight: bold;
+
+
+    @include mq(md) {
+      text-align: center;
+      font-size: 28px;
+    }
+
+    @include mq(sm) {
+      font-size: 24px;
+    }
+
+    @include mq(xs) {
+      font-size: 22px;
+    }
   }
   padding-block: 96px;
 }

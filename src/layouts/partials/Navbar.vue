@@ -12,7 +12,7 @@
       'navbar-sticky': navbarSticky,
       'border-bottom border-light': isBorder
     }"
-    :style="{backgroundColor: '#000 !important'}"
+    :style="{ backgroundColor: '#000 !important' }"
   >
     <div class="container px-3">
       <router-link class="navbar-brand pe-3" to="/">
@@ -243,3 +243,41 @@ const makeChunk = (input: Array<any> | undefined) => {
 
 const currentRouteName = router.currentRoute.value.name
 </script>
+
+<style lang="scss" scoped>
+.navbar-brand {
+  font-size: 22px;
+
+  img {
+    width: 47px;
+
+    @include mq(lg) {
+      width: 42px;
+    }
+
+    @include mq(md) {
+      width: 38px;
+    }
+
+    @include mq(sm) {
+      width: 34px;
+    }
+
+    @include mq(xs) {
+      width: 32px;
+    }
+  }
+
+  @include mq(lg) {
+    font-size: 20.5px;
+  }
+
+  @include mq(sm) {
+    font-size: 1.2rem;
+  }
+
+  @include mq(xs) {
+    font-size: 1.125rem;
+  }
+}
+</style>

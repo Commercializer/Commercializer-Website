@@ -259,12 +259,142 @@
         </div>
       </div>
       <div class="row-3">
-        <div class="box box-1">1</div>
-        <div class="box box-2">2</div>
-        <div class="box box-3">3</div>
-        <div class="box box-4">4</div>
-        <div class="box box-5">5</div>
-        <div class="box box-6">6</div>
+        <div class="box box-1">
+          <img src="/images/logos/agreementor.png" alt="Commercial Prime" class="logo" />
+          <h4>Complex Legal Jargon to Clarity</h4>
+          <p>AI Based Legal Agreement Explainer</p>
+          <img src="/images/products/agreementor.png" alt="Agreementor 1" class="product-img" />
+        </div>
+        <div class="box box-2">
+          <img
+            src="/images/products/agreementor-2.png"
+            alt="Agreementor 2"
+            style="
+              top: 2rem;
+              right: 48%;
+              transform: translateX(50%);
+              width: calc(100% - 3rem);
+              position: absolute;
+            "
+          />
+          <div style="position: absolute; bottom: 0; left: 1rem; color: #fff">
+            <h4 style="font-size: 24px; font-weight: 700; margin: 0">Made For</h4>
+            <p style="font-size: 14px">
+              Lawyers
+              <span style="color: #6e30c8">.</span>
+              CEOs
+              <span style="color: #6e30c8">.</span>
+              Professionals
+            </p>
+          </div>
+        </div>
+        <div class="box box-3">
+          <img
+            src="/images/products/agreementor-3.png"
+            alt="Agreementor 3"
+            style="
+              top: 3rem;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 80%;
+              position: absolute;
+            "
+          />
+          <div
+            style="
+              position: absolute;
+              bottom: 1rem;
+              right: 1rem;
+              color: #fff;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            "
+          >
+            <img src="/images/logos/deep-learning.svg" style="width: 50px" />
+            <div>
+              <h4 style="font-size: 26px; font-weight: 700; margin: 0">AI Enabled</h4>
+              <p style="font-size: 14px; margin: 0">Revolutionary Features</p>
+            </div>
+          </div>
+        </div>
+        <div class="box box-4" style="overflow: hidden">
+          <div
+            class="d-flex align-items-center gap-3"
+            style="
+              position: absolute;
+              top: 1rem;
+              right: 50%;
+              transform: translateX(50%);
+              width: 75%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <img src="/images/logos/lock.svg" alt="Logo" />
+            <h4 style="font-size: 16px; margin: 0">Trustworthy and Secure</h4>
+          </div>
+          <img
+            src="/images/products/agreementor-4-1.png"
+            alt="Agreementor 4-1"
+            style="top: 16.5%; left: 15%; width: 27.5%; position: absolute"
+          />
+          <img
+            src="/images/products/agreementor-4-2.png"
+            alt="Agreementor 4-2"
+            style="top: 33%; right: 35%; transform: translateX(50%); width: 30%; position: absolute"
+          />
+          <button
+            style="
+              border: none;
+              outline: none;
+              background-color: #fff;
+              color: #000;
+              margin-inline: auto;
+              display: block;
+              padding: 10px 24px;
+              border-radius: 8px;
+              font-weight: 500;
+              position: absolute;
+              bottom: 1rem;
+              right: 50%;
+              font-size: 14px;
+              transform: translateX(50%);
+              width: 70%;
+            "
+          >
+            Visit Agreementor
+          </button>
+        </div>
+        <div
+          class="box box-5"
+          style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+        >
+          <img
+            src="/images/logos/network-logo.svg"
+            alt="Network"
+            style="width: 72px; height: 72px"
+          />
+          <div>
+            <h4 style="font-size: 26px; font-weight: 700; margin: 0">1 Million+</h4>
+            <p style="font-size: 14px; margin: 0">Connections Made</p>
+          </div>
+        </div>
+        <div
+          class="box box-6"
+          style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+        >
+          <img
+            src="/images/logos/network-logo-2.svg"
+            alt="Network"
+            style="width: 72px; height: 72px"
+          />
+          <div>
+            <h4 style="font-size: 26px; font-weight: 700; margin: 0">Multi Tenancy</h4>
+            <p style="font-size: 14px; margin: 0">Architecture</p>
+          </div>
+        </div>
       </div>
     </b-container>
   </section>
@@ -292,12 +422,22 @@ import UserIcon from '@iconify/icons-bx/bx-user'
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
 
+    @include mq(md) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(12, calc(50vw - 2rem));
+    }
+
     .box {
       &-1 {
         grid-column: 1 / 2;
         grid-row: 1 / 5;
 
         padding: 2rem 3rem;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 1 / 5;
+        }
 
         h4 {
           font-size: 24px;
@@ -325,26 +465,51 @@ import UserIcon from '@iconify/icons-bx/bx-user'
         grid-column: 2 / 3;
         grid-row: 1 / 3;
         aspect-ratio: 1;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 5 / 7;
+        }
       }
 
       &-3 {
         grid-column: 3 / 4;
         grid-row: 1 / 3;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 7 / 9;
+        }
       }
 
       &-4 {
         grid-column: 2/ 3;
         grid-row: 3 / 5;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 9 / 11;
+        }
       }
 
       &-5 {
         grid-column: 3 / 4;
         grid-row: 3 / 4;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 11 / 12;
+        }
       }
 
       &-6 {
         grid-column: 3 / 4;
         grid-row: 4 / 5;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 12 / 13;
+        }
       }
     }
   }
@@ -356,12 +521,22 @@ import UserIcon from '@iconify/icons-bx/bx-user'
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
 
+    @include mq(md) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(12, calc(50vw - 2rem));
+    }
+
     .box {
       &-1 {
         grid-column: 1 / 2;
         grid-row: 1 / 5;
 
         padding: 2rem 3rem;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 1 / 5;
+        }
 
         h4 {
           font-size: 20px;
@@ -390,28 +565,52 @@ import UserIcon from '@iconify/icons-bx/bx-user'
         grid-column: 2 / 3;
         grid-row: 1 / 3;
         aspect-ratio: 1;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 5 / 7;
+        }
       }
 
       &-3 {
         background-color: purple;
         grid-column: 3 / 4;
         grid-row: 1 / 3;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 7 / 9;
+        }
       }
 
       &-4 {
         background-color: green;
         grid-column: 2/ 3;
         grid-row: 3 / 4;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 9 / 10;
+        }
       }
 
       &-5 {
         grid-column: 2 / 3;
         grid-row: 4 / 5;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 10 / 11;
+        }
       }
 
       &-6 {
         grid-column: 3 / 4;
         grid-row: 3 / 5;
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 11 / 13;
+        }
       }
     }
   }
@@ -423,36 +622,95 @@ import UserIcon from '@iconify/icons-bx/bx-user'
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
 
+    @include mq(md) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(12, calc(50vw - 2rem));
+    }
+
     .box {
       &-1 {
         grid-column: 1 / 2;
         grid-row: 1 / 5;
+
+        padding: 2rem 3rem;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 1 / 5;
+        }
+
+        h4 {
+          font-size: 20px;
+          font-weight: 400;
+          margin-top: 1rem;
+          color: #fff;
+        }
+
+        p {
+          color: #fff;
+          font-size: 22px;
+          font-weight: 700;
+          margin-top: 2rem;
+        }
+
+        .product-img {
+          position: absolute;
+          bottom: 3rem;
+          right: 50%;
+          transform: translateX(50%);
+          width: calc(100% - 4rem);
+        }
       }
 
       &-2 {
         grid-column: 2 / 3;
         grid-row: 1 / 3;
         aspect-ratio: 1;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 5 / 7;
+        }
       }
 
       &-3 {
         grid-column: 3 / 4;
         grid-row: 1 / 3;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 7 / 9;
+        }
       }
 
       &-4 {
         grid-column: 2/ 3;
         grid-row: 3 / 5;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 9 / 11;
+        }
       }
 
       &-5 {
         grid-column: 3 / 4;
         grid-row: 3 / 4;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 11 / 12;
+        }
       }
 
       &-6 {
         grid-column: 3 / 4;
         grid-row: 4 / 5;
+
+        @include mq(md) {
+          grid-column: 1/ 2;
+          grid-row: 12 / 13;
+        }
       }
     }
   }

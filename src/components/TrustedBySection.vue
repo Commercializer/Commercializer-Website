@@ -17,12 +17,17 @@
             </p>
           </b-col>
           <b-col lg="7" xl="6" class="offset-xl-1">
-            <h3 style="font-size: 32px; font-weight: 700">
-              Our Products & Services Are Trusted By
-            </h3>
+            <h3>Our Products & Services Are Trusted By</h3>
             <b-row class="g-4 g-xl-4 mt-3">
               <b-col sm="3" v-for="(item, idx) in featureData" :key="idx">
-                <div class="d-flex justify-content-center align-items-center  pe-md-2" style="padding: 1.25rem 1rem;border-radius: 0.35rem;border: 1px solid rgba(255,255,255,0.1);">
+                <div
+                  class="d-flex justify-content-center align-items-center pe-md-2"
+                  style="
+                    padding: 1.25rem 1rem;
+                    border-radius: 0.35rem;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                  "
+                >
                   <img
                     :src="item.image"
                     style="
@@ -63,12 +68,64 @@ import { featureData } from '@/views/landings/mobile-app-3/data'
 
   img {
     width: 150px;
+
+    @include mq(lg) {
+      width: 100px;
+    }
+
+    @include mq(md) {
+      width: 72px;
+    }
+
+    @include mq(sm) {
+      width: 56px;
+    }
   }
 
   p {
     font-weight: 700;
     font-size: 54px;
     color: #fff;
+    margin-bottom: 0;
+
+    @include mq(lg) {
+      font-size: 42px;
+    }
+
+    @include mq(md) {
+      font-size: 36px;
+    }
+
+    @include mq(sm) {
+      font-size: 32px;
+    }
+
+    @include mq(xs) {
+      font-size: 28px;
+    }
+  }
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+
+  @include mq(lg) {
+    font-size: 30px;
+  }
+
+  @include mq(md) {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  @include mq(sm) {
+    font-size: 24px;
+  }
+
+  @include mq(xs) {
+    font-size: 22px;
   }
 }
 </style>

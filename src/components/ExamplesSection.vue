@@ -19,7 +19,7 @@
               >COMMERCIALIZER UX IN ACTION</span
             >
           </a>
-          <h2 class="display-4 text-white mb-4" style="font-size: 32px">
+          <h2 class="examples__heading">
             Designed for Users, Powered by Strategy and Innovation
           </h2>
           <p
@@ -136,7 +136,6 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Pagination } from 'swiper/modules'
 
-
 import ecommerceImg from '@/assets/img/landing/saas-5/categories/ecommerce.jpg'
 import transportationImg from '@/assets/img/landing/saas-5/categories/transportation.jpg'
 import marketingImg from '@/assets/img/landing/saas-5/categories/marketing.jpg'
@@ -151,7 +150,6 @@ type Example = {
   image: string
   thumbnail: string
 }
-
 
 const categoriesData = [
   {
@@ -181,3 +179,24 @@ const categoriesData = [
   }
 ]
 </script>
+
+<style lang="scss" scoped>
+.examples__heading {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 3rem;
+
+  @include mq(md) {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  @include mq(sm) {
+    font-size: 24px;
+  }
+
+  @include mq(xs) {
+    font-size: 22px;
+  }
+}
+</style>

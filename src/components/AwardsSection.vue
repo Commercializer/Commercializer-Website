@@ -119,6 +119,10 @@ h2 {
   row-gap: 2.5rem;
   margin-top: 3rem;
 
+  @include mq(sm) {
+    grid-template-columns: 1fr;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
