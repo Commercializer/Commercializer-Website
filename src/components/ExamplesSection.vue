@@ -19,9 +19,7 @@
               >COMMERCIALIZER UX IN ACTION</span
             >
           </a>
-          <h2 class="examples__heading">
-            Designed for Users, Powered by Strategy and Innovation
-          </h2>
+          <h2 class="examples__heading">Designed for Users, Powered by Strategy and Innovation</h2>
           <p
             class="text-white"
             :style="{
@@ -52,7 +50,7 @@
           }
         }"
       >
-        <SwiperSlide v-for="(swiper, idx) in categoriesData" :key="idx">
+        <SwiperSlide v-for="(swiper, idx) in examples" :key="idx">
           <div href="#" class="d-block rounded-3 overflow-hidden">
             <div class="">
               <img
@@ -80,7 +78,7 @@
                     fontWeight: '600'
                   }"
                 >
-                  FINTECH
+                  {{ swiper.tag }}
                 </div>
                 <h3
                   :style="{
@@ -90,7 +88,7 @@
                     marginTop: '1rem'
                   }"
                 >
-                  Smart Crypto-Wallet Mobile App UX Design
+                  {{ swiper.title }}
                 </h3>
                 <div
                   :style="{
@@ -115,9 +113,11 @@
                       :style="{ fontSize: '16px', fontWeight: '700', margin: '0' }"
                       class="text-white"
                     >
-                      Mint Pay
+                      {{ swiper.name }}
                     </p>
-                    <span :style="{ fontSize: '14px', fontWeight: '400' }">California, USA</span>
+                    <span :style="{ fontSize: '14px', fontWeight: '400' }">{{
+                      swiper.location
+                    }}</span>
                   </div>
                 </div>
               </div>
@@ -151,31 +151,31 @@ type Example = {
   thumbnail: string
 }
 
-const categoriesData = [
+const examples: Example[] = [
   {
-    head: 'E-commerce',
-    description: 'Order processing, price suggestions, user research',
-    image: ecommerceImg
+    tag: 'FINTECH',
+    title: `QR Payment & Sales Mobile App
+UX Design`,
+    name: 'Ariv Pay',
+    location: 'London, UK',
+    image: '/images/case-studies/ariv-pay.png',
+    thumbnail: '/images/case-studies/ariv-pay-thumbnail.png'
   },
   {
-    head: 'Transportation',
-    description: 'Itinerary planning, freight pricing culculations, etc.',
-    image: transportationImg
+    tag: 'MANAGEMENT',
+    title: `Calendar Meetings & Appointments App UX Design`,
+    name: 'CalendQ',
+    location: 'Doha, Quatar',
+    image: '/images/case-studies/calendq.png',
+    thumbnail: '/images/case-studies/calendq-thumbnail.png'
   },
   {
-    head: 'Marketing',
-    description: 'Market research, data visualization, user testing',
-    image: marketingImg
-  },
-  {
-    head: 'Robotics',
-    description: 'Enhancing robot learning, improve robotic precision',
-    image: roboticsImg
-  },
-  {
-    head: 'Programming',
-    description: 'Code generation, code debugging and optimization',
-    image: programmingImg
+    tag: 'LEGAL',
+    title: 'Dash Screen Panel with Zero Layer UX Design',
+    name: 'Agreementor',
+    location: 'Delaware, USA',
+    image: '/images/case-studies/agreementor.png',
+    thumbnail: '/images/case-studies/agreementor-thumbnail.png'
   }
 ]
 </script>
