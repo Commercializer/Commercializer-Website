@@ -424,7 +424,8 @@ import UserIcon from '@iconify/icons-bx/bx-user'
 
     @include mq(md) {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(12, calc(50vw - 2rem));
+      grid-template-rows: repeat(12, 1fr);
+      // row-gap: 2rem;
     }
 
     .box {
@@ -437,6 +438,7 @@ import UserIcon from '@iconify/icons-bx/bx-user'
         @include mq(md) {
           grid-column: 1/ 2;
           grid-row: 1 / 5;
+          row-gap: 2rem;
         }
 
         h4 {
@@ -523,7 +525,8 @@ import UserIcon from '@iconify/icons-bx/bx-user'
 
     @include mq(md) {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(12, calc(50vw - 2rem));
+      grid-template-rows: repeat(12, 1fr);
+      // row-gap: 2rem;
     }
 
     .box {
@@ -624,7 +627,8 @@ import UserIcon from '@iconify/icons-bx/bx-user'
 
     @include mq(md) {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(12, calc(50vw - 2rem));
+      grid-template-rows: repeat(12, 1fr);
+      // row-gap: 2rem;
     }
 
     .box {

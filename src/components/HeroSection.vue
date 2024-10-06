@@ -34,7 +34,7 @@
             Transforming groundbreaking ideas into market-leading products.
           </p>
           <div
-            class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-4"
+            class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-4 locations"
             style="margin-top: 100px"
           >
             <p
@@ -56,12 +56,17 @@
               Colombo, Sri Lanka
             </p>
           </div>
-          <div class="d-flex align-items-center gap-4">
+          <div class="d-flex align-items-center gap-4 discover-more">
             <span
-              style="padding: 10px; border-radius: 500px; aspect-ratio: 1;background-color: rgba(255, 255, 255, 0.15)"
+              style="
+                padding: 10px;
+                border-radius: 500px;
+                aspect-ratio: 1;
+                background-color: rgba(255, 255, 255, 0.15);
+              "
             >
               <Icon :icon="ChevronIcon" style="font-size: 24px" />
-          </span>
+            </span>
             <span> Discover More </span>
           </div>
         </b-col>
@@ -82,3 +87,31 @@ import PlayIcon from '@iconify/icons-bx/bx-play'
 import ChevronIcon from '@iconify/icons-bx/bx-chevrons-down'
 import { Icon } from '@iconify/vue'
 </script>
+
+<style lang="scss" scopes>
+.locations {
+  text-align: center;
+
+  @include mq(md) {
+    gap: 1rem;
+    margin-top: 50px !important;
+  }
+
+  p {
+    @include mq(md) {
+      margin-bottom: 0rem;
+    }
+
+    @include mq(sm) {
+      justify-content: center;
+    }
+  }
+}
+
+.discover-more {
+  @include mq(sm) {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+</style>
