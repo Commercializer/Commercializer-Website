@@ -105,7 +105,7 @@
                   :style="{ marginTop: '1.25rem', gap: '0.75rem' }"
                 >
                   <img
-                    :src="swiper.image"
+                    :src="swiper.thumbnail"
                     :style="{ height: '48px', width: '48px', borderRadius: '4px' }"
                   />
                   <div class="d-flex flex-column">
