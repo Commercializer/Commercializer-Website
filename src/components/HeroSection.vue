@@ -43,21 +43,21 @@
             style="margin-top: 100px"
           >
             <p
-              style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.2rem"
+              style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.4rem"
             >
-              <span style="font-size: 24px">🇺🇸</span>
+              <img src="https://flagcdn.com/128x96/us.png" style="width: 28px;" />
               Delaware, USA
             </p>
             <p
-              style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.2rem"
+              style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.4rem"
             >
-              <span style="font-size: 24px">🇶🇦</span>
+            <img src="https://flagcdn.com/128x96/qa.png" style="width: 28px;" />
               Doha, Qatar
             </p>
             <p
-              style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.2rem"
+              style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.4rem"
             >
-              <span style="font-size: 24px"> 🇱🇰 </span>
+            <img src="https://flagcdn.com/128x96/lk.png" style="width: 28px;" />
               Colombo, Sri Lanka
             </p>
           </div>
