@@ -1,11 +1,16 @@
 <template>
   <!-- Hero -->
-  <section class="position-relative overflow-hidden zindex-2 pt-4 pt-md-5">
+  <section
+    class="position-relative overflow-hidden zindex-2 pt-4 pt-md-5"
+    id="home"
+    style="min-height: calc(100vh - 121.9px)"
+  >
     <b-container>
       <b-row class="justify-content-center align-items-center">
         <!-- Parallax gfx -->
         <b-col xl="6" lg="7" md="6" sm="8" class="col-10 offset-xl-1 order-md-2">
-          <Parallax custom-class="parallax mx-auto" :custom-style="{ maxWidth: '556px' }">
+          <img src="../assets/img/logo-large.png" alt="" style="width: 100%; max-width: 500px" />
+          <!-- <Parallax custom-class="parallax mx-auto" :custom-style="{ maxWidth: '556px' }">
             <div class="parallax-layer" data-depth="0.1">
               <img :src="layer1Img" alt="Bubble" />
             </div>
@@ -24,7 +29,7 @@
             <div class="parallax-layer" data-depth="0.2">
               <img :src="layer6Img" alt="Screen" />
             </div>
-          </Parallax>
+          </Parallax> -->
         </b-col>
 
         <!-- Text -->

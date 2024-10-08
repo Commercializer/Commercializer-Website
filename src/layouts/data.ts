@@ -292,27 +292,27 @@ export const navbarLinkData: NavLinkType[] = [
   // },
   {
     title: 'Home',
-    link: { name: 'ui.typography' }
+    href: '#home'
   },
-  {
-    title: 'About',
-    link: { name: 'ui.typography' }
-  },
+  // {
+  //   title: 'About',
+  //   link: { name: 'ui.typography' }
+  // },
   {
     title: 'Products',
-    link: { name: 'ui.typography' }
+    href: '#products'
   },
-  {
-    title: 'Portfolio',
-    link: { name: 'ui.typography' }
-  },  {
-    title: 'Blog',
-    link: { name: 'ui.typography' }
-  },
-  {
-    title: 'Contact',
-    link: { name: 'ui.typography' }
-  },
+  // {
+  //   title: 'Portfolio',
+  //   link: { name: 'ui.typography' }
+  // },  {
+  //   title: 'Blog',
+  //   link: { name: 'ui.typography' }
+  // },
+  // {
+  //   title: 'Contact',
+  //   link: { name: 'ui.typography' }
+  // },
 ]
 
 export const uiKitSidebarMobileLinkData: ChildrenLinkType[] = [

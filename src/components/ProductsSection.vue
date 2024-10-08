@@ -1,5 +1,5 @@
 <template>
-  <section id="products" class="mt-5">
+  <section id="products" style="margin-top: 6rem;">
     <b-container>
       <b-row class="justify-content-center">
         <b-col lg="9" xl="8" class="text-center">

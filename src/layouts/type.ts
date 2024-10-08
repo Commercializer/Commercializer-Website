@@ -22,6 +22,7 @@ export type NavLinkType = {
   image?: string
   links?: LinksType[]
   link?: LinkType
+  href?: string
 }
 
 // sidebar

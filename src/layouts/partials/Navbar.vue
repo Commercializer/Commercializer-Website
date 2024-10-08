@@ -27,6 +27,10 @@
               <router-link v-if="item.link" class="nav-link" :to="{ name: item.link.name }">
                 {{ item.title }}
               </router-link>
+              <a v-else-if="item.href" class="nav-link" :href="item.href">
+                {{ item.title }}
+              </a>
+              
 
               <template v-else>
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">{{
