@@ -64,10 +64,17 @@
                     :key="child.title"
                   >
                     <router-link
-                      :to="{ name: child.link.name }"
+                      :to="{ name: child.link?.name }"
                       class="nav-link fs-sm fw-medium px-0 py-1"
+                      v-if="child.link"
                       >{{ child.title }}
                     </router-link>
+                    <a
+                      v-if="child.href"
+                      :href="child.href"
+                      class="nav-link fs-sm fw-medium px-0 py-1"
+                      >{{ child.title }}
+                    </a>
                   </li>
                 </ul>
               </b-collapse>
@@ -125,7 +132,7 @@
                 </p>
                 <a
                   href="mailto:contact@commercializer.global"
-                  style="color: #6ac457; font-size: 18px;text-decoration: none;"
+                  style="color: #6ac457; font-size: 18px; text-decoration: none"
                   >contact@commercializer.global</a
                 >
                 <div
@@ -184,7 +191,8 @@ type LinkType = {
 
 type ChildLinkType = {
   title: string
-  link: LinkType
+  link?: LinkType
+  href?: string
 }
 
 type FooterLinkType = {
@@ -198,37 +206,37 @@ const footerLinks: FooterLinkType[] = [
     children: [
       {
         title: 'Home',
-        link: { name: '' }
-      },
-      {
-        title: 'About',
-        link: { name: '' }
-      },
-      {
-        title: 'Blog',
-        link: { name: '' }
-      },
-      {
-        title: 'Contact',
-        link: { name: '' }
+        href: '#home'
       }
+      // {
+      //   title: 'About',
+      //   link: { name: '' }
+      // },
+      // {
+      //   title: 'Blog',
+      //   link: { name: '' }
+      // },
+      // {
+      //   title: 'Contact',
+      //   link: { name: '' }
+      // }
     ]
   },
   {
     title: 'Company',
     children: [
-      {
-        title: 'Portfolio',
-        link: { name: '' }
-      },
+      // {
+      //   title: 'Portfolio',
+      //   link: { name: '' }
+      // },
       {
         title: 'Products',
-        link: { name: '' }
-      },
-      {
-        title: 'Services',
-        link: { name: '' }
+        href: '#products'
       }
+      // {
+      //   title: 'Services',
+      //   link: { name: '' }
+      // }
     ]
   }
 ]
