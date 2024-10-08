@@ -82,10 +82,10 @@
                 target="_blank"
                 novalidate
               >
-                <div class="d-flex flex-column flex-sm-row">
-                  <div class="position-relative w-100 mb-3 mb-sm-0 me-sm-3">
+                <div class="d-flex flex-column flex-sm-row gap-0 footer-contact">
+                  <div class="position-relative w-100 mb-3 mb-sm-0">
                     <input
-                      class="form-control form-control-lg ps-5"
+                      class="form-control form-control-lg ps-5 footer-contact__input"
                       type="email"
                       name="EMAIL"
                       placeholder="Your email"
@@ -96,11 +96,11 @@
                     ></i>
                   </div>
                   <button
-                    class="btn btn-primary shadow-primary btn-lg"
+                    class="btn btn-primary btn-lg footer-contact__button"
                     type="submit"
                     name="subscribe"
                   >
-                    Subscribe*
+                    Subscribe
                   </button>
                 </div>
                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
@@ -112,9 +112,22 @@
                     tabindex="-1"
                   />
                 </div>
-                <p class="mt-4 mb-0">
-                  *Enjoy using Silicon Template and stay tuned for the latest updates and news.
+                <p
+                  style="
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-top: 2rem;
+                    margin-bottom: 0rem;
+                    color: #fff;
+                  "
+                >
+                  Contact Us
                 </p>
+                <a
+                  href="mailto:contact@commercializer.global"
+                  style="color: #6ac457; font-size: 18px;text-decoration: none;"
+                  >contact@commercializer.global</a
+                >
                 <div
                   class="subscription-status position-absolute top-100 start-50 translate-middle-x"
                 ></div>
@@ -271,6 +284,29 @@ const footerLinks: FooterLinkType[] = [
 
     @include mq(xs) {
       font-size: 17px;
+    }
+  }
+}
+
+.footer-contact {
+  &__input {
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+
+    @include mq(499px) {
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+    }
+  }
+
+  &__button {
+    background-color: #6ac457;
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+
+    @include mq(499px) {
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
     }
   }
 }
