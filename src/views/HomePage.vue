@@ -7,6 +7,7 @@
   <ExamplesSection />
   <ProductsSection />
   <BottomBannerSection />
+  <FooterSection />
 </template>
 
 <script setup lang="ts">
@@ -18,4 +19,5 @@ import BrandsSection from '@/components/BrandsSection.vue'
 import ExamplesSection from '@/components/ExamplesSection.vue'
 import ProductsSection from '@/components/ProductsSection.vue'
 import BottomBannerSection from '@/components/BottomBannerSection.vue'
+import FooterSection from '@/components/FooterSection.vue'
 </script>

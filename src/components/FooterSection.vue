@@ -1,0 +1,277 @@
+<template>
+  <footer
+    class="footer pt-5 pb-4"
+    style="background-color: #131022; border-top: 1px solid rgba(255, 255, 255, 0.1)"
+    data-bs-theme="dark"
+  >
+    <b-container class="pt-1 pt-md-3 pt-lg-4 pt-xl-5">
+      <b-row>
+        <b-col lg="5" xl="4" class="mb-4 mb-md-5 mb-lg-0">
+          <div class="d-flex align-items-center pb-3 mb-1">
+            <div class="footer-brand p-0 pe-1 me-0">
+              <img :src="logoImg" width="47" alt="Silicon" />
+              Commercializer
+            </div>
+          </div>
+          <p class="text-body pb-1 pb-md-2 pb-lg-3 mb-3 footer-paragraph">
+            Transforming groundbreaking ideas into market-leading products.
+          </p>
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-4 locations"
+            style="margin-top: 50px"
+          >
+            <p
+              style="font-size: 14px; color: #fff; display: flex; align-items: center; gap: 0.2rem"
+            >
+              <span style="font-size: 18px">🇺🇸</span>
+              Delaware, USA
+            </p>
+            <p
+              style="font-size: 14px; color: #fff; display: flex; align-items: center; gap: 0.2rem"
+            >
+              <span style="font-size: 18px">🇶🇦</span>
+              Doha, Qatar
+            </p>
+            <p
+              style="font-size: 14px; color: #fff; display: flex; align-items: center; gap: 0.2rem"
+            >
+              <span style="font-size: 18px"> 🇱🇰 </span>
+              Colombo, Sri Lanka
+            </p>
+          </div>
+        </b-col>
+        <b-col lg="7" class="offset-xl-1">
+          <div id="footer-links" class="row">
+            <b-col md="3" v-for="(item, idx) in footerLinks" :key="item.title">
+              <h6 class="fs-lg mb-1 mb-md-3">
+                <span class="d-none d-md-block">{{ item.title }}</span>
+                <a
+                  href="#tools"
+                  class="d-block text-dark dropdown-toggle d-md-none py-2"
+                  v-b-toggle="`footer-link-${idx + 1}`"
+                  >{{ item.title }}</a
+                >
+              </h6>
+              <b-collapse
+                :id="`footer-link-${idx + 1}`"
+                class="d-md-block"
+                data-bs-parent="#footer-links"
+              >
+                <ul class="nav flex-column">
+                  <li
+                    class="nav-item mb-1"
+                    v-for="(child, idx) in item.children"
+                    :key="child.title"
+                  >
+                    <router-link
+                      :to="{ name: child.link.name }"
+                      class="nav-link fs-sm fw-medium px-0 py-1"
+                      >{{ child.title }}
+                    </router-link>
+                  </li>
+                </ul>
+              </b-collapse>
+            </b-col>
+            <b-col md="6" class="news-letter">
+              <h2>Subscribe to Our Newsletter</h2>
+              <form
+                class="subscription-form position-relative validate"
+                action="https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;amp;id=29ca296126"
+                method="post"
+                name="mc-embedded-subscribe-form"
+                target="_blank"
+                novalidate
+              >
+                <div class="d-flex flex-column flex-sm-row">
+                  <div class="position-relative w-100 mb-3 mb-sm-0 me-sm-3">
+                    <input
+                      class="form-control form-control-lg ps-5"
+                      type="email"
+                      name="EMAIL"
+                      placeholder="Your email"
+                      required
+                    />
+                    <i
+                      class="bx bx-envelope fs-xl text-muted position-absolute top-50 start-0 translate-middle-y ms-3"
+                    ></i>
+                  </div>
+                  <button
+                    class="btn btn-primary shadow-primary btn-lg"
+                    type="submit"
+                    name="subscribe"
+                  >
+                    Subscribe*
+                  </button>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+                <div style="position: absolute; left: -5000px" aria-hidden="true">
+                  <input
+                    class="subscription-form-antispam"
+                    type="text"
+                    name="b_c7103e2c981361a6639545bd5_29ca296126"
+                    tabindex="-1"
+                  />
+                </div>
+                <p class="mt-4 mb-0">
+                  *Enjoy using Silicon Template and stay tuned for the latest updates and news.
+                </p>
+                <div
+                  class="subscription-status position-absolute top-100 start-50 translate-middle-x"
+                ></div>
+              </form>
+            </b-col>
+          </div>
+        </b-col>
+      </b-row>
+      <div
+        class="d-md-flex align-items-center justify-content-between pt-sm-2 pt-md-4 pt-lg-5 pb-2 mt-4"
+      >
+        <ul class="nav order-md-2 ms-n3 ms-md-0 mb-3 mb-md-0">
+          <li class="nav-item">
+            <a href="#" class="nav-link fs-sm fw-medium">Terms and conditions</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link fs-sm fw-medium">Privacy policy</a>
+          </li>
+        </ul>
+        <p class="nav d-block fs-sm mb-0 order-md-1">
+          <span class="text-body" style="font-weight: bold">&copy; 2024 Commercializer </span>
+        </p>
+      </div>
+    </b-container>
+  </footer>
+</template>
+
+<script setup lang="ts">
+import logoImg from '@/assets/img/logo.png'
+import { Icon } from '@iconify/vue'
+import MapIcon from '@iconify/icons-bx/bx-map'
+import FacebookIcon from '@iconify/icons-bx/bxl-facebook'
+import InstagramIcon from '@iconify/icons-bx/bxl-instagram'
+import YoutubeIcon from '@iconify/icons-bx/bxl-youtube'
+import TelegramIcon from '@iconify/icons-bx/bxl-telegram'
+import { ref } from 'vue'
+
+const selectedCountry = ref(null)
+const countryOptions = [
+  { text: 'Choose country', value: 'Choose country' },
+  { text: 'Australia', value: 'Australia' },
+  { text: 'Belgium', value: 'Belgium' },
+  { text: 'Canada', value: 'Canada' },
+  { text: 'Denmark', value: 'Denmark' },
+  { text: 'United States', value: null }
+]
+
+import type { RouteParamsRaw } from 'vue-router'
+
+type LinkType = {
+  name: string
+  params?: RouteParamsRaw
+}
+
+type ChildLinkType = {
+  title: string
+  link: LinkType
+}
+
+type FooterLinkType = {
+  title: string
+  children: ChildLinkType[]
+}
+
+const footerLinks: FooterLinkType[] = [
+  {
+    title: 'Menu',
+    children: [
+      {
+        title: 'Home',
+        link: { name: '' }
+      },
+      {
+        title: 'About',
+        link: { name: '' }
+      },
+      {
+        title: 'Blog',
+        link: { name: '' }
+      },
+      {
+        title: 'Contact',
+        link: { name: '' }
+      }
+    ]
+  },
+  {
+    title: 'Company',
+    children: [
+      {
+        title: 'Portfolio',
+        link: { name: '' }
+      },
+      {
+        title: 'Products',
+        link: { name: '' }
+      },
+      {
+        title: 'Services',
+        link: { name: '' }
+      }
+    ]
+  }
+]
+</script>
+
+<style lang="scss" scoped>
+.footer-brand {
+  font-size: 32px;
+  color: #fff;
+
+  @include mq(md) {
+    font-size: 30px;
+  }
+
+  @include mq(sm) {
+    font-size: 28px;
+  }
+
+  @include mq(xs) {
+    font-size: 26px;
+  }
+}
+
+.footer-paragraph {
+  font-size: 20px;
+  color: #fff;
+
+  @include mq(md) {
+    font-size: 19px;
+  }
+
+  @include mq(sm) {
+    font-size: 18px;
+  }
+
+  @include mq(xs) {
+    font-size: 17px;
+  }
+}
+
+.news-letter {
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+
+    @include mq(md) {
+      font-size: 19px;
+    }
+
+    @include mq(sm) {
+      font-size: 18px;
+    }
+
+    @include mq(xs) {
+      font-size: 17px;
+    }
+  }
+}
+</style>
