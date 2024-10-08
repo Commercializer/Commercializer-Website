@@ -45,7 +45,7 @@ const landingRoute = [
     path: '',
     name: 'home-page',
     meta: {
-      title: 'Commercializer'
+      title: 'Commercializer - Commercializing Innovations',
     },
     component: () => import('@/views/HomePage.vue')
   },
