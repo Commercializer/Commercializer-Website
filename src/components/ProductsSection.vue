@@ -447,15 +447,17 @@ const scale = computed(() => {
   position: relative;
 }
 
+
 .row {
   &-1 {
-    margin-top: 3rem;
+    // margin-top: 2rem;
     display: grid;
     grid-template-columns: 40% repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
 
     @include mq(md) {
+    margin-top: 3rem;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(12, 1fr);
       // row-gap: 2rem;
@@ -550,13 +552,14 @@ const scale = computed(() => {
   }
 
   &-2 {
-    margin-top: 3rem;
+    // margin-top: 2rem;
     display: grid;
     grid-template-columns: 40% repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
 
     @include mq(md) {
+      margin-top: 3rem;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(12, 1fr);
       // row-gap: 2rem;
@@ -652,13 +655,14 @@ const scale = computed(() => {
   }
 
   &-3 {
-    margin-top: 3rem;
+    // margin-top: 2rem;
     display: grid;
     grid-template-columns: 40% repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
 
     @include mq(md) {
+      margin-top: 3rem;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(12, 1fr);
       // row-gap: 2rem;

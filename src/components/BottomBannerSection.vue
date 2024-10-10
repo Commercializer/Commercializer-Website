@@ -14,11 +14,15 @@
   background-color: #131022;
   padding-block: 102px;
   margin-top: 4rem;
+  // background-image: url(../assets/img/landing/digital-agency/contact-bg.png);
 }
 
 .banner {
-  background-image: linear-gradient(90deg, #81cb30 0%, #14b7c6 100%);
+  background-image: url(../assets/img/landing/digital-agency/contact-bg.png), linear-gradient(90deg, #81cb30 0%, #14b7c6 100%);
+  background-size: cover;
+  background-position: center;
   padding-block: 210px;
+  border-radius: 0.5rem;
 
   @include mq(lg) {
     padding-block: 200px;
