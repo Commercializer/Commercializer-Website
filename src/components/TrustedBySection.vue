@@ -19,7 +19,7 @@
           <b-col lg="7" xl="6" class="offset-xl-1">
             <h3>Our Products & Services Are Trusted By</h3>
             <b-row class="g-4 g-xl-4 mt-3">
-              <b-col sm="3" v-for="(item, idx) in featureData" :key="idx">
+              <b-col sm="3" v-for="client in clients" :key="client.image">
                 <div
                   class="d-flex justify-content-center align-items-center pe-md-2"
                   style="
@@ -29,7 +29,7 @@
                   "
                 >
                   <img
-                    :src="item.image"
+                    :src="client.image"
                     style="
                       filter: drop-shadow(
                           0px 0.8645132780075073px 4.602016925811768px rgba(99, 102, 241, 0.02)
@@ -56,6 +56,33 @@
 <script setup lang="ts">
 import logoImg from '@/assets/img/logo-large.png'
 import { featureData } from '@/views/landings/mobile-app-3/data'
+
+const clients: { image: string }[] = [
+  {
+    image: '/images/clients/mastercard-logo.webp'
+  },
+  {
+    image: '/images/clients/JAT-logo.webp'
+  },
+  {
+    image: '/images/clients/amana-logo.webp'
+  },
+  {
+    image: '/images/clients/NCINGA-logo.webp'
+  },
+  {
+    image: '/images/clients/hatch-logo.webp'
+  },
+  {
+    image: '/images/clients/Ex-pack-logo.webp'
+  },
+  {
+    image: '/images/clients/payable-logo.webp'
+  },
+  {
+    image: '/images/clients/fastcorp-logo.webp'
+  }
+]
 </script>
 
 <style lang="scss" scoped>
@@ -107,16 +134,16 @@ import { featureData } from '@/views/landings/mobile-app-3/data'
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   color: #fff;
 
   @include mq(lg) {
-    font-size: 30px;
+    font-size: 27px;
   }
 
   @include mq(md) {
-    font-size: 28px;
+    font-size: 26px;
     text-align: center;
   }
 

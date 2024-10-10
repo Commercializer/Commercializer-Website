@@ -3,7 +3,7 @@
   <section
     class="position-relative overflow-hidden zindex-2 pt-4 pt-md-5"
     id="home"
-    style="min-height: calc(100vh - 121.9px)"
+    style="min-height: calc(100vh - 74px)"
   >
     <b-container>
       <b-row class="justify-content-center align-items-center">

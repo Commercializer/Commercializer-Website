@@ -12,7 +12,7 @@
       'navbar-sticky': navbarSticky,
       'border-bottom border-light': isBorder
     }"
-    :style="{ backgroundColor: '#000 !important' }"
+    :style="{ backgroundColor: '#000 !important', height: '74px' }"
   >
     <div class="container px-3">
       <router-link class="navbar-brand pe-3" to="/">
