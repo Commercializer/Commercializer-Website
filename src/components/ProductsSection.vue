@@ -1,5 +1,5 @@
 <template>
-  <section id="products" style="margin-top: 6rem;">
+  <section id="products" style="margin-top: 6rem">
     <b-container>
       <b-row class="justify-content-center">
         <b-col lg="9" xl="8" class="text-center">
@@ -16,7 +16,12 @@
           </p>
         </b-col>
       </b-row>
-      <div class="row-1">
+      <div
+        class="row-1"
+        :style="{
+          transform: `scale(${scale})`
+        }"
+      >
         <div class="box box-1">
           <img src="/images/logos/commercial-prime.svg" alt="Commercial Prime" class="logo" />
           <h4>Empowering <span style="color: #d1b75f">Seamless Connections</span></h4>
@@ -143,7 +148,12 @@
           </div>
         </div>
       </div>
-      <div class="row-2">
+      <div
+        class="row-2"
+        :style="{
+          transform: `scale(${scale})`
+        }"
+      >
         <div class="box box-1">
           <img src="/images/logos/billable.png" alt="Commercial Prime" class="logo" />
           <h4>All in One Business Toolkit for MSMEs</h4>
@@ -258,7 +268,12 @@
           </div>
         </div>
       </div>
-      <div class="row-3">
+      <div
+        class="row-3"
+        :style="{
+          transform: `scale(${scale})`
+        }"
+      >
         <div class="box box-1">
           <img src="/images/logos/agreementor.png" alt="Commercial Prime" class="logo" />
           <h4>Complex Legal Jargon to Clarity</h4>
@@ -345,7 +360,7 @@
             alt="Agreementor 4-2"
             style="top: 33%; right: 35%; transform: translateX(50%); width: 30%; position: absolute"
           />
-          <button
+          <a
             style="
               border: none;
               outline: none;
@@ -362,10 +377,14 @@
               font-size: 14px;
               transform: translateX(50%);
               width: 70%;
+              text-align: center;
+              text-decoration: none;
             "
+            href="https://agreementor-landing-page.vercel.app/"
+            target="_blank"
           >
             Visit Agreementor
-          </button>
+          </a>
         </div>
         <div
           class="box box-5"
@@ -403,6 +422,20 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import UserIcon from '@iconify/icons-bx/bx-user'
+import { useBreakpoints, useWindowSize, breakpointsBootstrapV5 } from '@vueuse/core'
+import { computed } from 'vue'
+
+const breakpoints = useBreakpoints(breakpointsBootstrapV5)
+
+const isLargerThanLarge = breakpoints.greater('lg')
+
+const scale = computed(() => {
+  if (!isLargerThanLarge.value) {
+    return 1
+  } else {
+    return 0.88
+  }
+})
 </script>
 
 <style lang="scss" scoped>

@@ -16,8 +16,8 @@
   >
     <div class="container px-3">
       <router-link class="navbar-brand pe-3" to="/">
-        <img :src="logoImg" alt="Silicon" width="47" />
-        Commercializer
+        <img src="/commercializer-logo.svg" alt="Silicon" style="width: 298px;" />
+        <!-- Commercializer -->
       </router-link>
 
       <div id="navbarNav">

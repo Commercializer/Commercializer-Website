@@ -12,7 +12,7 @@
               <img :src="logoImg" alt="Silicon" width="47" />
               <p>Commercializer</p>
             </div>
-            <p class="text-center mt-4" style="font-size: 24px; width: 100%; color: #fff">
+            <p class="text-center mt-4" style="font-size: 20px; width: 100%; color: #fff">
               The Innovation Hub Where Usability Meets Profitability
             </p>
           </b-col>
