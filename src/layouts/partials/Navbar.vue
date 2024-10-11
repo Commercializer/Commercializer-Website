@@ -16,7 +16,7 @@
   >
     <div class="container px-3">
       <router-link class="navbar-brand pe-3" to="/">
-        <img src="/commercializer-logo.svg" alt="Silicon" style="width: 298px;" />
+        <img src="/commercializer-logo.svg" alt="Silicon" class="brand-logo" />
         <!-- Commercializer -->
       </router-link>
 
@@ -282,6 +282,14 @@ const currentRouteName = router.currentRoute.value.name
 
   @include mq(xs) {
     font-size: 1.125rem;
+  }
+}
+
+.brand-logo {
+  width: 298px !important;
+
+  @include mq(md) {
+    width: 260px !important;
   }
 }
 </style>

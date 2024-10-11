@@ -5,8 +5,8 @@
     id="home"
     style="min-height: calc(100vh - 74px)"
   >
-    <b-container style="height: calc(100vh - 74px)">
-      <b-row class="justify-content-center align-items-center" style="height: 100%">
+    <b-container style="min-height: calc(100vh - 74px)">
+      <b-row class="justify-content-center align-items-center" style="min-height: calc(100vh - 74px);">
         <!-- Parallax gfx -->
         <b-col xl="6" lg="6" md="6" sm="8" class="col-10 offset-xl-1 order-md-2">
           <img src="../assets/img/logo-large.png" alt="" style="width: 100%; max-width: 500px" />
@@ -35,12 +35,11 @@
         <!-- Text -->
         <b-col lg="5" md="6" class="text-center text-md-start order-md-1">
           <h1 class="display-5 mb-lg-4">Commercializing Innovations</h1>
-          <p class="fs-xl pb-3 pb-lg-0 mb-4 mb-lg-5">
+          <p class="fs-xl pb-3 pb-lg-0 mb-2 mb-md-3 mb-lg-5">
             Transforming groundbreaking ideas into market-leading products.
           </p>
           <div
             class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-4 locations"
-            style="margin-top: 100px"
           >
             <p
               style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.4rem"
@@ -96,10 +95,15 @@ import { Icon } from '@iconify/vue'
 <style lang="scss" scopes>
 .locations {
   text-align: center;
+  margin-top: 100px;
 
   @include mq(md) {
     gap: 1rem;
-    margin-top: 50px !important;
+    margin-top: 50px;
+  }
+
+  @include mq(sm) {
+    margin-top: 1rem;
   }
 
   p {
@@ -116,7 +120,7 @@ import { Icon } from '@iconify/vue'
 .discover-more {
   @include mq(sm) {
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 }
 </style>
