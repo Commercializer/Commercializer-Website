@@ -1,14 +1,14 @@
 <template>
   <!-- Hero -->
   <section
-    class="position-relative overflow-hidden zindex-2 pt-4 pt-md-5"
+    class="position-relative overflow-hidden zindex-2"
     id="home"
     style="min-height: calc(100vh - 74px)"
   >
-    <b-container>
-      <b-row class="justify-content-center align-items-center">
+    <b-container style="height: calc(100vh - 74px)">
+      <b-row class="justify-content-center align-items-center" style="height: 100%">
         <!-- Parallax gfx -->
-        <b-col xl="6" lg="7" md="6" sm="8" class="col-10 offset-xl-1 order-md-2">
+        <b-col xl="6" lg="6" md="6" sm="8" class="col-10 offset-xl-1 order-md-2">
           <img src="../assets/img/logo-large.png" alt="" style="width: 100%; max-width: 500px" />
           <!-- <Parallax custom-class="parallax mx-auto" :custom-style="{ maxWidth: '556px' }">
             <div class="parallax-layer" data-depth="0.1">
@@ -45,19 +45,19 @@
             <p
               style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.4rem"
             >
-              <img src="https://flagcdn.com/128x96/us.png" style="width: 28px;" />
+              <img src="https://flagcdn.com/128x96/us.png" style="width: 28px" />
               Delaware, USA
             </p>
             <p
               style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.4rem"
             >
-            <img src="https://flagcdn.com/128x96/qa.png" style="width: 28px;" />
+              <img src="https://flagcdn.com/128x96/qa.png" style="width: 28px" />
               Doha, Qatar
             </p>
             <p
               style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.4rem"
             >
-            <img src="https://flagcdn.com/128x96/lk.png" style="width: 28px;" />
+              <img src="https://flagcdn.com/128x96/lk.png" style="width: 28px" />
               Colombo, Sri Lanka
             </p>
           </div>
