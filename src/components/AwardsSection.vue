@@ -48,14 +48,12 @@
               class="mySwiper"
             >
               <swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
-              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
-              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
-              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
-              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
-              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
-              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
-              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
-              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide>
+              ><swiper-slide><img src="/images/awards/ac-2.webp" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-3.webp" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-4.webp" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-5.webp" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-6.webp" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-7.webp" /></swiper-slide>
             </swiper>
           </b-col>
         </b-row>
