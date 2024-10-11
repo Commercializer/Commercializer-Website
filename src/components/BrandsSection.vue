@@ -29,8 +29,23 @@
       }"
     >
       <SwiperSlide class="py-2" v-for="(brand, idx) in brandData" :key="idx">
-        <a href="#" class="px-2 mx-2">
-          <img :src="brand.image" class="d-block mx-auto my-2" width="155" alt="Brand" />
+        <a
+          href="#"
+          class="px-2 mx-2"
+          style="
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <img
+            :src="brand.image"
+            class="d-block mx-auto my-2"
+            width="155"
+            alt="Brand"
+            style="width: 96px; height: auto"
+          />
         </a>
       </SwiperSlide>
 
@@ -43,12 +58,6 @@
 <script setup lang="ts">
 import { Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import brand1SvgImg from '@/assets/img/brands/01.svg'
-import brand2SvgImg from '@/assets/img/brands/02.svg'
-import brand3SvgImg from '@/assets/img/brands/03.svg'
-import brand4SvgImg from '@/assets/img/brands/04.svg'
-import brand5SvgImg from '@/assets/img/brands/05.svg'
-import brand6SvgImg from '@/assets/img/brands/06.svg'
 
 type BrandType = {
   image: string
@@ -56,33 +65,37 @@ type BrandType = {
 
 const brandData: BrandType[] = [
   {
-    image: brand1SvgImg
+    image: '/images/clients/mastercard-logo.webp'
   },
   {
-    image: brand2SvgImg
+    image: '/images/clients/JAT-logo.webp'
   },
   {
-    image: brand3SvgImg
+    image: '/images/clients/amana-logo.webp'
   },
   {
-    image: brand4SvgImg
+    image: '/images/clients/NCINGA-logo.webp'
   },
   {
-    image: brand5SvgImg
+    image: '/images/clients/hatch-logo.webp'
   },
   {
-    image: brand6SvgImg
+    image: '/images/clients/Ex-pack-logo.webp'
+  },
+  {
+    image: '/images/clients/payable-logo.webp'
+  },
+  {
+    image: '/images/clients/fastcorp-logo.webp'
   }
 ]
 </script>
-
 
 <style scoped lang="scss">
 .brands {
   &__heading {
     font-size: 32px;
     font-weight: bold;
-
 
     @include mq(md) {
       text-align: center;
