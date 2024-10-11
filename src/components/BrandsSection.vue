@@ -1,7 +1,18 @@
 <template>
   <b-container class="brands">
-    <h2 class="brands__heading">Trusted and accredited by official partner network</h2>
+    <h2 class="brands__heading">
+      Trusted and accredited by official partner network
+      <div class="brands__heading-actions">
+        <button @click="swiper?.slidePrev()">
+          <Icon :icon="ChevronLeftIcon" class="fs-2"></Icon>
+        </button>
+        <button @click="swiper?.slideNext()">
+          <Icon :icon="ChevronRightIcon" class="fs-2"></Icon>
+        </button>
+      </div>
+    </h2>
     <Swiper
+      @swiper="onSwiper($event)"
       class="mx-n2"
       :modules="[Pagination]"
       :slidesPerView="1"
@@ -35,12 +46,7 @@
       <SwiperSlide class="py-2" v-for="(brand, idx) in brandData" :key="idx">
         <a
           href="#"
-          style="
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          "
+          style="height: 100px; display: flex; align-items: center; justify-content: center"
         >
           <img
             :src="brand.image"
@@ -59,8 +65,13 @@
 </template>
 
 <script setup lang="ts">
+import {Swiper as SwiperClass} from 'swiper'
 import { Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Icon } from '@iconify/vue'
+import ChevronLeftIcon from '@iconify/icons-bx/bx-chevron-left'
+import ChevronRightIcon from '@iconify/icons-bx/bx-chevron-right'
+import { ref } from 'vue'
 
 type BrandType = {
   image: string
@@ -92,6 +103,12 @@ const brandData: BrandType[] = [
     image: '/images/clients/fastcorp-logo.webp'
   }
 ]
+
+const swiper = ref<SwiperClass | null>(null)
+
+function onSwiper(swiperInstance: SwiperClass) {
+  swiper.value = swiperInstance
+}
 </script>
 
 <style scoped lang="scss">
@@ -99,6 +116,9 @@ const brandData: BrandType[] = [
   &__heading {
     font-size: 32px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     @include mq(md) {
       text-align: center;
@@ -111,6 +131,28 @@ const brandData: BrandType[] = [
 
     @include mq(xs) {
       font-size: 22px;
+    }
+
+    &-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      button {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @include mq(sm) {
+        display: none;
+      }
     }
   }
   padding-block: 96px;
