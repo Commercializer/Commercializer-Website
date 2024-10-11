@@ -28,7 +28,35 @@
               </div>
             </div>
           </b-col>
-          <b-col lg="6" class="offset-xl-1">
+          <b-col lg="5" class="photo-gallery-container offset-lg-1">
+            <swiper
+              :effect="'coverflow'"
+              :grabCursor="true"
+              :centeredSlides="true"
+              :slidesPerView="3"
+              :initialSlide="2"
+              :coverflowEffect="{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false
+              }"
+              :pagination="true"
+              :modules="modules"
+              direction="vertical"
+              class="mySwiper"
+            >
+              <swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide
+              ><swiper-slide><img src="/images/awards/ac-1.png" /></swiper-slide>
+            </swiper>
           </b-col>
         </b-row>
       </b-container>
@@ -38,8 +66,15 @@
 </template>
 
 <script setup lang="ts">
-import logoImg from '@/assets/img/logo-large.png'
-import { featureData } from '@/views/landings/mobile-app-3/data'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules'
+
+const modules = [EffectCoverflow, Pagination]
 
 type Award = {
   title: string
@@ -167,6 +202,35 @@ h2 {
       img {
         height: 68px;
         width: auto;
+      }
+    }
+  }
+}
+
+.photo-gallery-container {
+  height: calc(100vh - 0px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+
+  .mySwiper {
+    height: 100%;
+    margin-block: auto;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      transform: scale(0.98);
+    }
+
+    &-active {
+      img {
+        transform: scale(1) !important;
       }
     }
   }
