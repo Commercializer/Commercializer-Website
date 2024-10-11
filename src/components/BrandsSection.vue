@@ -4,25 +4,29 @@
     <Swiper
       class="mx-n2"
       :modules="[Pagination]"
-      :slidesPerView="2"
+      :slidesPerView="1"
       :pagination="{
         el: '.swiper-pagination',
         clickable: true
       }"
       :breakpoints="{
         500: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 8
         },
         650: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 8
         },
         850: {
-          slidesPerView: 5,
+          slidesPerView: 4,
           spaceBetween: 8
         },
         992: {
+          slidesPerView: 5,
+          spaceBetween: 8
+        },
+        1200: {
           slidesPerView: 6,
           spaceBetween: 8
         }
@@ -31,7 +35,6 @@
       <SwiperSlide class="py-2" v-for="(brand, idx) in brandData" :key="idx">
         <a
           href="#"
-          class="px-2 mx-2"
           style="
             height: 100px;
             display: flex;
