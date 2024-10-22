@@ -6,10 +6,13 @@
     style="min-height: calc(100vh - 74px)"
   >
     <b-container style="min-height: calc(100vh - 74px)">
-      <b-row class="justify-content-center align-items-center" style="min-height: calc(100vh - 74px);">
+      <b-row
+        class="justify-content-center align-items-center"
+        style="min-height: calc(100vh - 74px)"
+      >
         <!-- Parallax gfx -->
         <b-col xl="6" lg="6" md="6" sm="8" class="col-10 offset-xl-1 order-md-2">
-          <img src="../assets/img/logo-large.png" alt="" style="width: 100%; max-width: 500px" />
+          <img src="/commercializer-logo-with-annotations.png" alt="" style="width: 100%; max-width: 600px" />
           <!-- <Parallax custom-class="parallax mx-auto" :custom-style="{ maxWidth: '556px' }">
             <div class="parallax-layer" data-depth="0.1">
               <img :src="layer1Img" alt="Bubble" />
@@ -34,7 +37,18 @@
 
         <!-- Text -->
         <b-col lg="5" md="6" class="text-center text-md-start order-md-1">
-          <h1 class="display-5 mb-lg-4">Commercializing Innovations</h1>
+          <h1
+            class="display-5 mb-lg-4"
+            style="
+              background: linear-gradient(90deg, #14b7c6 0%, #81cb30 100%);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            "
+          >
+            Commercializing Innovations
+            <!-- Transforming groundbreaking ideas br into market-leading products. -->
+          </h1>
           <p class="fs-xl pb-3 pb-lg-0 mb-2 mb-md-3 mb-lg-5">
             Transforming groundbreaking ideas into market-leading products.
           </p>

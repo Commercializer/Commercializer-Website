@@ -156,6 +156,8 @@ function onSwiper(swiperInstance: SwiperClass) {
       }
     }
   }
-  padding-block: 96px;
+  padding-top: 0px;
+  padding-bottom: 96px;
+
 }
 </style>

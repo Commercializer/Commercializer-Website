@@ -165,7 +165,7 @@ UX Design`,
     tag: 'MANAGEMENT',
     title: `Calendar Meetings & Appointments App UX Design`,
     name: 'CalendQ',
-    location: 'Doha, Quatar',
+    location: 'Doha, Qatar',
     image: '/images/case-studies/calendq.png',
     thumbnail: '/images/case-studies/calendq-thumbnail.png'
   },
