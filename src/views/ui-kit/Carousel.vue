@@ -3,7 +3,7 @@
     <UIKitPageTitle
       title="Carousel (Slider)"
       description="A slideshow component for cycling through elements (images or slides with any content) like a carousel."
-      :is-silicon-component="true"
+      :is-commercializer-component="true"
     />
 
     <!-- Info alert -->

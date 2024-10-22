@@ -9,7 +9,7 @@
             class="d-flex flex-column align-items-center justify-content-center text-center text-lg-start mb-3 mb-sm-4 mb-lg-0"
           >
             <div class="logo-with-name">
-              <img :src="logoImg" alt="Silicon" width="47" />
+              <img :src="logoImg" alt="Commercializer" width="47" />
               <p>Commercializer</p>
             </div>
             <p class="text-center mt-4" style="font-size: 20px; width: 100%; color: #fff">

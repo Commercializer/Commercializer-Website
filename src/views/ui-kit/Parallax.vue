@@ -3,8 +3,8 @@
     <!-- Page title -->
     <UIKitPageTitle
       title="Parallax"
-      description="Silicon supports 2 types of parallax effect: on page scrolling and cursor position."
-      is-silicon-component
+      description="Commercializer supports 2 types of parallax effect: on page scrolling and cursor position."
+      is-commercializer-component
     />
 
     <!-- Background image -->

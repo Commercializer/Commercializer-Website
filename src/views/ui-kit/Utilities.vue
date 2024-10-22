@@ -1,9 +1,9 @@
 <template>
   <UIKitLayout>
     <UIKitPageTitle
-      title="Silicon utilities"
-      description="Custom Silicon classes with a purpose to reduce the frequency of highly repetitive declarations."
-      is-silicon-component
+      title="Commercializer utilities"
+      description="Custom Commercializer classes with a purpose to reduce the frequency of highly repetitive declarations."
+      is-commercializer-component
     />
 
     <!-- Faded background colors -->

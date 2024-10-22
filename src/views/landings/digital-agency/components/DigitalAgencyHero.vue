@@ -36,7 +36,7 @@
                 Work with us
               </router-link>
               <p class="d-lg-block d-none mb-0 ps-md-3">
-                Silicon is a leading full-service digital agency based in New York. We make mobile
+                Commercializer is a leading full-service digital agency based in New York. We make mobile
                 apps,websites &amp; brands, that people appreciate all around the world.
               </p>
             </div>

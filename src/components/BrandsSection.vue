@@ -1,8 +1,8 @@
 <template>
-  <b-container class="brands">
+  <b-container class="brands" id="clients">
     <h2 class="brands__heading">
       <!-- Trusted and accredited by official partner network -->
-       Our Products & Services Are Trusted By
+      Our Products & Services Are Trusted By
       <div class="brands__heading-actions">
         <button @click="swiper?.slidePrev()">
           <Icon :icon="ChevronLeftIcon" class="fs-2"></Icon>
@@ -15,7 +15,10 @@
     <Swiper
       @swiper="onSwiper($event)"
       class="mx-n2"
-      :modules="[Pagination]"
+      :modules="[Pagination, Autoplay, FreeMode]"
+      :loop="true"
+      :freeMode="true"
+      :freeModeMomentum="false"
       :slidesPerView="1"
       :pagination="{
         el: '.swiper-pagination',
@@ -43,6 +46,13 @@
           spaceBetween: 8
         }
       }"
+      :speed="1500"
+      :autoplay="{
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+        waitForTransition: true,
+      }"
     >
       <SwiperSlide class="py-2" v-for="(brand, idx) in brandData" :key="idx">
         <a
@@ -54,7 +64,7 @@
             class="d-block mx-auto my-2"
             width="155"
             alt="Brand"
-            style="width: 96px; height: auto"
+            :style="{ width: 'auto', height: `${brand.height}px` }"
           />
         </a>
       </SwiperSlide>
@@ -66,8 +76,8 @@
 </template>
 
 <script setup lang="ts">
-import {Swiper as SwiperClass} from 'swiper'
-import { Pagination } from 'swiper/modules'
+import { Swiper as SwiperClass } from 'swiper'
+import { Pagination, Autoplay, FreeMode } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Icon } from '@iconify/vue'
 import ChevronLeftIcon from '@iconify/icons-bx/bx-chevron-left'
@@ -76,33 +86,55 @@ import { ref } from 'vue'
 
 type BrandType = {
   image: string
+  height: number
 }
 
 const brandData: BrandType[] = [
   {
-    image: '/images/clients/mastercard-logo.webp'
+    image: '/images/clients/mastercard-logo.webp',
+    height: 38.825
   },
   {
-    image: '/images/clients/JAT-logo.webp'
+    image: '/images/clients/JAT-logo.webp',
+    height: 38.825
   },
   {
-    image: '/images/clients/amana-logo.webp'
+    image: '/images/clients/amana-logo.webp',
+    height: 38.825
   },
   {
-    image: '/images/clients/NCINGA-logo.webp'
+    image: '/images/clients/qatar-esports-new.png',
+    height: 58.825
   },
   {
-    image: '/images/clients/hatch-logo.webp'
+    image: '/images/clients/NCINGA-logo.webp',
+    height: 48.825
+  },
+  { image: '/images/clients/firstcapital.png', height: 60.825 },
+  { image: '/images/clients/hayleys.png', height: 60.825 },
+  { image: '/images/clients/arivpay.png', height: 60.825 },
+  { image: '/images/clients/anybanq.png', height: 60.825 },
+  {
+    image: '/images/clients/hatch-logo.webp',
+    height: 38.825
+  },
+  { image: '/images/clients/361.png', height: 75.825 },
+  { image: '/images/clients/premier-fintech.png', height: 45.825 },
+
+  {
+    image: '/images/clients/Ex-pack-logo.webp',
+    height: 58.825
   },
   {
-    image: '/images/clients/Ex-pack-logo.webp'
+    image: '/images/clients/payable-logo.webp',
+    height: 44.825
   },
+  { image: '/images/clients/ukiyo.png', height: 38.825 },
   {
-    image: '/images/clients/payable-logo.webp'
+    image: '/images/clients/fastcorp-logo.webp',
+    height: 44.825
   },
-  {
-    image: '/images/clients/fastcorp-logo.webp'
-  }
+  { image: '/images/clients/wilddrift.png', height: 80.825 }
 ]
 
 const swiper = ref<SwiperClass | null>(null)
@@ -158,6 +190,12 @@ function onSwiper(swiperInstance: SwiperClass) {
   }
   padding-top: 0px;
   padding-bottom: 96px;
+}
 
+.swiper-container-free-mode > .swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  margin: 0 auto;
 }
 </style>

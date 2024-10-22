@@ -3,7 +3,7 @@
     <UIKitPageTitle
       title="Testimonials / reviews"
       description="Component is designed to showcase testimonials from satisfied clients or reviews of the products on your website."
-      is-silicon-component
+      is-commercializer-component
     />
 
     <!-- &lt;!&ndash; Quotation &ndash;&gt; -->

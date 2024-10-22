@@ -5,8 +5,8 @@
       <b-row class="pb-5">
         <b-col lg="4" md="6">
           <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-            <img :src="logo" width="47" alt="Silicon" />
-            Silicon
+            <img :src="logo" width="47" alt="Commercializer" />
+            Commercializer
           </div>
           <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">
             Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit. Lacus, eget

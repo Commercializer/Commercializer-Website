@@ -5,8 +5,8 @@
         <b-col lg="5" xl="4" class="mb-4 mb-md-5 mb-lg-0">
           <div class="d-flex align-items-center pb-3 mb-1">
             <div class="navbar-brand text-dark p-0 pe-1 me-0">
-              <img :src="logoImg" width="47" alt="Silicon" />
-              Silicon
+              <img :src="logoImg" width="47" alt="Commercializer" />
+              Commercializer
             </div>
             <hr class="vr mt-2 mx-3" style="height: 26px" />
             <div class="text-white fw-semibold ps-1">Banking made easy.</div>
@@ -103,7 +103,7 @@
       >
         <ul class="nav order-md-2 ms-n3 ms-md-0 mb-3 mb-md-0">
           <li class="nav-item">
-            <a href="#" class="nav-link fs-sm fw-medium">Terms and conditions</a>
+            <a href="/terms-of-use" class="nav-link fs-sm fw-medium">Terms and conditions</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link fs-sm fw-medium">Privacy policy</a>
@@ -202,7 +202,7 @@ const footerLinks: FooterLinkType[] = [
     title: 'Resources',
     children: [
       {
-        title: 'About Silicon',
+        title: 'About Commercializer',
         link: { name: '' }
       },
       {
@@ -222,7 +222,7 @@ const footerLinks: FooterLinkType[] = [
         link: { name: '' }
       },
       {
-        title: 'Careers at Silicon',
+        title: 'Careers at Commercializer',
         link: { name: '' }
       }
     ]

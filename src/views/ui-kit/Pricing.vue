@@ -3,7 +3,7 @@
     <UIKitPageTitle
       title="Pricing"
       description="Quickly build pricing plans for subscription based pricing model."
-      :is-silicon-component="true"
+      :is-commercializer-component="true"
     />
 
     <!-- Cards: Style 1 -->

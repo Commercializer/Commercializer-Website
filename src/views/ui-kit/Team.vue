@@ -3,7 +3,7 @@
     <UIKitPageTitle
       title="Team"
       description="Component designed to showcase team members. Comes in different styles."
-      :is-silicon-component="true"
+      :is-commercializer-component="true"
     />
 
     <!-- Style 1 -->

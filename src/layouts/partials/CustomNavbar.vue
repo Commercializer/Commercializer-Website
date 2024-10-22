@@ -9,8 +9,8 @@
           :to="{ name: 'ui.typography' }"
           class="navbar-brand flex-shrink-0 py-1 py-lg-2"
         >
-          <img src="@/assets/img/logo.png" width="47" alt="Silicon" />
-          Silicon
+          <img src="@/assets/img/logo.png" width="47" alt="Commercializer" />
+          Commercializer
         </router-link>
         <span class="badge bg-warning">UI Kit</span>
       </div>
@@ -39,7 +39,7 @@
           <ThemeChanger />
         </div>
         <a
-          href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/"
+          href="https://themes.getbootstrap.com/product/commercializer-business-technology-template-ui-kit/"
           class="btn btn-primary btn-sm fs-sm rounded ms-4 d-none d-lg-inline-flex"
           target="_blank"
           rel="noopener"

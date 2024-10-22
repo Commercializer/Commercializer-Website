@@ -12,10 +12,10 @@
       <b-row class="gallery g-4" data-video="true" data-thumbnails="true">
         <b-col md="5">
           <b-link href="https://www.youtube.com/watch?v=zPo5ZaH6sW8" class="gallery-item video-item is-hovered rounded-3"
-            data-sub-html='<h6 class="fs-sm text-light">Silicon Inc. Showreel by Marvin McKinney</h6>'>
+            data-sub-html='<h6 class="fs-sm text-light">Commercializer Inc. Showreel by Marvin McKinney</h6>'>
             <img src="@/assets/img/about/gallery/01.jpg" alt="Gallery thumbnail" />
             <div class="gallery-item-caption p-4">
-              <h4 class="text-light mb-1">Silicon Inc.</h4>
+              <h4 class="text-light mb-1">Commercializer Inc.</h4>
               <p class="mb-0">Showreel by Marvin McKinney</p>
             </div>
           </b-link>

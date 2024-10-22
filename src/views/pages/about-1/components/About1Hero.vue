@@ -26,7 +26,7 @@
           </b-nav>
 
           <!-- Text -->
-          <h1 class="pb-2 pb-md-3">About Silicon</h1>
+          <h1 class="pb-2 pb-md-3">About Commercializer</h1>
           <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px">
             We are a dedicated team of passionate product managers, full stack developers, UX/UI
             designers, QA engineers and marketing experts helping businesses of every size — from

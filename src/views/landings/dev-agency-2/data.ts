@@ -76,7 +76,7 @@ export const clientReviewData: ReviewType[] = [
     user: userData[0]
   },
   {
-    title: 'Efficient and Innovative: Our Experience with Silicon.',
+    title: 'Efficient and Innovative: Our Experience with Commercializer.',
     description:
       'Vero minima sequi adipisci architecto dolorum, error animi delectus dicta perferendis! A, exercitationem soluta quam reprehenderit rem animi amet eligendi voluptates consequatur ipsam pariatur necessitatibus laboriosam in illo eos molestias ex explicabo eaque assumenda voluptatibus ducimus consectetur perferendis! Architecto molestias, rerum reprehenderit amet sunt natus fuga blanditiis suscipit.',
     rating: 4,

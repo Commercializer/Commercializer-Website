@@ -13,7 +13,7 @@
             href="#"
             class="d-inline-flex align-items-center fs-sm fw-semibold text-decoration-none border border-primary border-opacity-50 rounded-pill py-1 px-3"
           >
-            <span class="text-gradient-primary lh-lg">New Silicon v2.0</span>
+            <span class="text-gradient-primary lh-lg">New Commercializer v2.0</span>
             <Icon
               :icon="RightArrowAltIcon"
               class="bx text-gradient-primary fs-lg ms-2 me-n1"

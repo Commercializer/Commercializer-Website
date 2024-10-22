@@ -3,7 +3,7 @@
     <b-row class="align-items-center mb-xl-5 mb-4">
       <!-- Text -->
       <b-col md="6" xl="5" class="text-center text-md-start mb-5 mb-md-0">
-        <h2 class="h1 pb-2 pb-lg-3">Explore Opportunities with Silicon App</h2>
+        <h2 class="h1 pb-2 pb-lg-3">Explore Opportunities with Commercializer App</h2>
         <p class="pb-2 mb-4 mb-lg-5">
           In blandit luctus proin mauris a commodo, dolor diam tempus, aenean magna fusce eu. Id
           porttitor aliquam eget aliquet sagittis eu aut diam ut phasellus sed convallis iaculis

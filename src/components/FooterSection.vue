@@ -9,8 +9,7 @@
         <b-col lg="5" xl="4" class="mb-4 mb-md-5 mb-lg-0">
           <div class="d-flex align-items-center pb-3 mb-1">
             <div class="footer-brand p-0 pe-1 me-0">
-              <img :src="logoImg" width="47" alt="Silicon" />
-              Commercializer
+              <img src="/commercializer-logo.svg" width="220" alt="Commercializer Logo" />
             </div>
           </div>
           <p class="text-body pb-1 pb-md-2 pb-lg-3 mb-3 footer-paragraph">
@@ -131,9 +130,9 @@
                   Contact Us
                 </p>
                 <a
-                  href="mailto:contact@commercializer.global"
+                  href="mailto:sales@commercializer.global"
                   style="color: #6ac457; font-size: 18px; text-decoration: none"
-                  >contact@commercializer.global</a
+                  >sales@commercializer.global</a
                 >
                 <div
                   class="subscription-status position-absolute top-100 start-50 translate-middle-x"
@@ -148,10 +147,10 @@
       >
         <ul class="nav order-md-2 ms-n3 ms-md-0 mb-3 mb-md-0">
           <li class="nav-item">
-            <a href="#" class="nav-link fs-sm fw-medium">Terms and conditions</a>
+            <a href="/terms-of-use" class="nav-link fs-sm fw-medium">Terms and conditions</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link fs-sm fw-medium">Privacy policy</a>
+            <a href="/privacy-policy" class="nav-link fs-sm fw-medium">Privacy policy</a>
           </li>
         </ul>
         <p class="nav d-block fs-sm mb-0 order-md-1">
@@ -223,15 +222,23 @@ const footerLinks: FooterLinkType[] = [
     ]
   },
   {
-    title: 'Company',
+    title: 'Products',
     children: [
       // {
       //   title: 'Portfolio',
       //   link: { name: '' }
       // },
       {
-        title: 'Products',
-        href: '#products'
+        title: 'Commercial Prime',
+        href: '#commercial-prime'
+      },
+      {
+        title: 'Billable',
+        href: '#commercial-prime'
+      },
+      {
+        title:'Agreementor',
+        href: '#commercial-prime'
       }
       // {
       //   title: 'Services',

@@ -1,9 +1,11 @@
+import path from 'path'
+
 const authRoutes = [
   {
     path: '/sign-in',
     name: 'account.sign-in',
     meta: {
-      title: 'Account - Sign In | Silicon'
+      title: 'Account - Sign In | Commercializer'
     },
     component: () => import('@/views/account/sign-in/index.vue')
   },
@@ -11,7 +13,7 @@ const authRoutes = [
     path: '/sign-up',
     name: 'account.sign-up',
     meta: {
-      title: 'Account - Sign Up | Silicon'
+      title: 'Account - Sign Up | Commercializer'
     },
     component: () => import('@/views/account/sign-up/index.vue')
   }
@@ -22,7 +24,7 @@ const errorPageRoutes = [
     path: '/error-404-1',
     name: 'pages.error-404-1',
     meta: {
-      title: '404 Not Found v1 | Silicon'
+      title: '404 Not Found v1 | Commercializer'
     },
     component: () => import('@/views/pages/error-404-1/index.vue')
   },
@@ -30,7 +32,7 @@ const errorPageRoutes = [
     path: '/error-404-2',
     name: 'pages.error-404-2',
     meta: {
-      title: '404 Not Found v2 | Silicon'
+      title: '404 Not Found v2 | Commercializer'
     },
     component: () => import('@/views/pages/error-404-2/index.vue')
   },
@@ -45,7 +47,7 @@ const landingRoute = [
     path: '',
     name: 'home-page',
     meta: {
-      title: 'Commercializer - Commercializing Innovations',
+      title: 'Commercializer - Commercializing Innovations'
     },
     component: () => import('@/views/HomePage.vue')
   },
@@ -53,7 +55,7 @@ const landingRoute = [
     path: '/about',
     name: 'about-page',
     meta: {
-      title: 'About Us - Commercializer',
+      title: 'About Us - Commercializer'
     },
     component: () => import('@/views/AboutPage.vue')
   },
@@ -61,10 +63,28 @@ const landingRoute = [
     path: '/landing',
     name: 'landing',
     meta: {
-      title: 'Silicon | Multipurpose Business / Technology Template | Silicon',
+      title: 'Commercializer | Multipurpose Business / Technology Template | Commercializer',
       authRequired: false
     },
     component: () => import('@/views/landing/index.vue')
+  },
+  {
+    path: '/privacy-policy',
+    name: 'privacy-policy',
+    meta: {
+      title: 'Privacy Policy | Commercializer',
+      authRequired: false
+    },
+    component: () => import('../views/PrivacyPolicyPage.vue')
+  },
+  {
+    path: '/terms-of-use',
+    name: 'terms-of-use',
+    meta: {
+      title: 'Terms of Use | Commercializer',
+      authRequired: false
+    },
+    component: () => import('../views/TermsOfUsePage.vue')
   }
 ]
 
@@ -78,7 +98,7 @@ const landingsRoutes = [
         path: '/mobile-app-1',
         name: 'landings.mobile-app-1',
         meta: {
-          title: 'Mobile App Showcase Landing v.1 | Silicon'
+          title: 'Mobile App Showcase Landing v.1 | Commercializer'
         },
         component: () => import('@/views/landings/mobile-app-1/index.vue')
       },
@@ -86,7 +106,7 @@ const landingsRoutes = [
         path: '/mobile-app-2',
         name: 'landings.mobile-app-2',
         meta: {
-          title: 'Mobile App Showcase Landing v.2 | Silicon'
+          title: 'Mobile App Showcase Landing v.2 | Commercializer'
         },
         component: () => import('@/views/landings/mobile-app-2/index.vue')
       },
@@ -94,7 +114,7 @@ const landingsRoutes = [
         path: '/mobile-app-3',
         name: 'landings.mobile-app-3',
         meta: {
-          title: 'Mobile App Showcase Landing v.3 | Silicon'
+          title: 'Mobile App Showcase Landing v.3 | Commercializer'
         },
         component: () => import('@/views/landings/mobile-app-3/index.vue')
       },
@@ -102,7 +122,7 @@ const landingsRoutes = [
         path: '/product',
         name: 'landings.product',
         meta: {
-          title: 'Product Landing | Silicon'
+          title: 'Product Landing | Commercializer'
         },
         component: () => import('@/views/landings/product/index.vue')
       },
@@ -110,7 +130,7 @@ const landingsRoutes = [
         path: '/saas-1',
         name: 'landings.saas-1',
         meta: {
-          title: 'SaaS Landing v.1 | Silicon'
+          title: 'SaaS Landing v.1 | Commercializer'
         },
         component: () => import('@/views/landings/saas-1/index.vue')
       },
@@ -118,7 +138,7 @@ const landingsRoutes = [
         path: '/saas-2',
         name: 'landings.saas-2',
         meta: {
-          title: 'SaaS Landing v.2 | Silicon'
+          title: 'SaaS Landing v.2 | Commercializer'
         },
         component: () => import('@/views/landings/saas-2/index.vue')
       },
@@ -126,7 +146,7 @@ const landingsRoutes = [
         path: '/saas-3',
         name: 'landings.saas-3',
         meta: {
-          title: 'SaaS Landing v.3 | Silicon'
+          title: 'SaaS Landing v.3 | Commercializer'
         },
         component: () => import('@/views/landings/saas-3/index.vue')
       },
@@ -134,7 +154,7 @@ const landingsRoutes = [
         path: '/saas-4',
         name: 'landings.saas-4',
         meta: {
-          title: 'SaaS Landing v.4 | Silicon'
+          title: 'SaaS Landing v.4 | Commercializer'
         },
         component: () => import('@/views/landings/saas-4/index.vue')
       },
@@ -142,7 +162,7 @@ const landingsRoutes = [
         path: '/saas-5',
         name: 'landings.saas-5',
         meta: {
-          title: 'SaaS Landing v.5 | Silicon'
+          title: 'SaaS Landing v.5 | Commercializer'
         },
         component: () => import('@/views/landings/saas-5/index.vue')
       },
@@ -150,7 +170,7 @@ const landingsRoutes = [
         path: '/startup',
         name: 'landings.startup',
         meta: {
-          title: 'Startup Landing | Silicon'
+          title: 'Startup Landing | Commercializer'
         },
         component: () => import('@/views/landings/startup/index.vue')
       },
@@ -158,7 +178,7 @@ const landingsRoutes = [
         path: '/financial',
         name: 'landings.financial',
         meta: {
-          title: 'Financial Consulting Landing | Silicon'
+          title: 'Financial Consulting Landing | Commercializer'
         },
         component: () => import('@/views/landings/financial/index.vue')
       },
@@ -166,7 +186,7 @@ const landingsRoutes = [
         path: '/online-course',
         name: 'landings.online-course',
         meta: {
-          title: 'Online Courses Landing | Silicon'
+          title: 'Online Courses Landing | Commercializer'
         },
         component: () => import('@/views/landings/online-course/index.vue')
       },
@@ -174,7 +194,7 @@ const landingsRoutes = [
         path: '/medical',
         name: 'landings.medical',
         meta: {
-          title: 'Medical Landing | Silicon'
+          title: 'Medical Landing | Commercializer'
         },
         component: () => import('@/views/landings/medical/index.vue')
       },
@@ -182,7 +202,7 @@ const landingsRoutes = [
         path: '/software-dev-agency-1',
         name: 'landings.dev-agency-1',
         meta: {
-          title: 'Software Dev Agency Landing v.1 | Silicon'
+          title: 'Software Dev Agency Landing v.1 | Commercializer'
         },
         component: () => import('@/views/landings/dev-agency-1/index.vue')
       },
@@ -190,7 +210,7 @@ const landingsRoutes = [
         path: '/software-dev-agency-2',
         name: 'landings.dev-agency-2',
         meta: {
-          title: 'Software Dev Agency Landing v.2 | Silicon'
+          title: 'Software Dev Agency Landing v.2 | Commercializer'
         },
         component: () => import('@/views/landings/dev-agency-2/index.vue')
       },
@@ -198,7 +218,7 @@ const landingsRoutes = [
         path: '/software-dev-agency-3',
         name: 'landings.dev-agency-3',
         meta: {
-          title: 'Software Dev Agency Landing v.3 | Silicon'
+          title: 'Software Dev Agency Landing v.3 | Commercializer'
         },
         component: () => import('@/views/landings/dev-agency-3/index.vue')
       },
@@ -206,7 +226,7 @@ const landingsRoutes = [
         path: '/conference',
         name: 'landings.conference',
         meta: {
-          title: 'Conference Landing | Silicon'
+          title: 'Conference Landing | Commercializer'
         },
         component: () => import('@/views/landings/conference/index.vue')
       },
@@ -214,7 +234,7 @@ const landingsRoutes = [
         path: '/digital-agency',
         name: 'landings.digital-agency',
         meta: {
-          title: 'Digital Agency Landing | Silicon'
+          title: 'Digital Agency Landing | Commercializer'
         },
         component: () => import('@/views/landings/digital-agency/index.vue')
       },
@@ -222,7 +242,7 @@ const landingsRoutes = [
         path: '/blog',
         name: 'landings.blog',
         meta: {
-          title: 'Blog Homepage | Silicon'
+          title: 'Blog Homepage | Commercializer'
         },
         component: () => import('@/views/landings/blog/index.vue')
       }
@@ -240,7 +260,7 @@ const pagesRoutes = [
         path: 'about-1',
         name: 'pages.about-1',
         meta: {
-          title: 'About v.1 | Silicon'
+          title: 'About v.1 | Commercializer'
         },
         component: () => import('@/views/pages/about-1/index.vue')
       },
@@ -248,7 +268,7 @@ const pagesRoutes = [
         path: 'about-2',
         name: 'pages.about-2',
         meta: {
-          title: 'About v.2 | Silicon'
+          title: 'About v.2 | Commercializer'
         },
         component: () => import('@/views/pages/about-2/index.vue')
       },
@@ -256,7 +276,7 @@ const pagesRoutes = [
         path: 'about-3',
         name: 'pages.about-3',
         meta: {
-          title: 'About v.3 | Silicon'
+          title: 'About v.3 | Commercializer'
         },
         component: () => import('@/views/pages/about-3/index.vue')
       },
@@ -264,7 +284,7 @@ const pagesRoutes = [
         path: 'list-view-with-sidebar',
         name: 'pages.list-view-with-sidebar',
         meta: {
-          title: 'Blog List With Sidebar | Silicon'
+          title: 'Blog List With Sidebar | Commercializer'
         },
         component: () => import('@/views/pages/list-view-with-sidebar/index.vue')
       },
@@ -272,7 +292,7 @@ const pagesRoutes = [
         path: 'grid-view-with-sidebar',
         name: 'pages.grid-view-with-sidebar',
         meta: {
-          title: 'Blog Grid With Sidebar | Silicon'
+          title: 'Blog Grid With Sidebar | Commercializer'
         },
         component: () => import('@/views/pages/grid-view-with-sidebar/index.vue')
       },
@@ -280,7 +300,7 @@ const pagesRoutes = [
         path: 'list-view-no-sidebar',
         name: 'pages.list-view-no-sidebar',
         meta: {
-          title: 'Blog List With No Sidebar | Silicon'
+          title: 'Blog List With No Sidebar | Commercializer'
         },
         component: () => import('@/views/pages/list-view-no-sidebar/index.vue')
       },
@@ -288,7 +308,7 @@ const pagesRoutes = [
         path: 'grid-view-no-sidebar',
         name: 'pages.grid-view-no-sidebar',
         meta: {
-          title: 'Blog Grid With No Sidebar | Silicon'
+          title: 'Blog Grid With No Sidebar | Commercializer'
         },
         component: () => import('@/views/pages/grid-view-no-sidebar/index.vue')
       },
@@ -296,7 +316,7 @@ const pagesRoutes = [
         path: 'simple-feed',
         name: 'pages.simple-feed',
         meta: {
-          title: 'Blog Simple Feed | Silicon'
+          title: 'Blog Simple Feed | Commercializer'
         },
         component: () => import('@/views/pages/simple-feed/index.vue')
       },
@@ -304,7 +324,7 @@ const pagesRoutes = [
         path: 'single-post',
         name: 'pages.single-post',
         meta: {
-          title: 'Blog Simple Post | Silicon'
+          title: 'Blog Simple Post | Commercializer'
         },
         component: () => import('@/views/pages/single-post/index.vue')
       },
@@ -312,7 +332,7 @@ const pagesRoutes = [
         path: 'podcast',
         name: 'pages.podcast',
         meta: {
-          title: 'Blog Single Podcast | Silicon'
+          title: 'Blog Single Podcast | Commercializer'
         },
         component: () => import('@/views/pages/podcast/index.vue')
       },
@@ -320,7 +340,7 @@ const pagesRoutes = [
         path: 'grid-view',
         name: 'pages.grid-view',
         meta: {
-          title: 'Portfolio Grid View | Silicon'
+          title: 'Portfolio Grid View | Commercializer'
         },
         component: () => import('@/views/pages/grid-view/index.vue')
       },
@@ -328,7 +348,7 @@ const pagesRoutes = [
         path: 'list-view',
         name: 'pages.list-view',
         meta: {
-          title: 'Portfolio List View | Silicon'
+          title: 'Portfolio List View | Commercializer'
         },
         component: () => import('@/views/pages/list-view/index.vue')
       },
@@ -336,7 +356,7 @@ const pagesRoutes = [
         path: 'slider',
         name: 'pages.slider',
         meta: {
-          title: 'Portfolio Slider View | Silicon'
+          title: 'Portfolio Slider View | Commercializer'
         },
         component: () => import('@/views/pages/slider/index.vue')
       },
@@ -344,7 +364,7 @@ const pagesRoutes = [
         path: 'courses',
         name: 'pages.courses',
         meta: {
-          title: 'Courses | Silicon'
+          title: 'Courses | Commercializer'
         },
         component: () => import('@/views/pages/courses/index.vue')
       },
@@ -352,7 +372,7 @@ const pagesRoutes = [
         path: 'single-project',
         name: 'pages.single-project',
         meta: {
-          title: 'Portfolio Single Project | Silicon'
+          title: 'Portfolio Single Project | Commercializer'
         },
         component: () => import('@/views/pages/single-project/index.vue')
       },
@@ -360,7 +380,7 @@ const pagesRoutes = [
         path: 'single-course',
         name: 'pages.single-course',
         meta: {
-          title: 'Single Course | Silicon'
+          title: 'Single Course | Commercializer'
         },
         component: () => import('@/views/pages/single-course/index.vue')
       },
@@ -368,7 +388,7 @@ const pagesRoutes = [
         path: 'services-1',
         name: 'pages.services-1',
         meta: {
-          title: 'Services v.1 | Silicon'
+          title: 'Services v.1 | Commercializer'
         },
         component: () => import('@/views/pages/services-1/index.vue')
       },
@@ -376,7 +396,7 @@ const pagesRoutes = [
         path: 'services-2',
         name: 'pages.services-2',
         meta: {
-          title: 'Services v.2  | Silicon'
+          title: 'Services v.2  | Commercializer'
         },
         component: () => import('@/views/pages/services-2/index.vue')
       },
@@ -384,7 +404,7 @@ const pagesRoutes = [
         path: 'services-single-1',
         name: 'pages.services-single-1',
         meta: {
-          title: 'Service Details v.1 | Silicon'
+          title: 'Service Details v.1 | Commercializer'
         },
         component: () => import('@/views/pages/services-single-1/index.vue')
       },
@@ -392,7 +412,7 @@ const pagesRoutes = [
         path: 'services-single-2',
         name: 'pages.services-single-2',
         meta: {
-          title: 'Service Details v.2 | Silicon'
+          title: 'Service Details v.2 | Commercializer'
         },
         component: () => import('@/views/pages/services-single-2/index.vue')
       },
@@ -400,7 +420,7 @@ const pagesRoutes = [
         path: 'pricing',
         name: 'pages.pricing',
         meta: {
-          title: 'Pricing | Silicon'
+          title: 'Pricing | Commercializer'
         },
         component: () => import('@/views/pages/pricing/index.vue')
       },
@@ -408,7 +428,7 @@ const pagesRoutes = [
         path: 'contacts-1',
         name: 'pages.contacts-1',
         meta: {
-          title: 'Contacts v.1 | Silicon'
+          title: 'Contacts v.1 | Commercializer'
         },
         component: () => import('@/views/pages/contacts-1/index.vue')
       },
@@ -416,7 +436,7 @@ const pagesRoutes = [
         path: 'contacts-2',
         name: 'pages.contacts-2',
         meta: {
-          title: 'Contacts v.2 | Silicon'
+          title: 'Contacts v.2 | Commercializer'
         },
         component: () => import('@/views/pages/contacts-2/index.vue')
       },
@@ -424,7 +444,7 @@ const pagesRoutes = [
         path: 'contacts-3',
         name: 'pages.contacts-3',
         meta: {
-          title: 'Contacts v.3 | Silicon'
+          title: 'Contacts v.3 | Commercializer'
         },
         component: () => import('@/views/pages/contacts-3/index.vue')
       }
@@ -442,7 +462,7 @@ const accountRoutes = [
         path: 'details',
         name: 'account.details',
         meta: {
-          title: 'Account - Details | Silicon'
+          title: 'Account - Details | Commercializer'
         },
         component: () => import('@/views/account/details/index.vue')
       },
@@ -450,7 +470,7 @@ const accountRoutes = [
         path: 'security',
         name: 'account.security',
         meta: {
-          title: 'Account - Security | Silicon'
+          title: 'Account - Security | Commercializer'
         },
         component: () => import('@/views/account/security/index.vue')
       },
@@ -458,7 +478,7 @@ const accountRoutes = [
         path: 'notifications',
         name: 'account.notifications',
         meta: {
-          title: 'Account - Notification | Silicon'
+          title: 'Account - Notification | Commercializer'
         },
         component: () => import('@/views/account/notifications/index.vue')
       },
@@ -466,7 +486,7 @@ const accountRoutes = [
         path: 'messages',
         name: 'account.messages',
         meta: {
-          title: 'Account - Message | Silicon'
+          title: 'Account - Message | Commercializer'
         },
         component: () => import('@/views/account/messages/index.vue')
       },
@@ -474,7 +494,7 @@ const accountRoutes = [
         path: 'saved-items',
         name: 'account.saved-items',
         meta: {
-          title: 'Account - Saved Items | Silicon'
+          title: 'Account - Saved Items | Commercializer'
         },
         component: () => import('@/views/account/saved-items/index.vue')
       },
@@ -482,7 +502,7 @@ const accountRoutes = [
         path: 'collections',
         name: 'account.collections',
         meta: {
-          title: 'Account - Collections | Silicon'
+          title: 'Account - Collections | Commercializer'
         },
         component: () => import('@/views/account/collections/index.vue')
       },
@@ -490,7 +510,7 @@ const accountRoutes = [
         path: 'payment',
         name: 'account.payment',
         meta: {
-          title: 'Account - Payment | Silicon'
+          title: 'Account - Payment | Commercializer'
         },
         component: () => import('@/views/account/payment/index.vue')
       }
@@ -508,7 +528,7 @@ const uiRoutes = [
         path: 'typography',
         name: 'ui.typography',
         meta: {
-          title: 'Typography | Silicon UI Kit'
+          title: 'Typography | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Typography.vue')
       },
@@ -516,7 +536,7 @@ const uiRoutes = [
         path: 'code',
         name: 'ui.code',
         meta: {
-          title: 'Code | Silicon UI Kit'
+          title: 'Code | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Code.vue')
       },
@@ -524,7 +544,7 @@ const uiRoutes = [
         path: 'images',
         name: 'ui.images',
         meta: {
-          title: 'Images | Silicon UI Kit'
+          title: 'Images | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Images.vue')
       },
@@ -532,7 +552,7 @@ const uiRoutes = [
         path: 'tables',
         name: 'ui.tables',
         meta: {
-          title: 'Tables | Silicon UI Kit'
+          title: 'Tables | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Tables.vue')
       },
@@ -540,7 +560,7 @@ const uiRoutes = [
         path: 'accordion',
         name: 'ui.accordion',
         meta: {
-          title: 'Accordion | Silicon UI Kit'
+          title: 'Accordion | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Accordion.vue')
       },
@@ -548,7 +568,7 @@ const uiRoutes = [
         path: 'alerts',
         name: 'ui.alerts',
         meta: {
-          title: 'Alerts | Silicon UI Kit'
+          title: 'Alerts | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Alerts.vue')
       },
@@ -556,7 +576,7 @@ const uiRoutes = [
         path: 'audio-player',
         name: 'ui.audio-player',
         meta: {
-          title: 'AudioPlayer | Silicon UI Kit'
+          title: 'AudioPlayer | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/AudioPlayer.vue')
       },
@@ -564,7 +584,7 @@ const uiRoutes = [
         path: 'badges',
         name: 'ui.badges',
         meta: {
-          title: 'Badges | Silicon UI Kit'
+          title: 'Badges | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Badges.vue')
       },
@@ -572,7 +592,7 @@ const uiRoutes = [
         path: 'blog-components',
         name: 'ui.blog-components',
         meta: {
-          title: 'Blog Components | Silicon UI Kit'
+          title: 'Blog Components | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/BlogComponents.vue')
       },
@@ -580,7 +600,7 @@ const uiRoutes = [
         path: 'breadcrumb',
         name: 'ui.breadcrumb',
         meta: {
-          title: 'Breadcrumb | Silicon UI Kit'
+          title: 'Breadcrumb | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Breadcrumb.vue')
       },
@@ -588,7 +608,7 @@ const uiRoutes = [
         path: 'buttons',
         name: 'ui.buttons',
         meta: {
-          title: 'Buttons | Silicon UI Kit'
+          title: 'Buttons | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Buttons.vue')
       },
@@ -596,7 +616,7 @@ const uiRoutes = [
         path: 'buttons-group',
         name: 'ui.buttons-group',
         meta: {
-          title: 'ButtonGroup | Silicon UI Kit'
+          title: 'ButtonGroup | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/ButtonGroup.vue')
       },
@@ -604,7 +624,7 @@ const uiRoutes = [
         path: 'card',
         name: 'ui.card',
         meta: {
-          title: 'Card | Silicon UI Kit'
+          title: 'Card | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Card.vue')
       },
@@ -612,7 +632,7 @@ const uiRoutes = [
         path: 'carousel',
         name: 'ui.carousel',
         meta: {
-          title: 'Carousel | Silicon UI Kit'
+          title: 'Carousel | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Carousel.vue')
       },
@@ -620,7 +640,7 @@ const uiRoutes = [
         path: 'collapse',
         name: 'ui.collapse',
         meta: {
-          title: 'Collapse | Silicon UI Kit'
+          title: 'Collapse | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Collapse.vue')
       },
@@ -628,7 +648,7 @@ const uiRoutes = [
         path: 'dropdowns',
         name: 'ui.dropdowns',
         meta: {
-          title: 'Dropdowns | Silicon UI Kit'
+          title: 'Dropdowns | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Dropdowns.vue')
       },
@@ -636,7 +656,7 @@ const uiRoutes = [
         path: 'forms',
         name: 'ui.forms',
         meta: {
-          title: 'Forms | Silicon UI Kit'
+          title: 'Forms | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Forms.vue')
       },
@@ -644,7 +664,7 @@ const uiRoutes = [
         path: 'gallery',
         name: 'ui.gallery',
         meta: {
-          title: 'Gallery | Silicon UI Kit'
+          title: 'Gallery | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Gallery.vue')
       },
@@ -652,7 +672,7 @@ const uiRoutes = [
         path: 'image-comparison-slider',
         name: 'ui.image-comparison-slider',
         meta: {
-          title: 'Image Comparison Slider | Silicon UI Kit'
+          title: 'Image Comparison Slider | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/ImageComparisonSlider.vue')
       },
@@ -660,7 +680,7 @@ const uiRoutes = [
         path: 'input-group',
         name: 'ui.input-group',
         meta: {
-          title: 'InputGroup | Silicon UI Kit'
+          title: 'InputGroup | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/InputGroup.vue')
       },
@@ -668,7 +688,7 @@ const uiRoutes = [
         path: 'list-group',
         name: 'ui.list-group',
         meta: {
-          title: 'ListGroup | Silicon UI Kit'
+          title: 'ListGroup | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/ListGroup.vue')
       },
@@ -676,7 +696,7 @@ const uiRoutes = [
         path: 'modal',
         name: 'ui.modal',
         meta: {
-          title: 'Modal | Silicon UI Kit'
+          title: 'Modal | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Modal.vue')
       },
@@ -684,7 +704,7 @@ const uiRoutes = [
         path: 'navbar',
         name: 'ui.navbar',
         meta: {
-          title: 'Navbar | Silicon UI Kit'
+          title: 'Navbar | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Navbar.vue')
       },
@@ -692,7 +712,7 @@ const uiRoutes = [
         path: 'offcanvas',
         name: 'ui.offcanvas',
         meta: {
-          title: 'Offcanvas | Silicon UI Kit'
+          title: 'Offcanvas | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Offcanvas.vue')
       },
@@ -700,7 +720,7 @@ const uiRoutes = [
         path: 'pagination',
         name: 'ui.pagination',
         meta: {
-          title: 'Pagination | Silicon UI Kit'
+          title: 'Pagination | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Pagination.vue')
       },
@@ -708,7 +728,7 @@ const uiRoutes = [
         path: 'parallax',
         name: 'ui.parallax',
         meta: {
-          title: 'Parallax | Silicon UI Kit'
+          title: 'Parallax | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Parallax.vue')
       },
@@ -716,7 +736,7 @@ const uiRoutes = [
         path: 'pills',
         name: 'ui.pills',
         meta: {
-          title: 'Pills | Silicon UI Kit'
+          title: 'Pills | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Pills.vue')
       },
@@ -724,7 +744,7 @@ const uiRoutes = [
         path: 'placeholders',
         name: 'ui.placeholders',
         meta: {
-          title: 'Placeholders | Silicon UI Kit'
+          title: 'Placeholders | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Placeholders.vue')
       },
@@ -732,7 +752,7 @@ const uiRoutes = [
         path: 'popovers',
         name: 'ui.popovers',
         meta: {
-          title: 'Popovers | Silicon UI Kit'
+          title: 'Popovers | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Popovers.vue')
       },
@@ -740,7 +760,7 @@ const uiRoutes = [
         path: 'portfolio-components',
         name: 'ui.portfolio-components',
         meta: {
-          title: 'Portfolio Components | Silicon UI Kit'
+          title: 'Portfolio Components | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/PortfolioComponents.vue')
       },
@@ -748,7 +768,7 @@ const uiRoutes = [
         path: 'pricing',
         name: 'ui.pricing',
         meta: {
-          title: 'Pricing | Silicon UI Kit'
+          title: 'Pricing | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Pricing.vue')
       },
@@ -756,7 +776,7 @@ const uiRoutes = [
         path: 'progressbar',
         name: 'ui.progressbar',
         meta: {
-          title: 'Progressbar | Silicon UI Kit'
+          title: 'Progressbar | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Progressbar.vue')
       },
@@ -764,7 +784,7 @@ const uiRoutes = [
         path: 'social-buttons',
         name: 'ui.social-buttons',
         meta: {
-          title: 'Social Buttons | Silicon UI Kit'
+          title: 'Social Buttons | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/SocialButtons.vue')
       },
@@ -772,7 +792,7 @@ const uiRoutes = [
         path: 'spinners',
         name: 'ui.spinners',
         meta: {
-          title: 'Spinners | Silicon UI Kit'
+          title: 'Spinners | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Spinners.vue')
       },
@@ -780,7 +800,7 @@ const uiRoutes = [
         path: 'steps',
         name: 'ui.steps',
         meta: {
-          title: 'Steps | Silicon UI Kit'
+          title: 'Steps | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Steps.vue')
       },
@@ -788,7 +808,7 @@ const uiRoutes = [
         path: 'tabs',
         name: 'ui.tabs',
         meta: {
-          title: 'Tabs | Silicon UI Kit'
+          title: 'Tabs | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Tabs.vue')
       },
@@ -796,7 +816,7 @@ const uiRoutes = [
         path: 'team',
         name: 'ui.team',
         meta: {
-          title: 'Team | Silicon UI Kit'
+          title: 'Team | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Team.vue')
       },
@@ -804,7 +824,7 @@ const uiRoutes = [
         path: 'testimonial',
         name: 'ui.testimonial',
         meta: {
-          title: 'Testimonial | Silicon UI Kit'
+          title: 'Testimonial | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Testimonial.vue')
       },
@@ -812,7 +832,7 @@ const uiRoutes = [
         path: 'toasts',
         name: 'ui.toasts',
         meta: {
-          title: 'Toast | Silicon UI Kit'
+          title: 'Toast | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Toast.vue')
       },
@@ -820,7 +840,7 @@ const uiRoutes = [
         path: 'tooltips',
         name: 'ui.tooltips',
         meta: {
-          title: 'Tooltips | Silicon UI Kit'
+          title: 'Tooltips | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Tooltips.vue')
       },
@@ -828,7 +848,7 @@ const uiRoutes = [
         path: 'video-popup',
         name: 'ui.video-popup',
         meta: {
-          title: 'VideoPopup | Silicon UI Kit'
+          title: 'VideoPopup | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/VideoPopup.vue')
       },
@@ -836,7 +856,7 @@ const uiRoutes = [
         path: 'utilities',
         name: 'ui.utilities',
         meta: {
-          title: 'Utilities | Silicon UI Kit'
+          title: 'Utilities | Commercializer UI Kit'
         },
         component: () => import('@/views/ui-kit/Utilities.vue')
       }

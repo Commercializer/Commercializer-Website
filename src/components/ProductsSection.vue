@@ -12,7 +12,11 @@
               fontSize: '18px'
             }"
           >
-            Our tried and tested products!
+            <!-- Our tried and tested products! -->
+            Crafted with innovation, experience, and strategic insight, Commercializer products are
+            designed for corporates, entrepreneurs, professionals, and MSMEs. Trusted by thousands
+            of businesses, our solutions embody quality and reliability, leveraging SaaS and
+            multi-tenancy architecture to deliver scalable and robust products.
           </p>
         </b-col>
       </b-row>
@@ -21,8 +25,9 @@
         :style="{
           transform: `scale(${scale})`
         }"
+        id="commercial primmary"
       >
-        <div class="box box-1">
+        <div class="box box-1" id="products">
           <img src="/images/logos/commercial-prime.svg" alt="Commercial Prime" class="logo" />
           <h4>Empowering <span style="color: #d1b75f">Seamless Connections</span></h4>
           <p>NFC-Based One Tap Connect Digital Business Card</p>
@@ -43,7 +48,7 @@
             <p style="font-size: 14px">
               Entrepreneurs
               <span style="color: #d1b75f">.</span>
-              Corporations
+              Corporates
               <span style="color: #d1b75f">.</span>
               Professionals
             </p>
@@ -74,14 +79,16 @@
               position: absolute;
             "
           />
-          <button
+          <a
             style="
               border: none;
               outline: none;
               background-color: #fff;
               color: #000;
               margin-inline: auto;
-              display: block;
+              display: flex;
+              align-items: center;
+              justify-content: center;
               padding: 10px 24px;
               border-radius: 8px;
               font-weight: 500;
@@ -91,10 +98,13 @@
               font-size: 14px;
               transform: translateX(50%);
               width: 70%;
+              text-decoration: none;
             "
+            target="_blank"
+            href="https://commercialprime.co.uk/"
           >
             Visit Commercial Prime
-          </button>
+          </a>
         </div>
         <div class="box box-4">
           <img
@@ -174,14 +184,13 @@
             alt="Commercial Prime 3"
             style="top: 0; right: 2rem; width: 42%; position: absolute"
           />
-          <button
+          <a
             style="
               border: none;
               outline: none;
               background-color: #fff;
               color: #000;
               margin-inline: auto;
-              display: block;
               padding: 10px 24px;
               border-radius: 8px;
               font-weight: 500;
@@ -191,10 +200,17 @@
               font-size: 14px;
               transform: translateX(50%);
               width: 70%;
+              text-align: center;
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             "
+            href="https://billable.global"
+            target="_blank"
           >
             Visit Billable
-          </button>
+          </a>
         </div>
         <div class="box box-3">
           <img
@@ -213,9 +229,9 @@
             <p style="font-size: 14px">
               Retail
               <span style="color: #22c55e">.</span>
-              Enterprise
+              Distributions
               <span style="color: #22c55e">.</span>
-              Service
+              Services
             </p>
           </div>
         </div>
@@ -391,13 +407,13 @@
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
         >
           <img
-            src="/images/logos/network-logo.svg"
+            src="/images/logos/inspection.svg"
             alt="Network"
             style="width: 72px; height: 72px"
           />
           <div>
-            <h4 style="font-size: 26px; font-weight: 700; margin: 0">1 Million+</h4>
-            <p style="font-size: 14px; margin: 0">Connections Made</p>
+            <h4 style="font-size: 26px; font-weight: 700; margin: 0">Simplified</h4>
+            <p style="font-size: 14px; margin: 0">Legal</p>
           </div>
         </div>
         <div
@@ -405,13 +421,13 @@
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
         >
           <img
-            src="/images/logos/network-logo-2.svg"
+            src="/images/logos/network-layer.svg"
             alt="Network"
             style="width: 72px; height: 72px"
           />
           <div>
-            <h4 style="font-size: 26px; font-weight: 700; margin: 0">Multi Tenancy</h4>
-            <p style="font-size: 14px; margin: 0">Architecture</p>
+            <h4 style="font-size: 26px; font-weight: 700; margin: 0">Multi language</h4>
+            <p style="font-size: 14px; margin: 0">Support available</p>
           </div>
         </div>
       </div>
@@ -445,8 +461,12 @@ const scale = computed(() => {
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: radial-gradient(108.51% 131.17% at 13.08% 8.07%, #1c1c1c 0%, #414141 100%);
   position: relative;
-}
+  transition: all 0.3s ease-in-out;
 
+  &:hover {
+    transform: scale(1.01);
+  }
+}
 
 .row {
   &-1 {
@@ -457,7 +477,7 @@ const scale = computed(() => {
     gap: 1rem;
 
     @include mq(md) {
-    margin-top: 3rem;
+      margin-top: 3rem;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(12, 1fr);
       // row-gap: 2rem;

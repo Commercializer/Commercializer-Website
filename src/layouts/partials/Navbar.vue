@@ -16,7 +16,7 @@
   >
     <div class="container px-3">
       <router-link class="navbar-brand pe-3" to="/">
-        <img src="/commercializer-logo.svg" alt="Silicon" class="brand-logo" />
+        <img src="/commercializer-logo.svg" alt="Commercializer" class="brand-logo" />
         <!-- Commercializer -->
       </router-link>
 
@@ -30,7 +30,6 @@
               <a v-else-if="item.href" class="nav-link" :href="item.href">
                 {{ item.title }}
               </a>
-              
 
               <template v-else>
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">{{
@@ -73,7 +72,7 @@
       </button>
       <a
         class="fs-sm rounded d-none d-lg-inline-flex"
-        href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/"
+        href="https://calendly.com/commercializer/30min"
         rel="noopener"
         target="_blank"
         style="
@@ -137,7 +136,7 @@
       <div class="px-3 py-3">
         <a
           class="fs-sm rounded d-none d-lg-inline-flex"
-          href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/"
+          href="https://calendly.com/commercializer/30min"
           rel="noopener"
           target="_blank"
           style="
@@ -286,7 +285,7 @@ const currentRouteName = router.currentRoute.value.name
 }
 
 .brand-logo {
-  width: 298px !important;
+  width: 220px !important;
 
   @include mq(md) {
     width: 260px !important;

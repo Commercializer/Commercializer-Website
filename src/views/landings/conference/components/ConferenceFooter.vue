@@ -2,8 +2,8 @@
   <footer class="footer bg-dark pt-5 pb-4 pb-lg-5" data-bs-theme="dark">
     <b-container class="text-center pt-lg-3">
       <div class="navbar-brand justify-content-center text-dark mb-2 mb-lg-4">
-        <img :src="logo" class="me-2" width="60" alt="Silicon" />
-        <span class="fs-4">Silicon</span>
+        <img :src="logo" class="me-2" width="60" alt="Commercializer" />
+        <span class="fs-4">Commercializer</span>
       </div>
       <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
         <li class="nav-item"><a href="#" class="nav-link">Home</a></li>

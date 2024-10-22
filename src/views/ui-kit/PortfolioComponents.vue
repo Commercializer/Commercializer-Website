@@ -3,7 +3,7 @@
     <UIKitPageTitle
       title="Portfolio components"
       description="Components that are related to the portfolio section of the website."
-      :is-silicon-component="true"
+      :is-commercializer-component="true"
     />
 
     <!-- Grid view: Card style 1 -->

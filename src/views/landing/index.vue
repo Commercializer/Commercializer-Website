@@ -58,7 +58,7 @@
       <!-- More features (Grid) -->
       <b-container class="pt-4 pb-5 py-lg-5">
         <h2 class="h1 text-center pt-1 pt-md-3 pt-lg-4 pb-3 pb-md-4 mb-0 mb-lg-3">
-          More Silicon Features
+          More Commercializer Features
         </h2>
         <b-row
           class="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5"

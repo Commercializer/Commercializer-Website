@@ -7,17 +7,17 @@
 
     <!-- Headings -->
     <CustomSyntax id="type-headings" title="Headings" :code="headings">
-      <h1>h1. Silicon heading</h1>
+      <h1>h1. Commercializer heading</h1>
       <hr class="my-0" />
-      <h2 class="pt-3">h2. Silicon heading</h2>
+      <h2 class="pt-3">h2. Commercializer heading</h2>
       <hr class="my-0" />
-      <h3 class="pt-3">h3. Silicon heading</h3>
+      <h3 class="pt-3">h3. Commercializer heading</h3>
       <hr class="my-0" />
-      <h4 class="pt-3">h4. Silicon heading</h4>
+      <h4 class="pt-3">h4. Commercializer heading</h4>
       <hr class="my-0" />
-      <h5 class="pt-3">h5. Silicon heading</h5>
+      <h5 class="pt-3">h5. Commercializer heading</h5>
       <hr class="my-0" />
-      <h6 class="pt-3 mb-0">h6. Silicon heading</h6>
+      <h6 class="pt-3 mb-0">h6. Commercializer heading</h6>
     </CustomSyntax>
 
     <!-- Display headings -->

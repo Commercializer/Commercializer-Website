@@ -8,7 +8,7 @@
     </Jarallax>
     <b-container class="position-relative zindex-2 pt-5" data-bs-theme="dark">
       <h2 class="h1 text-center pt-2 pt-sm-3 pb-4 pb-md-5 mb-2 mb-md-0 mb-lg-2">
-        Silicon vs Custom development
+        Commercializer vs Custom development
       </h2>
       <div class="overflow-x-auto pb-4">
         <div class="position-relative ms-n4 ms-md-0" style="min-width: 800px">
@@ -26,7 +26,7 @@
             <b-col>&nbsp;</b-col>
             <b-col class="py-2 py-md-3">
               <div class="text-center py-4 mx-auto" style="width: 264px">
-                <h3 class="h4 mb-sm-4">Silicon</h3>
+                <h3 class="h4 mb-sm-4">Commercializer</h3>
                 <a
                   href="#"
                   class="btn btn-primary bg-gradient-primary w-100 border-0 rounded-pill mb-2"

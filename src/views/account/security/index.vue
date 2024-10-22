@@ -63,7 +63,7 @@
               <div class="ps-3">
                 <div class="fw-medium text-nav mb-1">Iphone 12 – New York, USA</div>
                 <span class="d-inline-block fs-sm text-muted border-end pe-2 me-2"
-                  >Silicon App</span
+                  >Commercializer App</span
                 >
                 <span class="d-inline-block fs-sm text-muted">20 hours ago</span>
               </div>

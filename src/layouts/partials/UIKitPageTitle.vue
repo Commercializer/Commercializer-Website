@@ -6,7 +6,7 @@
       <h1 class="pb-1">{{ title }}</h1>
       <p class="text-muted fs-lg mb-2">{{ description }}</p>
     </div>
-    <span v-if="isSiliconComponent" class="badge bg-warning mb-2">Silicon component</span>
+    <span v-if="isCommercializerComponent" class="badge bg-warning mb-2">Commercializer component</span>
 
     <a
       v-else
@@ -35,7 +35,7 @@ const props = defineProps({
     type: String,
     required: true
   },
-  isSiliconComponent: {
+  isCommercializerComponent: {
     type: Boolean,
     default: false
   }

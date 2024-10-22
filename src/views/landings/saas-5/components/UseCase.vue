@@ -16,7 +16,7 @@
     ></div>
 
     <b-container class="position-relative zindex-2 pt-2 pt-sm-3 pt-md-4 pt-lg-5 mt-xl-3">
-      <h2 class="h1 text-center pb-1 mb-2">What you can build with Silicon</h2>
+      <h2 class="h1 text-center pb-1 mb-2">What you can build with Commercializer</h2>
       <p class="fs-lg text-center pb-lg-2">Well, lots of things. Some of them are listed below</p>
 
       <!-- Use case -->

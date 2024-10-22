@@ -3,7 +3,7 @@
     <b-row class="align-items-center align-items-xl-end py-2 pb-sm-3">
       <b-col md="6" class="mb-5 mb-md-0">
         <div style="max-width: 570px">
-          <h2 class="h1 pb-3 mb-2 mb-md-3">Get possibilities for better trading with Silicon</h2>
+          <h2 class="h1 pb-3 mb-2 mb-md-3">Get possibilities for better trading with Commercializer</h2>
           <b-row class="row-cols-1 row-cols-sm-2 gx-lg-5 g-4">
             <b-col
               v-for="(item, idx) in featureData"

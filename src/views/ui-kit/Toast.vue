@@ -15,7 +15,7 @@
               class="d-inline-block align-middle bg-primary rounded-1 me-2"
               style="width: 1.25rem; height: 1.25rem"
             ></div>
-            <h6 class="fs-sm mb-0 me-auto">Silicon</h6>
+            <h6 class="fs-sm mb-0 me-auto">Commercializer</h6>
             <small class="fw-bold text-muted">11 mins ago</small>
           </template>
           <div>Hello, world! This is a toast message.</div>

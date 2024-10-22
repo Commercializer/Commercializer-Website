@@ -35,7 +35,7 @@
     >
       <div class="text-center text-lg-start pe-xl-5 me-lg-4">
         <div class="px-3" style="max-width: 530px">
-          <h2 class="h1 mb-lg-4">Download <span class="text-primary">Silicon</span> app</h2>
+          <h2 class="h1 mb-lg-4">Download <span class="text-primary">Commercializer</span> app</h2>
           <p class="fs-lg pb-2 pb-lg-0 mb-4 mb-lg-5">
             Take control of your finances and download our mobile app today! Start tracking your
             expenses, budgeting wisely, and achieving your financial goals with ease. Don't wait,

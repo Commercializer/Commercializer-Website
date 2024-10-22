@@ -9,8 +9,8 @@
         <b-col cols="12" xl="3" class="pb-sm-2 pb-md-3 mb-4 mb-lg-5 mb-xl-0">
           <div class="d-flex align-items-center mb-3 mb-xl-0">
             <div class="navbar-brand text-dark pb-xl-3 pe-2 pe-xl-0 mb-xl-2 me-4 me-xl-0">
-              <img :src="logoImg" width="47" alt="Silicon" />
-              Silicon
+              <img :src="logoImg" width="47" alt="Commercializer" />
+              Commercializer
             </div>
             <select class="form-select form-select-sm d-xl-none" style="max-width: 130px">
               <option value="English">English</option>

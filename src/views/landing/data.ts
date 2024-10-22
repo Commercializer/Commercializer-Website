@@ -170,7 +170,7 @@ export const moreFeatureData: MoreFeatureType[] = [
     icon: BootstrapIcon,
     title: 'Built with Bootstrap 5',
     description:
-      'Silicon is the powerful front-end solution based on Bootstrap 5 — the world’s most popular responsive, mobile-first front-end component library.'
+      'Commercializer is the powerful front-end solution based on Bootstrap 5 — the world’s most popular responsive, mobile-first front-end component library.'
   },
   {
     icon: FileIcon,
@@ -181,13 +181,13 @@ export const moreFeatureData: MoreFeatureType[] = [
   {
     icon: MobileIcon,
     title: 'Mobile Freindly Interface',
-    description: `It's not a surprise that nowadays over 80% of users surf the inernet using their mobile devices. Silicon is 100% responsive and optimized for small touch screens.`
+    description: `It's not a surprise that nowadays over 80% of users surf the inernet using their mobile devices. Commercializer is 100% responsive and optimized for small touch screens.`
   },
   {
     icon: Html5Icon,
     title: 'W3C Valid HTML Code',
     description:
-      'All HTML files are checked via W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Silicon is innovative at its core.'
+      'All HTML files are checked via W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Commercializer is innovative at its core.'
   },
   {
     icon: NodejsIcon,
@@ -199,13 +199,13 @@ export const moreFeatureData: MoreFeatureType[] = [
     icon: SassIcon,
     title: 'Easy to Customize with Sass',
     description:
-      'Silicon is built using Sass. Easily change colors, typography and much more. It is the most mature, stable, and powerful CSS extension language in the world.'
+      'Commercializer is built using Sass. Easily change colors, typography and much more. It is the most mature, stable, and powerful CSS extension language in the world.'
   },
   {
     icon: JavascriptIcon,
     title: 'Future Proof Java-Script',
     description:
-      'Silicon core scripts as well as all dependencies are written in vanilla JS. And now with Bootstrap 5 we finally drop jQuery and use ES6 modules.'
+      'Commercializer core scripts as well as all dependencies are written in vanilla JS. And now with Bootstrap 5 we finally drop jQuery and use ES6 modules.'
   }
   // {
   //   icon: '',

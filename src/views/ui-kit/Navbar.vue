@@ -17,8 +17,8 @@
           <b-container class="px-3 d-md-flex justify-content-between">
             <div class="w-full d-flex justify-content-between">
               <b-navbar-brand href="#">
-                <img src="@/assets/img/logo.svg" width="47" alt="Silicon" />
-                Silicon
+                <img src="@/assets/img/logo.svg" width="47" alt="Commercializer" />
+                Commercializer
               </b-navbar-brand>
               <b-button
                 class="navbar-toggler"
@@ -58,8 +58,8 @@
           <b-container class="px-3 d-md-flex justify-content-between">
             <div class="w-full d-flex justify-content-between">
               <b-navbar-brand href="#">
-                <img src="@/assets/img/logo.svg" width="47" alt="Silicon" />
-                Silicon
+                <img src="@/assets/img/logo.svg" width="47" alt="Commercializer" />
+                Commercializer
               </b-navbar-brand>
               <b-button
                 class="navbar-toggler ms-auto"
@@ -113,8 +113,8 @@
             <b-container class="px-3 d-md-flex justify-content-between">
               <div class="w-full d-flex justify-content-between">
                 <b-navbar-brand href="#">
-                  <img src="@/assets/img/logo.svg" :width="47" alt="Silicon" />
-                  Silicon
+                  <img src="@/assets/img/logo.svg" :width="47" alt="Commercializer" />
+                  Commercializer
                 </b-navbar-brand>
                 <b-button
                   class="navbar-toggler ms-3"
@@ -198,8 +198,8 @@
           <b-container class="px-3 d-md-flex justify-content-between">
             <div class="w-full d-flex justify-content-between">
               <b-navbar-brand href="#">
-                <img src="@/assets/img/logo.svg" width="47" alt="Silicon" />
-                Silicon
+                <img src="@/assets/img/logo.svg" width="47" alt="Commercializer" />
+                Commercializer
               </b-navbar-brand>
               <button
                 class="navbar-toggler ms-auto"
@@ -258,8 +258,8 @@
           <b-container class="px-3">
             <div class="w-full d-flex justify-content-between">
               <b-navbar-brand href="#">
-                <img src="@/assets/img/logo.svg" width="47" alt="Silicon" />
-                Silicon
+                <img src="@/assets/img/logo.svg" width="47" alt="Commercializer" />
+                Commercializer
               </b-navbar-brand>
               <b-button class="navbar-toggler ms-auto" v-b-toggle.collapse.navbarCollapse5>
                 <span class="navbar-toggler-icon"></span>
@@ -355,8 +355,8 @@
           <b-container class="px-3 d-md-flex justify-content-between">
             <div class="w-full d-flex justify-content-between">
               <b-navbar-brand href="#">
-                <img src="@/assets/img/logo.svg" width="47" alt="Silicon" />
-                Silicon
+                <img src="@/assets/img/logo.svg" width="47" alt="Commercializer" />
+                Commercializer
               </b-navbar-brand>
               <b-button
                 class="navbar-toggler"
@@ -396,8 +396,8 @@
           <b-container class="px-3 d-md-flex justify-content-between">
             <div class="w-full d-flex justify-content-between">
               <b-navbar-brand href="#">
-                <img src="@/assets/img/logo.svg" width="47" alt="Silicon" />
-                Silicon
+                <img src="@/assets/img/logo.svg" width="47" alt="Commercializer" />
+                Commercializer
               </b-navbar-brand>
               <b-button
                 class="navbar-toggler"

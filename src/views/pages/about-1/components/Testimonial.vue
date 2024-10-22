@@ -10,7 +10,7 @@
             class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4"
           >
             <h2 class="h1 text-center text-md-start p-lg-4">
-              What Our Clients Say About Silicon Studio
+              What Our Clients Say About Commercializer Studio
             </h2>
           </div>
         </div>

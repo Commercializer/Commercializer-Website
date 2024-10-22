@@ -2,8 +2,8 @@
   <header class="navbar navbar-expand-lg bg-light shadow-sm fixed-top">
     <div class="container">
       <a href="#" class="navbar-brand flex-shrink-0">
-        <img src="@/assets/img/logo.svg" width="47" alt="Silicon" />
-        Silicon
+        <img src="@/assets/img/logo.svg" width="47" alt="Commercializer" />
+        Commercializer
       </a>
       <button
         class="navbar-toggler ms-auto"

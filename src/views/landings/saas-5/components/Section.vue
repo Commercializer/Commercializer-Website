@@ -36,7 +36,7 @@
       <b-row class="align-items-center py-lg-2 py-xl-3 my-xl-1 my-xxl-3">
         <b-col md="5" xl="4">
           <h2 class="h1 pb-2 pb-sm-3 mb-md-0">
-            Learn <span class="text-gradient-primary">how Silicon works</span> in a nutshell. Watch
+            Learn <span class="text-gradient-primary">how Commercializer works</span> in a nutshell. Watch
             a short introductory video
           </h2>
         </b-col>

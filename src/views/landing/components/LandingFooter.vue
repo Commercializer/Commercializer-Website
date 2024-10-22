@@ -39,7 +39,7 @@
               />
             </div>
             <p class="mt-4 mb-0">
-              *Enjoy using Silicon Template and stay tuned for the latest updates and news.
+              *Enjoy using Commercializer Template and stay tuned for the latest updates and news.
             </p>
             <div
               class="subscription-status position-absolute top-100 start-50 translate-middle-x"

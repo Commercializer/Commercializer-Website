@@ -17,8 +17,8 @@
             :to="{ name: 'ui.typography' }"
             class="navbar-brand text-dark d-none d-lg-flex py-0"
           >
-            <img :src="logo" width="47" alt="Silicon" />
-            Silicon
+            <img :src="logo" width="47" alt="Commercializer" />
+            Commercializer
           </router-link>
           <div class="">
             <b-badge

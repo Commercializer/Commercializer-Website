@@ -4,8 +4,8 @@
       <b-row>
         <b-col md="6" lg="5" xl="4" class="pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0">
           <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-            <img :src="logoImg" width="47" alt="Silicon" />
-            Silicon
+            <img :src="logoImg" width="47" alt="Commercializer" />
+            Commercializer
           </div>
           <p class="text-body mb-0">
             Suscipit ipsum tincidunt pellentesque vitae. Porttitor pellentesque enim consequat

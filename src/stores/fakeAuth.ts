@@ -2,14 +2,14 @@ import { defineStore } from 'pinia'
 import { useStorage } from '@vueuse/core'
 
 const fakeData = {
-  name: 'Silicon',
+  name: 'Commercializer',
   email: 'test@test.com',
   password: 'password'
 }
 
 export const useFakeAuthStore = defineStore('fakeAuth', {
   state: () => ({
-    fakeUser: useStorage('Silicon_Fake_User', { name: '', email: '' })
+    fakeUser: useStorage('Commercializer_Fake_User', { name: '', email: '' })
   }),
   getters: {
     user: (state) => state.fakeUser,

@@ -1,6 +1,6 @@
 <template>
   <b-container class="my-5 pt-xl-5 pt-lg-4 pt-md-3 pb-lg-5 pb-md-4 pb-3">
-    <h2 class="h1 mt-xl-3 mb-4 pb-3 text-center">Why Silicon App?</h2>
+    <h2 class="h1 mt-xl-3 mb-4 pb-3 text-center">Why Commercializer App?</h2>
 
     <b-tabs content-class="mb-xl-3 py-4 bg-secondary rounded-3" align="center">
       <!-- Economic Analysis -->

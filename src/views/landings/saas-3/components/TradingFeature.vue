@@ -2,7 +2,7 @@
   <b-container class="py-5 my-md-2 my-lg-4 my-xl-5">
     <!-- Text -->
     <h2 class="h1 text-center mx-auto mt-n2 mt-sm-0 pt-md-2" style="max-width: 530px">
-      Get Possibilities for Better Trading with Silicon
+      Get Possibilities for Better Trading with Commercializer
     </h2>
     <ul class="list-unstyled d-flex flex-wrap justify-content-center mb-5">
       <li class="d-flex fs-xl mx-3 mt-2 mt-sm-3">

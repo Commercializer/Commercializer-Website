@@ -16,7 +16,7 @@
             data-disable-parallax-down="lg"
           >
             <div class="card-body p-lg-3">
-              <h2 class="text-light pb-1 pb-md-3">Silicon Medical Center</h2>
+              <h2 class="text-light pb-1 pb-md-3">Commercializer Medical Center</h2>
               <p class="fs-lg text-light pb-2 pb-md-0 mb-4 mb-md-5">
                 Our medical center provides a wide range of health care services. We use only
                 advanced technologies to keep your family happy and healthy, without any unexpected

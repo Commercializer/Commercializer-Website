@@ -7,7 +7,7 @@
     <div class="container vh-100">
       <div class="row flex-nowrap vh-100">
         <div class="col-lg-4 col-md-5 d-flex flex-column text-center text-md-start py-5">
-          <h1 class="display-3 mt-auto mb-4">Silicon</h1>
+          <h1 class="display-3 mt-auto mb-4">Commercializer</h1>
           <p class="lead text-light opacity-70 pb-5 mb-0 mb-md-3">
             Multipurpose Business /<br class="d-none d-md-inline" />
             Technology Template

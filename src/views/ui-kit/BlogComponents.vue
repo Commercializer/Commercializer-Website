@@ -3,7 +3,7 @@
     <UIKitPageTitle
       title="Blog components"
       description="Components that are related to the blog / news section of the website."
-      :is-silicon-component="true"
+      :is-commercializer-component="true"
     />
 
     <!-- Post preview card: Vertical (grid) -->

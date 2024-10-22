@@ -517,7 +517,7 @@ export const uiKitSidebarLinkData: SidebarLinkType[] = [
         externalLink: 'https://bootstrap-vue-next.github.io/bootstrap-vue-next/'
       },
       {
-        title: 'Silicon',
+        title: 'Commercializer',
         link: {
           name: 'ui.utilities'
         }

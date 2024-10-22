@@ -86,7 +86,7 @@ const awards: Award[] = [
     title: 'National Winner',
     description: 'Best Innovation in Business Process Management',
     year: 2021,
-    img: '/images/awards/award1.png'
+    img: '/images/awards/award2.png'
   },
   {
     title: 'Western Province Winner',

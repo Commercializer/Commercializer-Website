@@ -22,7 +22,7 @@
 
       <!-- Page title -->
       <div class="mt-4 mb-lg-5 mb-4 py-3">
-        <h1 class="display-4 mb-0">We are Silicon Team</h1>
+        <h1 class="display-4 mb-0">We are Commercializer Team</h1>
       </div>
 
       <!-- Gallery -->
