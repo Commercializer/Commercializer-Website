@@ -292,16 +292,16 @@ export const navbarLinkData: NavLinkType[] = [
   // },
   {
     title: 'Home',
-    href: '#home'
+    link: { name: 'home-page' }
   },
   // {
   //   title: 'About',
-  //   link: { name: 'ui.typography' }
+  //   link: { name: 'about-page' }
   // },
   {
     title: 'Products',
     href: '#products'
-  },
+  }
   // {
   //   title: 'Portfolio',
   //   link: { name: 'ui.typography' }

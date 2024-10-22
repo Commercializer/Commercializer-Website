@@ -1,9 +1,9 @@
 <template>
   <Navbar :absolute="false" />
   <HeroSection />
-  <!-- <TrustedBySection /> -->
-  <BrandsSection />
+  <TrustedBySection />
   <AwardsSection />
+  <BrandsSection />
   <ExamplesSection />
   <ProductsSection />
   <BottomBannerSection />

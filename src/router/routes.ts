@@ -50,6 +50,14 @@ const landingRoute = [
     component: () => import('@/views/HomePage.vue')
   },
   {
+    path: '/about',
+    name: 'about-page',
+    meta: {
+      title: 'About Us - Commercializer',
+    },
+    component: () => import('@/views/AboutPage.vue')
+  },
+  {
     path: '/landing',
     name: 'landing',
     meta: {
