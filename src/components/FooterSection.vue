@@ -162,13 +162,6 @@
 </template>
 
 <script setup lang="ts">
-import logoImg from '@/assets/img/logo.png'
-import { Icon } from '@iconify/vue'
-import MapIcon from '@iconify/icons-bx/bx-map'
-import FacebookIcon from '@iconify/icons-bx/bxl-facebook'
-import InstagramIcon from '@iconify/icons-bx/bxl-instagram'
-import YoutubeIcon from '@iconify/icons-bx/bxl-youtube'
-import TelegramIcon from '@iconify/icons-bx/bxl-telegram'
 import { ref } from 'vue'
 
 const selectedCountry = ref(null)
@@ -203,21 +196,24 @@ const footerLinks: FooterLinkType[] = [
   {
     title: 'Menu',
     children: [
-      {
-        title: 'Home',
-        href: '#home'
-      }
       // {
-      //   title: 'About',
-      //   link: { name: '' }
+      //   title: 'Home',
+      //   href: '#home'
       // },
       // {
-      //   title: 'Blog',
-      //   link: { name: '' }
+      //   title: 'Awards',
+      //   link: { name: '' },
+      //   href: '#awards'
       // },
       // {
-      //   title: 'Contact',
-      //   link: { name: '' }
+      //   title: 'Clients',
+      //   link: { name: '' },
+      //   href: '#clients'
+      // },
+      // {
+      //   title: 'Case studies',
+      //   link: { name: '' },
+      //   href: '#examples'
       // }
     ]
   },
@@ -234,11 +230,11 @@ const footerLinks: FooterLinkType[] = [
       },
       {
         title: 'Billable',
-        href: '#commercial-prime'
+        href: '#billable'
       },
       {
-        title:'Agreementor',
-        href: '#commercial-prime'
+        title: 'Agreementor',
+        href: '#agreementor'
       }
       // {
       //   title: 'Services',

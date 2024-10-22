@@ -25,7 +25,7 @@
         :style="{
           transform: `scale(${scale})`
         }"
-        id="commercial primmary"
+        id="commercial-prime"
       >
         <div class="box box-1" id="products">
           <img src="/images/logos/commercial-prime.svg" alt="Commercial Prime" class="logo" />
@@ -163,6 +163,7 @@
         :style="{
           transform: `scale(${scale})`
         }"
+        id="billable"
       >
         <div class="box box-1">
           <img src="/images/logos/billable.png" alt="Commercial Prime" class="logo" />
@@ -289,6 +290,7 @@
         :style="{
           transform: `scale(${scale})`
         }"
+        id="agreementor"  
       >
         <div class="box box-1">
           <img src="/images/logos/agreementor.png" alt="Commercial Prime" class="logo" />
