@@ -1,7 +1,8 @@
 <template>
   <b-container class="brands">
     <h2 class="brands__heading">
-      Trusted and accredited by official partner network
+      <!-- Trusted and accredited by official partner network -->
+       Our Products & Services Are Trusted By
       <div class="brands__heading-actions">
         <button @click="swiper?.slidePrev()">
           <Icon :icon="ChevronLeftIcon" class="fs-2"></Icon>
