@@ -196,25 +196,22 @@ const footerLinks: FooterLinkType[] = [
   {
     title: 'Menu',
     children: [
-      // {
-      //   title: 'Home',
-      //   href: '#home'
-      // },
-      // {
-      //   title: 'Awards',
-      //   link: { name: '' },
-      //   href: '#awards'
-      // },
-      // {
-      //   title: 'Clients',
-      //   link: { name: '' },
-      //   href: '#clients'
-      // },
-      // {
-      //   title: 'Case studies',
-      //   link: { name: '' },
-      //   href: '#examples'
-      // }
+      {
+        title: 'Home',
+        href: '#home'
+      },
+      {
+        title: 'Awards',
+        href: '#awards'
+      },
+      {
+        title: 'Clients',
+        href: '#clients'
+      },
+      {
+        title: 'Case studies',
+        href: '#examples'
+      }
     ]
   },
   {

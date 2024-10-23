@@ -1,6 +1,6 @@
 <template>
   <!-- <div> -->
-  <section class="position-relative zindex-2 px-3 mt-n2 mt-sm-0">
+  <section class="position-relative zindex-2 px-3 mt-n2 mt-sm-0" id="awards">
     <div class="card border-0 rounded-3 shadow py-5 px-3 px-lg-0 mx-auto" style="max-width: 1560px">
       <b-container class="py-lg-4 py-xl-5">
         <b-row class="pt-md-3 pb-md-2">
