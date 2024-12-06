@@ -314,10 +314,10 @@ export const navbarLinkData: NavLinkType[] = [
     //   }
     // ]
   },
-  // {
-  //   title: 'About',
-  //   link: { name: 'about-page' }
-  // },
+  {
+    title: 'About',
+    link: { name: 'about-page' }
+  },
   {
     title: 'Products',
     href: '#products'
