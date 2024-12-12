@@ -32,7 +32,7 @@
 
         <!-- Text -->
         <b-col lg="5" md="6" class="text-center text-md-start order-md-1">
-          <h1 class="display-5 mb-lg-4">
+          <h1 class="display-5 mb-lg-4 shimmer">
             Commercializing Innovations
           </h1>
           <p class="fs-xl pb-3 pb-lg-0 mb-2 mb-md-3 mb-lg-5" style="color: #dedede">
@@ -131,6 +131,31 @@ onBeforeUnmount(() => {
 .hero-container {
   display: flex;
   align-items: center;
+}
+
+.shimmer {
+  display: inline-block;
+  background: linear-gradient(
+    -60deg,
+    rgba(255, 255, 255, 0.3) 25%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.3) 75%
+  );
+  background-size: 200% 100%;
+  color: #dedede; /* The base color of the text */
+  -webkit-background-clip: text;
+  background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 
