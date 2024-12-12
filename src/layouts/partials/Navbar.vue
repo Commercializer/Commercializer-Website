@@ -101,12 +101,12 @@
     <template v-slot:default>
       <ul class="navbar-nav me-auto">
         <li v-for="(item, idx) in navbarLinkData" :key="item.title" class="nav-item dropdown">
-          <router-link v-if="item.link" class="nav-link" :to="{ name: item.link.name }">{{
+          <router-link v-if="item.link" class="nav-link" :to="{ name: item.link.name }" @click="handleMobileNavigation">{{
             item.title
           }}</router-link>
 
           <template v-else>
-            <a class="nav-link dropdown-toggle" v-b-toggle="`nav-collapse-${idx}`" href="#">{{
+            <a class="nav-link dropdown-toggle" v-b-toggle="`nav-collapse-${idx}`" href="#" @click.prevent="handleMobileNavigation(item.href)">{{
               item.title
             }}</a>
 
@@ -115,11 +115,12 @@
                 <div v-for="(link, idx) in item.links" class="mega-dropdown-column py-3">
                   <h6 v-if="item.title" class="mb-1">{{ link.title }}</h6>
                   <ul class="list-unstyled">
-                    <li v-for="(child, idx) in link.children">
+                    <li v-for="(child, idx) in link.children" :key="child.title">
                       <router-link
                         class="dropdown-item py-2"
                         :class="{ active: child.link.name === currentRouteName }"
                         :to="{ name: child.link.name }"
+                        @click="handleMobileNavigation"
                         >{{ child.title }}
                       </router-link>
                     </li>
@@ -161,7 +162,6 @@ import logoImg from '@/assets/img/logo.png'
 import { onMounted, ref } from 'vue'
 
 import { navbarLinkData } from '@/layouts/data'
-
 import { Icon } from '@iconify/vue'
 import CartIcon from '@iconify/icons-bx/cart'
 import router from '@/router'
@@ -206,6 +206,26 @@ const isStuck = ref(props.stuck)
 
 const isMobileView = ref(false)
 const showMobileNav = ref(false)
+
+const handleMobileNavigation = (href?: string) => {
+  if (href) {
+    if (href.startsWith('#')) {
+      // Smooth scrolling for anchor links
+      const targetElement = document.querySelector(href)
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' })
+        showMobileNav.value = false // Close the mobile nav
+      }
+    } else {
+      // For Vue Router links
+      router.push(href).then(() => {
+        showMobileNav.value = false // Close the mobile nav
+      })
+    }
+  } else {
+    showMobileNav.value = false // Close the mobile nav if no href provided
+  }
+}
 
 onMounted(() => {
   if (!props.stuck) {

@@ -4,7 +4,11 @@ import { useFakeAuthStore } from '@/stores/fakeAuth'
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: allRoutes
+  routes: allRoutes,
+})
+
+router.afterEach(() => {
+  window.scrollTo(0, 0)
 })
 
 // Before each route for page title

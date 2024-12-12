@@ -316,7 +316,8 @@ export const navbarLinkData: NavLinkType[] = [
   },
   {
     title: 'About',
-    link: { name: 'about-page' }
+    // link: { name: 'about-page' }
+    href: '/about'
   },
   {
     title: 'Products',
