@@ -245,45 +245,68 @@
     { icon: icon3, text: "Guidance to Perfection" },
   ];
   
-  let isPageScrolling = true;
+  let startY = 0;
+  let scrollLeft = 0;
   
-  const handleWheel = (event: WheelEvent) => {
+  // Lock mobile scroll
+  const lockScroll = () => {
+    document.body.style.overflow = "hidden";
+  };
+  
+  // Unlock mobile scroll
+  const unlockScroll = () => {
+    document.body.style.overflow = "";
+  };
+  
+  // Handle touch start for mobile scrolling
+  const handleTouchStart = (event: TouchEvent) => {
     const container = swipeContainer.value;
-  
     if (!container) return;
   
-    // Check if the user is hovering over the component
-    const boundingRect = container.getBoundingClientRect();
-    const isWithinBounds =
-      event.clientY >= boundingRect.top && event.clientY <= boundingRect.bottom;
+    startY = event.touches[0].pageY;
+    scrollLeft = container.scrollLeft;
   
-    if (isWithinBounds) {
-      isPageScrolling = false;
-      event.preventDefault();
+    lockScroll(); // Lock scroll on mobile devices
+  };
   
-      // Scroll horizontally within the row
-      container.scrollLeft += event.deltaY;
+  // Handle touch move for mobile scrolling
+  const handleTouchMove = (event: TouchEvent) => {
+    const container = swipeContainer.value;
+    if (!container) return;
   
-      // Resume page scrolling if at the start or end of the row
-      if (
-        container.scrollLeft === 0 ||
-        container.scrollLeft + container.clientWidth >= container.scrollWidth
-      ) {
-        isPageScrolling = true;
-      }
-    } else if (!isPageScrolling) {
-      isPageScrolling = true; // Allow normal page scroll outside the component
-    }
+    const currentY = event.touches[0].pageY;
+    const deltaY = startY - currentY;
+    const horizontalScroll = deltaY * 16;
+  
+    container.scrollLeft = scrollLeft + horizontalScroll;
+  };
+  
+  // Handle touch end for mobile scrolling
+  const handleTouchEnd = () => {
+    unlockScroll(); // Unlock scroll after swiping
   };
   
   onMounted(() => {
-    window.addEventListener("wheel", handleWheel, { passive: false });
+    const container = swipeContainer.value;
+  
+    if (container) {
+      container.addEventListener("touchstart", handleTouchStart, { passive: true });
+      container.addEventListener("touchmove", handleTouchMove, { passive: true });
+      container.addEventListener("touchend", handleTouchEnd);
+    }
   });
   
   onBeforeUnmount(() => {
-    window.removeEventListener("wheel", handleWheel);
+    const container = swipeContainer.value;
+    if (container) {
+      container.removeEventListener("touchstart", handleTouchStart);
+      container.removeEventListener("touchmove", handleTouchMove);
+      container.removeEventListener("touchend", handleTouchEnd);
+    }
+  
+    unlockScroll(); // Ensure scroll unlocks on component destruction
   });
-  </script>
+  </script>  
   
   
   <style scoped>
@@ -291,9 +314,14 @@
     text-align: center;
     background-color: #000;
     color: #fff;
-    padding: 40px 20px;
+    padding-bottom: 4rem;
+    width: 100%;
   }
   
+  .container {
+    position: relative;
+  }
+
   .heading {
     font-family: Ubuntu;
     font-size: 2rem;
@@ -308,6 +336,7 @@
     line-height: 1.8;
     max-width: 700px;
     margin: 20px auto 40px;
+    position: static; 
   }
   
   .swipe-container {
@@ -381,13 +410,9 @@
     }
   
     .swipe-row {
-      gap: 24px;
       justify-content: flex-start;
     }
-  
-    .pricing-plan {
-      padding: 20px;
-    }
+
   
     .checkmark {
       width: 32px;
