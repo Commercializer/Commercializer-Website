@@ -98,21 +98,37 @@ const cards = ref([
 const activeIndex = ref(0);
 
 const getCardPosition = (index: number) => {
-  const positions = [
-    { left: '16%', top: '0%' }, // Active card
+  const screenWidth = window.innerWidth;
+
+  // Define default positions for larger screens
+  const desktopPositions = [
+    { left: '16%', top: '0%' },  // Active card
     { left: '86%', top: '38%' }, // Right position
-    { left: '24%', top: '100%' }, // Bottom position
+    { left: '24%', top: '100%' },// Bottom position
   ];
-  const positionIndex = (index - activeIndex.value + cards.value.length) % cards.value.length;
-  return positions[positionIndex];
+
+  // Define positions for mobile screens (adjusting the size and layout)
+  const mobilePositions = [
+    { left: '-7%', top: '10%' },  // Active card
+    { left: '6%', top: '101%' },  // Next card
+    { left: '68%', top: '40%' },  // Last card
+  ];
+
+  if (screenWidth <= 768) {
+    return mobilePositions[(index - activeIndex.value + mobilePositions.length) % mobilePositions.length];
+  }
+
+  const positionIndex = (index - activeIndex.value + desktopPositions.length) % desktopPositions.length;
+  return desktopPositions[positionIndex];
 };
+
 
 let intervalId: ReturnType<typeof setInterval>;
 
 onMounted(() => {
   intervalId = setInterval(() => {
     activeIndex.value = (activeIndex.value + 1) % cards.value.length;
-  }, 2500); // 2.5 seconds interval
+  }, 3000); // 2.5 seconds interval
 });
 
 onBeforeUnmount(() => {
@@ -136,25 +152,25 @@ onBeforeUnmount(() => {
 .shimmer {
   display: inline-block;
   background: linear-gradient(
-    -60deg,
-    rgba(255, 255, 255, 0.3) 25%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0.3) 75%
+    60deg,
+    rgba(255, 255, 255, 0.9) 25%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.9) 75%
   );
   background-size: 200% 100%;
-  color: #dedede; /* The base color of the text */
+  color: #fbfbfb9f; /* The base color of the text */
   -webkit-background-clip: text;
   background-clip: text; 
   -webkit-text-fill-color: transparent;
-  animation: shimmer 2.5s infinite linear;
+  animation: shimmer 20s infinite linear;
 }
 
 @keyframes shimmer {
   0% {
-    background-position: 200% 0;
+    background-position: 300% 0;
   }
   100% {
-    background-position: -200% 0;
+    background-position: -300% 0;
   }
 }
 
@@ -162,11 +178,11 @@ onBeforeUnmount(() => {
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
-    opacity: 1;
+    opacity: 0.9;
   }
   50% {
-    transform: scale(1.1);
-    opacity: 0.8;
+    transform: scale(1.05);
+    opacity: 0.85;
   }
 }
 
@@ -187,7 +203,7 @@ onBeforeUnmount(() => {
   z-index: 4;
   transform: translate(-10%, -10%); /* Keep the positioning here */
   transform-origin: center; /* Ensure the pulse scales from the center */
-  animation: pulse 2.5s infinite ease-in-out; /* Apply pulse animation */
+  animation: pulse 3s infinite ease-in-out; /* Apply pulse animation */
 }
 
 
@@ -239,5 +255,39 @@ onBeforeUnmount(() => {
 .box-card-content p {
   font-size: 0.7rem;
   margin: 0.2rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .triangle-container {
+    align-items: center; 
+    justify-content: center;
+    max-width: 100%;
+    margin-bottom: 20%;
+    margin-top: 8%;
+    margin-left: 2%;
+  }
+
+  .center-triangle {
+    max-width: 200px;
+    transform: translate(0, 0);
+  }
+
+  .box-card-wrapper {
+    width: 38%;
+    height: 20%;
+  }
+
+  .box-card-wrapper.active-card {
+    width: 44%;
+    height: 25%;
+  }
+
+  .box-card-content h4 {
+    font-size: 0.5rem;
+  }
+
+  .box-card-content p {
+    font-size: 0.4rem;
+  }
 }
 </style>
