@@ -90,7 +90,7 @@ import { Icon } from '@iconify/vue';
 import logo from '@/assets/img/logo-large.svg';
 
 const cards = ref([
-  { title: 'Product Studio', text: 'Build Your Dream Product With Us' },
+  { title: 'Product Studio', text: 'Build Your Dream Product' },
   { title: 'AI Automation Agency', text: 'Streamline Processes with AI' },
   { title: 'UX Studio', text: 'Design Stunning Experiences' },
 ]);
@@ -103,15 +103,15 @@ const getCardPosition = (index: number) => {
   // Define default positions for larger screens
   const desktopPositions = [
     { left: '16%', top: '0%' },  // Active card
-    { left: '86%', top: '38%' }, // Right position
-    { left: '24%', top: '100%' },// Bottom position
+    { left: '86%', top: '38%' }, 
+    { left: '24%', top: '100%' },
   ];
 
-  // Define positions for mobile screens (adjusting the size and layout)
+  // Define positions for mobile screens 
   const mobilePositions = [
     { left: '-7%', top: '10%' },  // Active card
-    { left: '6%', top: '101%' },  // Next card
-    { left: '68%', top: '40%' },  // Last card
+    { left: '6%', top: '101%' }, 
+    { left: '68%', top: '40%' }, 
   ];
 
   if (screenWidth <= 768) {
@@ -128,7 +128,8 @@ let intervalId: ReturnType<typeof setInterval>;
 onMounted(() => {
   intervalId = setInterval(() => {
     activeIndex.value = (activeIndex.value + 1) % cards.value.length;
-  }, 3000); // 2.5 seconds interval
+  }, 4500); 
+
 });
 
 onBeforeUnmount(() => {
@@ -151,27 +152,31 @@ onBeforeUnmount(() => {
 
 .shimmer {
   display: inline-block;
-  background: linear-gradient(
-    60deg,
-    rgba(255, 255, 255, 0.9) 25%,
-    rgba(255, 255, 255, 0.15) 50%,
-    rgba(255, 255, 255, 0.9) 75%
-  );
-  background-size: 200% 100%;
-  color: #fbfbfb9f; /* The base color of the text */
+  color: #acacacdb;
+  /* background: -webkit-gradient(linear, left top, right bottom, from(#acacac), to(#acacac), color-stop(0.6, #fff)); */
+  background: linear-gradient( -45deg, #acacac 25%, #fff 50%, #acacac 75%);
+  -webkit-background-size: 200% 100%;
+  background-size: 80px 100%;
   -webkit-background-clip: text;
-  background-clip: text; 
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 20s infinite linear;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #222222;
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: 300% 0;
-  }
-  100% {
-    background-position: -300% 0;
-  }
+		0% {
+      background-position: -100% 0;
+		}
+		100% {
+      background-position: 100% 0;
+		}
 }
 
 
@@ -181,7 +186,7 @@ onBeforeUnmount(() => {
     opacity: 0.9;
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.04);
     opacity: 0.85;
   }
 }
@@ -201,9 +206,9 @@ onBeforeUnmount(() => {
   width: 100%;
   max-width: 300px;
   z-index: 4;
-  transform: translate(-10%, -10%); /* Keep the positioning here */
-  transform-origin: center; /* Ensure the pulse scales from the center */
-  animation: pulse 3s infinite ease-in-out; /* Apply pulse animation */
+  transform: translate(-10%, -10%); 
+  transform-origin: center; 
+  animation: pulse 4s infinite ease-in-out; /* Apply pulse animation */
 }
 
 
@@ -215,7 +220,7 @@ onBeforeUnmount(() => {
   width: 44%;
   height: 24%;
   border-radius: 12px;
-  transition: all 0.8s ease-in-out; /* Smooth transition for position and styling */
+  transition: all 0.8s ease-in-out; 
   z-index: 1;
   opacity: 0.5;
   background: radial-gradient(
@@ -226,7 +231,6 @@ onBeforeUnmount(() => {
 }
 
 .box-card-wrapper.active-card {
-  /* Active card should have rounded border and be in the front */
   box-shadow: 0 0 0 2px rgba(0, 255, 149, 0.984);
   opacity: 1;
   width: 45%;
@@ -238,7 +242,7 @@ onBeforeUnmount(() => {
   z-index: 2;
   width: 100%;
   height: 100%;
-  border-radius: 8px; /* Consistent border radius */
+  border-radius: 8px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
