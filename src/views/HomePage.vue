@@ -3,7 +3,6 @@
   <HeroSection />
   <!-- <TrustedBySection /> -->
   <BrandsSection />
-  <ExamplesSection />
   <AwardsSection />
   <!-- <ExamplesSection /> -->
   <ProductsSection />
