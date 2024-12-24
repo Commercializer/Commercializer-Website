@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 209.03 90.78"><defs><style>.cls-1{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="-45.68" y1="45.39" x2="337.81" y2="45.39" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00b3de"/><stop offset="1" stop-color="#a8d100"/></linearGradient></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M209,71.24,75.82,48.32A16.34,16.34,0,0,1,62.29,33.06L60.59,0,3,69.43A13,13,0,0,0,13,90.74l156.23,0A32.51,32.51,0,0,0,187,85.55Z"/></g></g></svg>
+<svg width="100%" height="100%" viewBox="0 0 240 240" fill="none" style="background-color:rgba(0,255,0,0.3);;" xmlns="http://www.w3.org/2000/svg">
+<path d="M224.003 146.24L90.8228 123.32C87.1714 122.688 83.8433 120.833 81.3848 118.06C78.9263 115.287 77.4834 111.761 77.2928 108.06L75.5928 75L18.0028 144.43C16.4241 146.329 15.419 148.639 15.1053 151.089C14.7916 153.538 15.1822 156.027 16.2314 158.263C17.2805 160.498 18.9449 162.389 21.0296 163.713C23.1143 165.038 25.5331 165.741 28.0028 165.74H184.233C190.534 165.769 196.708 163.966 202.003 160.55L224.003 146.24Z" fill="url(#paint0_linear_1594_5587)"/>
+<defs>
+<linearGradient id="paint0_linear_1594_5587" x1="-30.6772" y1="120.39" x2="352.813" y2="120.39" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00B3DE"/>
+<stop offset="1" stop-color="#A8D100"/>
+</linearGradient>
+</defs>
+</svg>
