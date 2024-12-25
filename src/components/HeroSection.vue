@@ -362,7 +362,6 @@ onBeforeUnmount(() => {
 }
 
 .final-text-col {
-  background-color: rgba(255, 0, 0, 0.3);
   flex: 1;
   text-align: center;
   font-size: 24px;
