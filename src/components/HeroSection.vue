@@ -1,44 +1,14 @@
 <template>
   <section class="position-relative overflow-hidden zindex-2" id="home">
     <b-container style="min-height: calc(100vh - 74px)">
-      <b-row class="justify-content-space-between align-items-center hero-row" ref="heroRow" style="min-height: calc(100vh - 120px); position: relative;">
-        <div class="center-triangle" ref="logo" style="position:absolute; right: 0; left: 0; margin: auto; background-color: blue;" >
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 313.25 277.23"
-              class="pulse-svg"
-              width=100%
-              height=100%
-              style="background-color: #fff;"
-              preserve-aspect-ratio="xMinYMid meet"
-            >
-              <defs>
-                <linearGradient id="linear-gradient" x1="-45.68" y1="93.23" x2="337.81" y2="93.23" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#00b3de" />
-                  <stop offset="1" stop-color="#a8d100" />
-                </linearGradient>
-                <linearGradient id="linear-gradient-2" x1="-45.68" y1="109.11" x2="337.81" y2="109.11" xlink:href="#linear-gradient" />
-                <linearGradient id="linear-gradient-3" x1="-45.68" y1="182.84" x2="337.81" y2="182.84" xlink:href="#linear-gradient" />
-                <linearGradient id="linear-gradient-4" x1="-45.68" y1="231.84" x2="337.81" y2="231.84" xlink:href="#linear-gradient" />
-              </defs>
-              <g id="Layer_2" data-name="Layer 2">
-                <g id="Layer_1-2" data-name="Layer 1">
-                  <path class="cls-1 part-1" ref="part1" d="M60.59,186.45,147.19,82a16.32,16.32,0,0,1,20-4.13l29,14.76L165.13,8.51a13,13,0,0,0-23.47-2L63.54,142.23a32.49,32.49,0,0,0-4.3,17.89Z" />
-                  <line class="cls-2 "  x1="228.71" y1="109.21" x2="228.35" y2="109.02" />
-                  <path class="cls-3 part-3" ref="part3" d="M236.83,239.67l-27.8,18,89,15.13a13,13,0,0,0,13.45-19.3L233.17,117.4a32.51,32.51,0,0,0-13.43-12.76l-23.56-12,47.09,127.67A16.31,16.31,0,0,1,236.83,239.67Z" />
-                  <path class="cls-4 part-2" ref="part2" d="M209,257.69,75.82,234.77a16.33,16.33,0,0,1-13.53-15.26l-1.7-33.06L3,255.88a13,13,0,0,0,10,21.31l156.23,0A32.51,32.51,0,0,0,187,272Z" />
-                </g>
-              </g>
-            </svg>
-        </div>
+      <b-row class="justify-content-center align-items-center hero-row" style="min-height: calc(100vh - 120px)">
         <b-col xl="6" lg="6" md="6" sm="8" class="col-10 offset-xl-1 order-md-2 image-col">
           <div class="triangle-container">
-            <!-- <div ref="logo" id="center-triangle" class="center-triangle" style="background-color: #fff;">
-              <img src="@/assets/img/Asset_L35.svg" width="70%" class="triangle-part part-1" ref="part1" />
-              <img src="@/assets/img/Asset_L36.svg" width="70%" class="triangle-part part-2" ref="part2" />
-              <img src="@/assets/img/Asset_L37.svg" width="70%" class="triangle-part part-3" ref="part3" />
-            </div> -->
+            <div ref="logo" id="center-triangle" class="center-triangle">
+              <img src="@/assets/img/Asset_L35.svg" class="triangle-part part-1" ref="part1" />
+              <img src="@/assets/img/Asset_L36.svg" class="triangle-part part-2" ref="part2" />
+              <img src="@/assets/img/Asset_L37.svg" class="triangle-part part-3" ref="part3" />
+            </div>
             <div v-for="(card, index) in cards" :key="index" :class="['box-card-wrapper', { 'active-card': activeIndex === index }]" :style="getCardPosition(index)">
               <div class="gradient-border"></div>
               <div class="box-card-content">
@@ -76,14 +46,14 @@
     </b-container>
     <section class="below-section container" id="below">
       <b-row class="final-text-row">
-        <b-col class="final-text-col">
-          <h5 class="final-text" >Innovation</h5>
+        <b-col class="final-text-col" >
+          <h5 class="final-text" ref="finaltext1">Innovation</h5>
         </b-col>
-        <b-col class="final-text-col">
-          <h5 class="final-text" >Experience</h5>
+        <b-col class="final-text-col"  >
+          <h5 class="final-text" ref="finaltext2">Experience</h5>
         </b-col>
-        <b-col class="final-text-col">
-            <h5 class="final-text" >Commercial strategy</h5>
+        <b-col class="final-text-col" >
+          <h5 class="final-text" ref="finaltext3">Commercial strategy</h5>
         </b-col>
       </b-row>
     </section>
@@ -91,20 +61,22 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount, type ComponentPublicInstance } from 'vue';
 import ChevronIcon from '@iconify/icons-bx/bx-chevrons-down';
 import { Icon } from '@iconify/vue';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import type { RefSymbol } from '@vue/reactivity';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
-const logo = ref<SVGElement | null>(null);
-const part1 = ref<SVGPathElement | null>(null);
-const part2 = ref<SVGPathElement | null>(null);
-const part3 = ref<SVGPathElement | null>(null);
-
+const logo = ref<HTMLImageElement | null>(null);
+const part1 = ref<SVGElement | null>(null);
+const part2 = ref<SVGElement | null>(null);
+const part3 = ref<SVGElement | null>(null);
+const finaltext1 = ref<HTMLHeadingElement | null>(null);
+const finaltext2 = ref<HTMLHeadingElement | null>(null);
+const finaltext3 = ref<HTMLHeadingElement | null>(null);
 
 const cards = ref([
   { title: 'Product Studio', text: 'Build Your Dream Product' },
@@ -116,32 +88,33 @@ const activeIndex = ref(0);
 
 const getCardPosition = (index: number) => {
   const screenWidth = window.innerWidth;
-  
-  const desktopPositions = [
-    { left: `8%`, top: `-16%` },
-    { left: `68%`, top: `16%` },
-    { left: `12%`, top: `78%` },
-  ];
-  const mobilePositions = [
-    { left: `6%`, top: `0%` },
-    { left: `72%`, top: `32%` },
-    { left: `0%`, top: `96%` },
-  ];
+  const cardPositions ={
+    desktop: [
+    { left: `0%`, top: `6%` },
+    { left: `61%`, top: `28%` },
+    { left: `12%`, top: `84%` },
+  ],
+    mobile: [
+    { left: `0%`, top: `8%` },
+    { left: `64%`, top: `24%` },
+    { left: `0%`, top: `86%` },
+  ],
 
-  if (screenWidth <= 768) {
-        return mobilePositions[(index - activeIndex.value + mobilePositions.length) % mobilePositions.length];
-    }
+  }
+  const isMobile = screenWidth <= 768;
+    const positions = isMobile ? cardPositions.mobile : cardPositions.desktop;
 
-    const positionIndex = (index - activeIndex.value + desktopPositions.length) % desktopPositions.length;
-    return desktopPositions[positionIndex];
+    const positionIndex = (index - activeIndex.value + positions.length) % positions.length;
+    return positions[positionIndex];
 };
 
 let intervalId: ReturnType<typeof setInterval>;
 let tl : gsap.core.Timeline;
 let tlSplit : gsap.core.Timeline;
 let tlRotate: gsap.core.Timeline;
-const ScreenWidth = ref(window.innerWidth)
-const ScreenHeight = ref(window.innerHeight)
+const screenWidth = ref(window.innerWidth)
+const screenHeight = ref(window.innerHeight)
+
 
 onMounted(() => {
   const isMobile = window.innerWidth <= 1024;
@@ -177,25 +150,21 @@ onMounted(() => {
       },
       0
     );
+    const partWidth = screenWidth.value / 6;
     tl.to(".center-triangle", {
       rotation: 360,
       scale: 1.1,
-      y: ((ScreenHeight.value/2)- ((logo.value?.getBoundingClientRect().y ?? 0) + (logo.value?.getBoundingClientRect().height ?? 0)/2)) + 480,
-      x: (ScreenWidth.value/2)- ((logo.value?.getBoundingClientRect().x ?? 0) + (logo.value?.getBoundingClientRect().width ?? 0)/2) ,
+      x: (screenWidth.value/2) - ((logo.value?.getBoundingClientRect().x ?? 0) + (logo.value?.getBoundingClientRect().width ?? 0)/2),
+      y: 3*(screenHeight.value/2)/2,
       duration: 2,
       ease: "power2.inOut",
-    });
-    tl.to(".center-triangle", {
-      width:1200,
-      ease: "power2.inOut",
-      duration:2,
     });
 
     tlSplit = gsap.timeline({
       scrollTrigger: {
         trigger: ".below-section",
-        start: "center +=60%",
-        end: "+=80%",
+        start: "center +=72%",
+        end: "+=50%",
         scrub: true,
         onEnter: () => {
             gsap.set(".final-text-row", { opacity: 1 });
@@ -205,25 +174,37 @@ onMounted(() => {
         },
       },
     });
-    const partWidth = ScreenWidth.value / 3;
-    tlSplit
-    .to(".part-1", { x: -partWidth, y: 0, duration: 1 })
-    .to(".part-2", { x: 0, y: 100, duration: 1 }, "<")
-    .to(".part-3", { x: partWidth, y: 0, duration: 1 }, "<")
-    .to(".final-text-row", { opacity: 1, duration: 1 },"<");
+const partX1Position= (part1.value?.getBoundingClientRect().x ?? 0)
+const partX2Position= (part2.value?.getBoundingClientRect().x ?? 0)
+const partX3Position= (part3.value?.getBoundingClientRect().x ?? 0)
+const text1Position =(finaltext1.value?.getBoundingClientRect().x ?? 0)+((finaltext1.value?.getBoundingClientRect().width ?? 0)/2)
+const text2Position =(finaltext2.value?.getBoundingClientRect().x ?? 0)+((finaltext2.value?.getBoundingClientRect().width ?? 0)/2)
+const text3Position =(finaltext3.value?.getBoundingClientRect().x ?? 0)+((finaltext3.value?.getBoundingClientRect().width ?? 0)/2)
+const part1Dest = text1Position + ((part1.value?.getBoundingClientRect().width ?? 0)*0.8)
+const part2Dest = text2Position + ((part2.value?.getBoundingClientRect().width ?? 0)*0.65)
+const part3Dest = text3Position + ((part3.value?.getBoundingClientRect().width ?? 0)*0.6)
+    
+tlSplit
+      .to(".part-1", { x: (part1Dest-partX1Position), y: "131%", transformOrigin:("50% 50%"), duration: 1 }, "<")
+      .to(".part-2", { x: (part2Dest-partX2Position), y: "67%", transformOrigin:("50% 50%"), duration: 1 }, "<")
+      .to(".part-3", { x: (part3Dest-partX3Position), y: "95%", transformOrigin:("50% 50%"), duration: 1 }, "<")
+      .to(".final-text-row", { opacity: 1, duration: 1, delay: 1 },"<");
+      // ((finaltext1.value?.getBoundingClientRect().x ?? 0)-(finaltext1.value?.getBoundingClientRect().width ?? 0)/2)-((part1.value?.getBoundingClientRect().x ?? 0)+((part1.value?.getBoundingClientRect().width ?? 0)))
+        //  console.log(((finaltext1.value?.getBoundingClientRect().x ?? 0)-(finaltext1.value?.getBoundingClientRect().width ?? 0)/2)-((part1.value?.getBoundingClientRect().x ?? 0)+((part1.value?.getBoundingClientRect().width ?? 0))))
 
     tlRotate = gsap.timeline({
       scrollTrigger: {
         trigger: ".below-section",
-         start: "center +=30%",
-         end: "+=5%",
+         start: "center +=45%",
+         end: "+=15%",
         scrub: true,
       },
     });
       tlRotate
-      .to(part1.value, { rotation: 180, duration: 2 })
-      .to(part2.value, { rotation: -58, duration: 2 }, "<")
-      .to(part3.value, { rotation: 62, duration: 2 }, "<");
+      .to(part1.value, { rotation: 180, transformOrigin:("50% 50%"), duration: 2 })
+      .to(part2.value, { rotation: -58,transformOrigin:("50% 50%"), duration: 2 }, "<")
+      .to(part3.value, { rotation: 62,transformOrigin:("50% 50%"), duration: 2 }, "<");
+
 
   } else {
     intervalId = setInterval(() => {
@@ -235,7 +216,6 @@ onMounted(() => {
     }
   }
 });
-
 
 onBeforeUnmount(() => {
   clearInterval(intervalId);
@@ -270,10 +250,6 @@ onBeforeUnmount(() => {
   background-position: 0 0;
   background-color: #222222;
 }
-.cls-1 { fill: url(#linear-gradient); }
-.cls-2 { fill: url(#linear-gradient-2); }
-.cls-3 { fill: url(#linear-gradient-3); }
-.cls-4 { fill: url(#linear-gradient-4); }
 
 @keyframes shimmer {
   0% {
@@ -290,7 +266,8 @@ onBeforeUnmount(() => {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 400px;
+  height: 100%;
+
 }
 
 .triangle-part {
@@ -299,9 +276,11 @@ onBeforeUnmount(() => {
 }
 
 .center-triangle {
+  width: 400px;
+  height: 400px;
   z-index: 10;
-  width: 400px; 
-  height:400px;
+  position: relative;
+
 }
 
 .box-card-wrapper {
@@ -327,7 +306,23 @@ onBeforeUnmount(() => {
   height: 18%;
   z-index: 5;
 }
+.part-1 {
+  top: -4%;
+  left: 2%;
+  width: 70%;
+}
 
+.part-2 {
+  top: 36%;
+  left: -5%;
+  width: 70%;
+}
+
+.part-3 {
+  top: 22%;
+  left: 39%;
+  width: 70%;
+}
 
 .box-card-content {
   position: relative;
@@ -351,7 +346,6 @@ onBeforeUnmount(() => {
 }
 .below-section{
   height: 120vh;
-  margin: auto;
   position: relative;
 }
 .final-text-row {
@@ -368,7 +362,7 @@ onBeforeUnmount(() => {
 }
 
 .final-text-col {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.3);
   flex: 1;
   text-align: center;
   font-size: 24px;
@@ -379,38 +373,39 @@ onBeforeUnmount(() => {
   margin-top: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .center-triangle {
     width: 280px;
     height: 280px;
   }
 
+
   .part-1 {
-  top: -8%;
-  left: 2%;
-  width: 82%;
+  top: 0%;
+  left: 5%;
+  width: 70%;
   }
 
   .part-2 {
   top: 40%;
-  left: -6%;
-  width: 82%;
+  left: -1%;
+  width: 70%;
   }
 
   .part-3 {
-  top: 24%;
-  left: 46%;
-  width: 82%;
+  top: 27%;
+  left: 43%;
+  width: 69%;
   }
 
   .box-card-wrapper {
-  width: 36%;
-  height: 16%;
+  width: 38%;
+  height: 15%;
   }
 
   .box-card-wrapper.active-card {
-    width: 36%;
-    height: 17%;
+    width: 38%;
+    height: 16%;
   }
 
   .box-card-content h4 {
