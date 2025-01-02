@@ -292,8 +292,8 @@ export const navbarLinkData: NavLinkType[] = [
   // },
   {
     title: 'Home',
-    href: '/'
-    // link: { name: 'home-page' }
+    href: '/',
+    link: { name: 'home-page' }
 
     // links: [
     //   {
@@ -316,7 +316,7 @@ export const navbarLinkData: NavLinkType[] = [
   },
   {
     title: 'About',
-    // link: { name: 'about-page' }
+    link: { name: 'about-page' },
     href: '/about'
   },
   {

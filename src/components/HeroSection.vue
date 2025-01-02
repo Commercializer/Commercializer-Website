@@ -127,30 +127,19 @@ onMounted(() => {
       scrollTrigger: {
         trigger: ".below",
         start: "top top",
-        end: "+=80%",
+        end: "+=75%",
         scrub: true,
-        onUpdate: (self) => {
-          const logoTop = self.progress;
-          if (logoTop > 0.01) {
-            gsap.set(".box-card-wrapper", { opacity: 0, duration: 1 });
-          } else {
-            gsap.set(".box-card-wrapper", { opacity: 1, duration: 1 });
-          }
-        },
+        // onUpdate: (self) => {
+        //   const logoTop = self.progress;
+        //   if (logoTop > 0.01) {
+        //     gsap.set(".box-card-wrapper", { opacity: 0, duration: 1 });
+        //   } else {
+        //     gsap.set(".box-card-wrapper", { opacity: 1, duration: 1 });
+        //   }
+        // },
       },
     });
 
-    tl.fromTo(
-      [".text-col h1", ".text-col p", ".text-col .locations", ".discover-more"],
-      {},
-      {
-        opacity: 0,
-        duration: 0.4,
-        ease: "power1.inOut",
-      },
-      0
-    );
-    const partWidth = screenWidth.value / 6;
     tl.to(".center-triangle", {
       rotation: 360,
       scale: 1.1,
@@ -159,6 +148,19 @@ onMounted(() => {
       duration: 2,
       ease: "power2.inOut",
     });
+
+    tl.fromTo(
+      [".text-col h1", ".text-col p", ".text-col .locations", ".discover-more",".box-card-wrapper"],
+      {x: 0, opacity: 1},
+      {
+        opacity: 0,
+        x: -200,
+        duration: 2,
+        ease: "power1.inOut",
+        overwrite: true
+      },
+      0
+    );
 
     tlSplit = gsap.timeline({
       scrollTrigger: {
@@ -174,29 +176,34 @@ onMounted(() => {
         },
       },
     });
-const partX1Position= (part1.value?.getBoundingClientRect().x ?? 0)
-const partX2Position= (part2.value?.getBoundingClientRect().x ?? 0)
-const partX3Position= (part3.value?.getBoundingClientRect().x ?? 0)
-const text1Position =(finaltext1.value?.getBoundingClientRect().x ?? 0)+((finaltext1.value?.getBoundingClientRect().width ?? 0)/2)
-const text2Position =(finaltext2.value?.getBoundingClientRect().x ?? 0)+((finaltext2.value?.getBoundingClientRect().width ?? 0)/2)
-const text3Position =(finaltext3.value?.getBoundingClientRect().x ?? 0)+((finaltext3.value?.getBoundingClientRect().width ?? 0)/2)
-const part1Dest = text1Position + ((part1.value?.getBoundingClientRect().width ?? 0)*0.8)
-const part2Dest = text2Position + ((part2.value?.getBoundingClientRect().width ?? 0)*0.65)
-const part3Dest = text3Position + ((part3.value?.getBoundingClientRect().width ?? 0)*0.6)
     
-tlSplit
-      .to(".part-1", { x: (part1Dest-partX1Position), y: "131%", transformOrigin:("50% 50%"), duration: 1 }, "<")
-      .to(".part-2", { x: (part2Dest-partX2Position), y: "67%", transformOrigin:("50% 50%"), duration: 1 }, "<")
-      .to(".part-3", { x: (part3Dest-partX3Position), y: "95%", transformOrigin:("50% 50%"), duration: 1 }, "<")
+    const partX1Position= (part1.value?.getBoundingClientRect().x ?? 0)
+    const partX2Position= (part2.value?.getBoundingClientRect().x ?? 0)
+    const partX3Position= (part3.value?.getBoundingClientRect().x ?? 0)
+    const text1Position =(finaltext1.value?.getBoundingClientRect().x ?? 0)+((finaltext1.value?.getBoundingClientRect().width ?? 0)/2)
+    const text2Position =(finaltext2.value?.getBoundingClientRect().x ?? 0)+((finaltext2.value?.getBoundingClientRect().width ?? 0)/2)
+    const text3Position =(finaltext3.value?.getBoundingClientRect().x ?? 0)+((finaltext3.value?.getBoundingClientRect().width ?? 0)/2)
+    const part1Dest = text1Position + ((part1.value?.getBoundingClientRect().width ?? 0)*0.8)
+    const part2Dest = text2Position + ((part2.value?.getBoundingClientRect().width ?? 0)*0.65)
+    const part3Dest = text3Position + ((part3.value?.getBoundingClientRect().width ?? 0)*0.6)
+    const partY1Position= (part1.value?.getBoundingClientRect().y ?? 0)
+    const partY2Position= (part2.value?.getBoundingClientRect().y ?? 0)
+    const partY3Position= (part3.value?.getBoundingClientRect().y ?? 0)
+    const textY1Position = (finaltext1.value?.getBoundingClientRect().y ?? 0)
+    const textY2Position = (finaltext2.value?.getBoundingClientRect().y ?? 0)
+    const textY3Position = (finaltext3.value?.getBoundingClientRect().y ?? 0)
+    
+    tlSplit
+      .to(".part-1", { x: (part1Dest-partX1Position), y:  ((textY1Position/2) - (1.99*partY1Position)), transformOrigin:("50% 50%"), duration: 1 }, "<")
+      .to(".part-2", { x: (part2Dest-partX2Position), y: ((textY2Position/2) - (1.54*partY2Position)), transformOrigin:("50% 50%"), duration: 1 }, "<")
+      .to(".part-3", { x: (part3Dest-partX3Position), y:((textY3Position/2) - (1.57*partY3Position)), transformOrigin:("50% 50%"), duration: 1 }, "<")
       .to(".final-text-row", { opacity: 1, duration: 1, delay: 1 },"<");
-      // ((finaltext1.value?.getBoundingClientRect().x ?? 0)-(finaltext1.value?.getBoundingClientRect().width ?? 0)/2)-((part1.value?.getBoundingClientRect().x ?? 0)+((part1.value?.getBoundingClientRect().width ?? 0)))
-        //  console.log(((finaltext1.value?.getBoundingClientRect().x ?? 0)-(finaltext1.value?.getBoundingClientRect().width ?? 0)/2)-((part1.value?.getBoundingClientRect().x ?? 0)+((part1.value?.getBoundingClientRect().width ?? 0))))
 
     tlRotate = gsap.timeline({
       scrollTrigger: {
         trigger: ".below-section",
-         start: "center +=45%",
-         end: "+=15%",
+         start: "center +=44.2%",
+         end: "+=13%",
         scrub: true,
       },
     });
@@ -345,7 +352,7 @@ onBeforeUnmount(() => {
   margin: 0.1em 0 0;
 }
 .below-section{
-  height: 120vh;
+  height: 140vh;
   position: relative;
 }
 .final-text-row {
@@ -353,7 +360,7 @@ onBeforeUnmount(() => {
   align-items: center;
   width: 100%;
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   opacity: 0;
   margin: 0 auto; /* Center the row */
   gap: 10px; /* Adjust gap for small screens */
@@ -364,12 +371,11 @@ onBeforeUnmount(() => {
 .final-text-col {
   flex: 1;
   text-align: center;
-  font-size: 24px;
   color: #fff;
-  padding: 10px 5px;
 }
 .final-text{
   margin-top: 10px;
+  font-size: 32px;
 }
 
 @media (max-width: 800px) {
