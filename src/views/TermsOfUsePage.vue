@@ -1,4 +1,5 @@
 <template>
+  <Navbar :absolute="false" />
   <b-container>
     <!-- <PartialTermsOfUse /> -->
     <b-container class="pt-5 pb-2 mt-5 pb-md-3 py-lg-5">
@@ -333,7 +334,14 @@
       </div>
     </main>
   </b-container>
+  <FooterSection />
 </template>
+
+
+<script setup lang="ts">
+import Navbar from '@/layouts/partials/Navbar.vue'
+import FooterSection from '@/components/FooterSection.vue'
+</script>
 
 <style lang="scss" scoped>
 h3 {

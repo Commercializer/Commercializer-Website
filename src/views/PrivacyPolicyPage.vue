@@ -1,4 +1,5 @@
 <template>
+  <Navbar :absolute="false" />
   <b-container>
     <PrivacyPolicy />
     <main>
@@ -204,10 +205,14 @@
       <a href="mailto:info@commercializer.global" target="_blank">info@commercializer.global</a>
     </main>
   </b-container>
+  <FooterSection />
 </template>
 
 <script setup lang="ts">
 import PrivacyPolicy from '@/layouts/partials/PrivacyPolicy.vue'
+import Navbar from '@/layouts/partials/Navbar.vue'
+import FooterSection from '@/components/FooterSection.vue'
+
 const usesOfData = [
   `0.1. to provide and maintain our Service;`,
 
