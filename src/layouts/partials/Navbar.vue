@@ -13,10 +13,11 @@
       'border-bottom border-light': isBorder
     }"
     :style="{ backgroundColor: '#000 !important', height: '74px' }"
+    ref="headerRef"
   >
     <div class="container px-3">
       <router-link class="navbar-brand pe-3" to="/">
-        <img src="/commercializer-logo.svg" alt="Commercializer" class="brand-logo" />
+        <img ref="logoRef" src="/commercializer-logo.svg" alt="Commercializer" class="brand-logo" :class="{'mobile-logo-hidden': isHomePage && isMobileView}" />
         <!-- Commercializer -->
       </router-link>
 
@@ -159,7 +160,7 @@
 
 <script lang="ts" setup>
 import logoImg from '@/assets/img/logo.png'
-import { onMounted, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
 import { navbarLinkData } from '@/layouts/data'
 import { Icon } from '@iconify/vue'
@@ -206,6 +207,9 @@ const isStuck = ref(props.stuck)
 
 const isMobileView = ref(false)
 const showMobileNav = ref(false)
+const logoRef = ref<HTMLElement | null>(null);
+const headerRef = ref<HTMLElement | null>(null);
+const isHomePage = ref(router.currentRoute.value.name === 'home-page')
 
 const handleMobileNavigation = (href?: string) => {
   if (href) {
@@ -227,6 +231,16 @@ const handleMobileNavigation = (href?: string) => {
   }
 }
 
+const scrollHandler = () => {
+    if (isMobileView.value && logoRef.value && isHomePage.value) {
+    if (window.scrollY > (headerRef.value?.offsetHeight ?? 74)) {
+        logoRef.value.classList.remove('mobile-logo-hidden');
+    } else {
+        logoRef.value.classList.add('mobile-logo-hidden');
+    }
+  }
+};
+
 onMounted(() => {
   if (!props.stuck) {
     window.addEventListener('scroll', () => {
@@ -239,13 +253,30 @@ onMounted(() => {
       }
     })
   }
-
+  window.addEventListener('scroll', scrollHandler);
   window.addEventListener('resize', () => {
     isMobileView.value = window.innerWidth < 990
+    scrollHandler()
   })
 
-  isMobileView.value = window.innerWidth < 990
-})
+  isMobileView.value = window.innerWidth < 990;
+  if (isMobileView.value && logoRef.value && isHomePage.value) {
+     logoRef.value.classList.add('mobile-logo-hidden');
+   }
+});
+
+watch(() => router.currentRoute.value.name, (newRouteName) => {
+    isHomePage.value = newRouteName === 'home-page';
+    if (!isHomePage.value && logoRef.value) {
+        logoRef.value.classList.remove('mobile-logo-hidden');
+    } else if (isHomePage.value && isMobileView.value && logoRef.value) {
+        logoRef.value.classList.add('mobile-logo-hidden');
+    }
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', scrollHandler);
+});
 
 const makeChunk = (input: Array<any> | undefined) => {
   if (!input) return []
@@ -311,4 +342,8 @@ const currentRouteName = router.currentRoute.value.name
     width: 260px !important;
   }
 }
+.mobile-logo-hidden {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+ }
 </style>
