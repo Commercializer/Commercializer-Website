@@ -13,6 +13,7 @@
               <div class="gradient-border"></div>
               <div class="box-card-content">
                 <h4>{{ card.title }}</h4>
+                 <p v-if="activeIndex === index" class="active-text">{{ card.text }}</p>
               </div>
             </div>
           </div>
@@ -131,11 +132,11 @@ const finaltext2 = ref<HTMLHeadingElement | null>(null);
 const finaltext3 = ref<HTMLHeadingElement | null>(null);
 
   const cards = ref([
-  { title: 'Research & Consultancy'},
-  { title: 'Brand Transformation'},
-  { title: 'Commercial Strategy Building'},
-  { title: 'Product Development'}, 
-  { title: 'Market Launch GTM'}  
+  { title: 'Research & Consultancy', text: 'Uncover insights and shape your vision'},
+  { title: 'Brand Transformation', text: 'Create a brand that stands out'},
+  { title: 'Commercial Strategy Building', text: 'Strategize for growth & success' },
+  { title: 'Product Development', text: 'UX-oriented, scalable products that deliver'}, 
+  { title: 'Market Launch GTM', text: 'Launch with impact, scale with success'}  
 ]);
 
 const activeIndex = ref(0);
