@@ -13,30 +13,82 @@
               <div class="gradient-border"></div>
               <div class="box-card-content">
                 <h4>{{ card.title }}</h4>
-                <p>{{ card.text }}</p>
               </div>
             </div>
           </div>
         </b-col>
         <b-col lg="5" md="6" class="text-center text-md-start order-md-1 text-col">
           <h1 class="display-5 mb-lg-4 shimmer">Commercializing Innovations</h1>
-          <p class="fs-xl pb-3 pb-lg-0 mb-2 mb-md-3 mb-lg-5" style="color: #dedede">Transforming groundbreaking ideas into market-leading products.</p>
-          <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-4 locations">
-            <p style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.4rem">
-              <img src="https://flagcdn.com/128x96/us.png" style="width: 28px" />
-              Delaware, USA
-            </p>
-            <p style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.4rem">
-              <img src="https://flagcdn.com/128x96/qa.png" style="width: 28px" />
-              Doha, Qatar
-            </p>
-            <p style="font-size: 18px; color: #fff; display: flex; align-items: center; gap: 0.4rem">
-              <img src="https://flagcdn.com/128x96/lk.png" style="width: 28px" />
-              Colombo, Sri Lanka
-            </p>
+          <p
+            class="fs-xl pb-3 pb-lg-0 mb-2 mb-md-3 mb-lg-5"
+            style="color: #dedede"
+          >
+            Transforming groundbreaking ideas into market-leading products.
+          </p>
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-4 locations"
+            :class="{'locations-mobile': isMobile}"
+          >
+            <template v-if="!isMobile">
+              <p
+                style="
+                  font-size: 18px;
+                  color: #fff;
+                  display: flex;
+                  align-items: center;
+                  gap: 0.4rem;
+                "
+              >
+                <img src="https://flagcdn.com/128x96/us.png" style="width: 28px" />
+                Delaware, USA
+              </p>
+              <p
+                style="
+                  font-size: 18px;
+                  color: #fff;
+                  display: flex;
+                  align-items: center;
+                  gap: 0.4rem;
+                "
+              >
+                <img src="https://flagcdn.com/128x96/qa.png" style="width: 28px" />
+                Doha, Qatar
+              </p>
+              <p
+                style="
+                  font-size: 18px;
+                  color: #fff;
+                  display: flex;
+                  align-items: center;
+                  gap: 0.4rem;
+                "
+              >
+                <img src="https://flagcdn.com/128x96/lk.png" style="width: 28px" />
+                Colombo, Sri Lanka
+              </p>
+            </template>
+            <template v-else>
+              <div style="display: flex; gap: 2rem; justify-content: center">
+                <img src="https://flagcdn.com/128x96/us.png" style="width: 28px" />
+                <img src="https://flagcdn.com/128x96/qa.png" style="width: 28px" />
+                <img src="https://flagcdn.com/128x96/lk.png" style="width: 28px" />
+              </div>
+            </template>
           </div>
-          <a class="d-flex align-items-center gap-4 discover-more mt-3" style="text-decoration: none; color: #fff; cursor: pointer;" href="#clients">
-            <span style="padding: 10px; border-radius: 500px; aspect-ratio: 1; background-color: rgba(255, 255, 255, 0.15);">
+          <a
+            class="d-flex align-items-center gap-4 discover-more mt-3"
+            style="text-decoration: none; color: #fff; cursor: pointer;"
+            href="#clients"
+            :class="{'discover-more-mobile': isMobile}"
+          >
+            <span
+              style="
+                padding: 10px;
+                border-radius: 500px;
+                aspect-ratio: 1;
+                background-color: rgba(255, 255, 255, 0.15);
+              "
+            >
               <Icon :icon="ChevronIcon" style="font-size: 24px" />
             </span>
             <span> Discover More </span>
@@ -61,7 +113,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, onBeforeUnmount, type ComponentPublicInstance } from 'vue';
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue';
 import ChevronIcon from '@iconify/icons-bx/bx-chevrons-down';
 import { Icon } from '@iconify/vue';
 import { gsap } from "gsap";
@@ -78,31 +130,39 @@ const finaltext1 = ref<HTMLHeadingElement | null>(null);
 const finaltext2 = ref<HTMLHeadingElement | null>(null);
 const finaltext3 = ref<HTMLHeadingElement | null>(null);
 
-const cards = ref([
-  { title: 'Product Studio', text: 'Build Your Dream Product' },
-  { title: 'AI Automation Agency', text: 'Streamline Processes with AI' },
-  { title: 'UX Studio', text: 'Design Stunning Experiences' },
+  const cards = ref([
+  { title: 'Research & Consultancy'},
+  { title: 'Brand Transformation'},
+  { title: 'Commercial Strategy Building'},
+  { title: 'Product Development'}, 
+  { title: 'Market Launch GTM'}  
 ]);
 
 const activeIndex = ref(0);
+const isMobile = computed(() => window.innerWidth <= 768);
+
 
 const getCardPosition = (index: number) => {
   const screenWidth = window.innerWidth;
   const cardPositions ={
     desktop: [
-    { left: `0%`, top: `6%` },
-    { left: `61%`, top: `28%` },
-    { left: `12%`, top: `84%` },
+    { left: `-10%`, top: `25%` },
+    { left: `0%`, top: `85%` },
+    { left: `60%`, top: `84%` },
+    { left: `65%`, top: `27%` }, 
+    { left: `30%`, top: `-13%` },
   ],
     mobile: [
-    { left: `0%`, top: `8%` },
-    { left: `64%`, top: `24%` },
-    { left: `0%`, top: `86%` },
+    { left: `-10%`, top: `28%` },
+    { left: `-5%`, top: `90%` },
+    { left: `65%`, top: `90%` },
+    { left: `72%`, top: `28%` },
+    { left: `30%`, top:` -6%` },
   ],
 
   }
-  const isMobile = screenWidth <= 768;
-    const positions = isMobile ? cardPositions.mobile : cardPositions.desktop;
+  const isMobileView = screenWidth <= 768;
+    const positions = isMobileView ? cardPositions.mobile : cardPositions.desktop;
 
     const positionIndex = (index - activeIndex.value + positions.length) % positions.length;
     return positions[positionIndex];
@@ -117,8 +177,8 @@ const screenHeight = ref(window.innerHeight)
 
 
 onMounted(() => {
-  const isMobile = window.innerWidth <= 1024;
-  if (!isMobile) {
+  const isMobileView = window.innerWidth <= 1024;
+  if (!isMobileView) {
     intervalId = setInterval(() => {
       activeIndex.value = (activeIndex.value + 1) % cards.value.length;
     }, 4500);
@@ -150,7 +210,7 @@ onMounted(() => {
     });
 
     tl.fromTo(
-      [".text-col h1", ".text-col p", ".text-col .locations", ".discover-more",".box-card-wrapper"],
+      [".text-col h1", ".text-col p", ".locations", ".discover-more",".box-card-wrapper"],
       {x: 0, opacity: 1},
       {
         opacity: 0,
@@ -176,7 +236,7 @@ onMounted(() => {
         },
       },
     });
-    
+
     const partX1Position= (part1.value?.getBoundingClientRect().x ?? 0)
     const partX2Position= (part2.value?.getBoundingClientRect().x ?? 0)
     const partX3Position= (part3.value?.getBoundingClientRect().x ?? 0)
@@ -192,13 +252,14 @@ onMounted(() => {
     const textY1Position = (finaltext1.value?.getBoundingClientRect().y ?? 0)
     const textY2Position = (finaltext2.value?.getBoundingClientRect().y ?? 0)
     const textY3Position = (finaltext3.value?.getBoundingClientRect().y ?? 0)
-    
+
     tlSplit
-      .to(".part-1", { x: (part1Dest-partX1Position), y:  ((textY1Position/2) - (1.99*partY1Position)), transformOrigin:("50% 50%"), duration: 1 }, "<")
+      .to(".part-1", { x: (part1Dest-partX1Position), y:  ((textY1Position/2) - (2*partY1Position)), transformOrigin:("50% 50%"), duration: 1 }, "<")
       .to(".part-2", { x: (part2Dest-partX2Position), y: ((textY2Position/2) - (1.54*partY2Position)), transformOrigin:("50% 50%"), duration: 1 }, "<")
       .to(".part-3", { x: (part3Dest-partX3Position), y:((textY3Position/2) - (1.57*partY3Position)), transformOrigin:("50% 50%"), duration: 1 }, "<")
       .to(".final-text-row", { opacity: 1, duration: 1, delay: 1 },"<");
-
+    // `${(part1Dest - partX1Position)}vh`
+    console.log((part1Dest-partX1Position));
     tlRotate = gsap.timeline({
       scrollTrigger: {
         trigger: ".below-section",
@@ -373,9 +434,16 @@ onBeforeUnmount(() => {
   text-align: center;
   color: #fff;
 }
-.final-text{
+.final-text {
   margin-top: 10px;
   font-size: 32px;
+}
+.locations-mobile {
+   justify-content: center !important;
+  text-align: center !important;
+}
+.discover-more-mobile {
+  justify-content: center !important;
 }
 
 @media (max-width: 800px) {
@@ -386,20 +454,20 @@ onBeforeUnmount(() => {
 
 
   .part-1 {
-  top: 0%;
-  left: 5%;
+  top: 2%;
+  left: 7%;
   width: 70%;
   }
 
   .part-2 {
-  top: 40%;
-  left: -1%;
+  top: 42%;
+  left: 1%;
   width: 70%;
   }
 
   .part-3 {
-  top: 27%;
-  left: 43%;
+  top: 29%;
+  left: 45%;
   width: 69%;
   }
 
@@ -421,13 +489,13 @@ onBeforeUnmount(() => {
       font-size: 0.4em;
   }
   .final-text-row {
-    flex-direction: column; /* Stack on small screens */
+    flex-direction: column;
     gap: 15px;
   }
 
   .final-text-col {
-    min-width: 100%; /* Full width for stacked layout */
-    font-size: 18px; /* Adjust text size */
+    min-width: 100%;
+    font-size: 18px; 
   }
 }
 
