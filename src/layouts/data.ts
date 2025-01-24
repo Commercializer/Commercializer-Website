@@ -320,6 +320,11 @@ export const navbarLinkData: NavLinkType[] = [
     href: '/about'
   },
   {
+    title: 'contact',
+    link: { name: 'contact-page' },
+    href: '/contact'
+  },
+  {
     title: 'Products',
     href: '#products'
   }

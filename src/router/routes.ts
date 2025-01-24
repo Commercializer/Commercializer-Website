@@ -59,6 +59,14 @@ const landingRoute = [
     },
     component: () => import('@/views/AboutPage.vue')
   },
+  {
+  path: '/contact',
+  name: 'contact-page',
+  meta: {
+    title: 'Contacts Us | Commercializer'
+  },
+  component: () => import('@/views/ContactPage.vue')
+  },
   // {
   //   path: '/landing',
   //   name: 'landing',
