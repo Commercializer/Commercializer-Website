@@ -43,23 +43,19 @@
                 </b-form-group>
               </b-col>
 
-              <b-col sm="6">
+             <b-col sm="6">
                 <b-form-group label="Contact Number" label-for="contact" label-class="fs-base">
-                  <b-form-input
-                    id="contact"
-                    type="tel"
-                    class="form-control-lg dark-placeholder"
-                    placeholder="+12 77 123 4567"
-                    v-model="formData.contact"
-                    required
-                  ></b-form-input>
-                  <b-form-invalid-feedback
-                    >Please provide a valid contact number!</b-form-invalid-feedback
-                  >
-                </b-form-group>
-              </b-col>
-
-              <b-col sm="6">
+                    <vue-tel-input
+                      id="contact"
+                      class="form-control-lg"
+                      v-model="formData.contact"
+                      @country-change="handleCountryChange"
+                      :default-country="'LK'"
+                    />
+                     <b-form-invalid-feedback>Please provide a valid contact number!</b-form-invalid-feedback>
+                  </b-form-group>
+                </b-col>
+                 <b-col sm="6">
                 <b-form-group label="Brand / Company" label-for="company" label-class="fs-base">
                   <b-form-input id="company" type="text" class="form-control-lg dark-placeholder" v-model="formData.company"></b-form-input>
                 </b-form-group>
@@ -106,7 +102,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, toRaw } from 'vue';
+import { VueTelInput } from 'vue-tel-input';
+import 'vue-tel-input/vue-tel-input.css';
 
 const formData = ref({
   firstName: '',
@@ -117,11 +115,19 @@ const formData = ref({
   website: '',
   message: '',
   checkbox1: false,
+  countryCode: '',
 });
 
+const handleCountryChange = (country: any) => {
+  formData.value.countryCode = country.dialCode;
+  console.log('Selected country code', formData.value.countryCode);
+};
+
 const handleSubmit = async () => {
+  console.log('Form Data Submitted:',formData.value);
+
   try {
-    const response = await fetch('http://localhost:3000/api/send-email', { 
+    const response = await fetch('http://localhost:3000/api/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -138,16 +144,17 @@ const handleSubmit = async () => {
     const data = await response.json();
 
     if (data.status === 'success') {
-      formData.value = {
-        firstName: '',
-        lastName: '',
-        email: '',
-        contact: '',
-        company: '',
-        website: '',
-        message: '',
-        checkbox1: false,
-      };
+         formData.value = {
+            firstName: '',
+            lastName: '',
+            email: '',
+            contact: '',
+            company: '',
+            website: '',
+            message: '',
+            checkbox1: false,
+            countryCode: '',
+        };
       alert('Your request has been successfully sent!');
     } else {
       console.error('Server error:', data.message);
@@ -158,7 +165,6 @@ const handleSubmit = async () => {
     alert('An error occurred while sending your request. Please try again later.');
   }
 };
-
 </script>
 
 <style scoped>
@@ -170,10 +176,10 @@ const handleSubmit = async () => {
   display: inline-block;
 }
 .smaller-text {
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
 }
 .dark-placeholder::placeholder {
-    color: #666; 
+    color: #666;
 }
 .gradient-button {
   background: linear-gradient(90deg, #81cb30 0%, #14b7c6 100%) !important;

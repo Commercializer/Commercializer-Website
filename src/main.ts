@@ -8,6 +8,9 @@ import router from '@/router'
 import VueTheMask from 'vue-the-mask'
 import Vue3Lottie from 'vue3-lottie'
 
+import VueTelInput from 'vue-tel-input';
+import 'vue-tel-input/vue-tel-input.css';
+
 import 'boxicons'
 import 'jarallax/dist/jarallax.min.css'
 import 'lightgallery/css/lg-fullscreen.css'
@@ -32,8 +35,14 @@ import '@/assets/scss/theme.scss'
 
 const app = createApp(App)
 
+const globalOptions = {
+    mode: 'auto', 
+};
+
 app.use(createPinia())
 app.use(router)
 app.use(VueTheMask)
+app.use(VueTelInput, globalOptions);
 app.use(Vue3Lottie)
 app.mount('#app')
+
