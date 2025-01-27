@@ -27,7 +27,7 @@
         }"
         id="commercial-prime"
       >
-        <div class="box box-1" id="products">
+        <div class="box box-1" id="products" @mousemove="handleMouseMove">
           <img src="/images/logos/commercial-prime.svg" alt="Commercial Prime" class="logo" />
           <h4>Empowering <span style="color: #d1b75f">Seamless Connections</span></h4>
           <p>NFC-Based One Tap Connect Digital Business Card</p>
@@ -37,7 +37,7 @@
             class="product-img"
           />
         </div>
-        <div class="box box-2">
+        <div class="box box-2" @mousemove="handleMouseMove">
           <img
             src="/images/products/commercial-prime-2.png"
             alt="Commercial Prime 2"
@@ -54,7 +54,7 @@
             </p>
           </div>
         </div>
-        <div class="box box-3">
+        <div class="box box-3" @mousemove="handleMouseMove">
           <div
             class="d-flex align-items-center gap-3"
             style="
@@ -106,7 +106,7 @@
             Visit Commercial Prime
           </a>
         </div>
-        <div class="box box-4">
+        <div class="box box-4" @mousemove="handleMouseMove">
           <img
             src="/images/products/commercial-prime-4.png"
             alt="Commercial Prime 2"
@@ -132,6 +132,7 @@
         <div
           class="box box-5"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+          @mousemove="handleMouseMove"
         >
           <img
             src="/images/logos/network-logo.svg"
@@ -146,6 +147,7 @@
         <div
           class="box box-6"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+          @mousemove="handleMouseMove"
         >
           <img
             src="/images/logos/network-logo-2.svg"
@@ -165,7 +167,7 @@
         }"
         id="billable"
       >
-        <div class="box box-1">
+        <div class="box box-1" @mousemove="handleMouseMove">
           <img src="/images/logos/billable.png" alt="Commercial Prime" class="logo" />
           <h4>All in One Business Toolkit for MSMEs</h4>
           <p>
@@ -174,7 +176,7 @@
           </p>
           <img src="/images/products/billable.png" alt="Billable 1" class="product-img" />
         </div>
-        <div class="box box-2">
+        <div class="box box-2" @mousemove="handleMouseMove">
           <img
             src="/images/products/billable-2-1.png"
             alt="Commercial Prime 3"
@@ -213,7 +215,7 @@
             Visit Billable
           </a>
         </div>
-        <div class="box box-3">
+        <div class="box box-3" @mousemove="handleMouseMove">
           <img
             src="/images/products/billable-2.png"
             alt="Commercial Prime 2"
@@ -239,6 +241,7 @@
         <div
           class="box box-4"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+          @mousemove="handleMouseMove"
         >
           <img
             src="/images/logos/credit-card.svg"
@@ -253,6 +256,7 @@
         <div
           class="box box-5"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+          @mousemove="handleMouseMove"
         >
           <img src="/images/logos/hex.svg" alt="Network" style="width: 72px; height: 72px" />
           <div>
@@ -260,7 +264,7 @@
             <p style="font-size: 14px; margin: 0">Products</p>
           </div>
         </div>
-        <div class="box box-6">
+        <div class="box box-6" @mousemove="handleMouseMove">
           <img
             src="/images/products/billable-4.png"
             alt="Commercial Prime 2"
@@ -290,15 +294,15 @@
         :style="{
           transform: `scale(${scale})`
         }"
-        id="agreementor"  
+        id="agreementor"
       >
-        <div class="box box-1">
+        <div class="box box-1" @mousemove="handleMouseMove">
           <img src="/images/logos/agreementor.png" alt="Commercial Prime" class="logo" />
           <h4>Complex Legal Jargon to Clarity</h4>
           <p>AI Based Legal Agreement Explainer</p>
           <img src="/images/products/agreementor.png" alt="Agreementor 1" class="product-img" />
         </div>
-        <div class="box box-2">
+        <div class="box box-2" @mousemove="handleMouseMove">
           <img
             src="/images/products/agreementor-2.png"
             alt="Agreementor 2"
@@ -321,7 +325,7 @@
             </p>
           </div>
         </div>
-        <div class="box box-3">
+        <div class="box box-3" @mousemove="handleMouseMove">
           <img
             src="/images/products/agreementor-3.png"
             alt="Agreementor 3"
@@ -351,7 +355,7 @@
             </div>
           </div>
         </div>
-        <div class="box box-4" style="overflow: hidden">
+        <div class="box box-4" style="overflow: hidden" @mousemove="handleMouseMove">
           <div
             class="d-flex align-items-center gap-3"
             style="
@@ -407,6 +411,7 @@
         <div
           class="box box-5"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+          @mousemove="handleMouseMove"
         >
           <img
             src="/images/logos/inspection.svg"
@@ -421,6 +426,7 @@
         <div
           class="box box-6"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+          @mousemove="handleMouseMove"
         >
           <img
             src="/images/logos/network-layer.svg"
@@ -441,7 +447,7 @@
 import { Icon } from '@iconify/vue'
 import UserIcon from '@iconify/icons-bx/bx-user'
 import { useBreakpoints, useWindowSize, breakpointsBootstrapV5 } from '@vueuse/core'
-import { computed } from 'vue'
+import { computed, onMounted, onUnmounted } from 'vue'
 
 const breakpoints = useBreakpoints(breakpointsBootstrapV5)
 
@@ -454,6 +460,18 @@ const scale = computed(() => {
     return 0.88
   }
 })
+
+const handleMouseMove = (event: MouseEvent) => {
+  const target = event.currentTarget as HTMLElement;
+  const rect = target.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+
+  target.style.setProperty('--mouse-x', `${x}px`);
+  target.style.setProperty('--mouse-y', `${y}px`);
+};
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -464,10 +482,52 @@ const scale = computed(() => {
   background: radial-gradient(108.51% 131.17% at 13.08% 8.07%, #1c1c1c 0%, #414141 100%);
   position: relative;
   transition: all 0.3s ease-in-out;
+  --mouse-x: 0px;
+  --mouse-y: 0px;
+  overflow: hidden;
 
   &:hover {
     transform: scale(1.01);
   }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 96px;
+      height: 96px;
+      left: -48px;
+      top: -48px;
+      background-color: #481a96;
+      border-radius: 50%;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s, transform 0.5s;
+      transform: translate(var(--mouse-x), var(--mouse-y));
+      z-index: 30;
+      filter: blur(100px);
+    }
+
+    &:hover::before {
+       opacity: 0.2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.5s;
+      background: radial-gradient(
+        250px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.2),
+        transparent
+      );
+       z-index: 10;
+    }
+    &:hover::after {
+        opacity: 1;
+    }
 }
 
 .row {
