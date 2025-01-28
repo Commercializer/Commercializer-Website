@@ -35,6 +35,7 @@ declare module 'vue' {
     BTab: typeof import('bootstrap-vue-next/components/BTabs')['BTab']
     BTabs: typeof import('bootstrap-vue-next/components/BTabs')['BTabs']
     ContactForm: typeof import('./src/components/contact/ContactForm.vue')['default']
+    CookieBanner: typeof import('./src/components/CookieBanner.vue')['default']
     CustomSyntax: typeof import('./src/components/CustomSyntax.vue')['default']
     Deliverables: typeof import('./src/components/about/Deliverables.vue')['default']
     ExamplesSection: typeof import('./src/components/ExamplesSection.vue')['default']

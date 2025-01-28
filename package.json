@@ -24,6 +24,7 @@
     "gsap": "^3.12.5",
     "img-comparison-slider": "^8.0.6",
     "jarallax": "^2.2.1",
+    "js-cookie": "^3.0.5",
     "lightgallery": "^2.7.2",
     "parallax-js": "^3.1.0",
     "pinia": "^2.2.2",
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.4",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^22.5.5",
     "@types/parallax-js": "^3.1.3",
     "@types/rellax": "^1.7.7",
