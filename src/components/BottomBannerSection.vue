@@ -3,11 +3,64 @@
     <div class="container">
       <div class="banner">
         <p>Ready to Commercialize? Let's Talk.</p>
-        <a href="https://calendly.com/commercializer/30min" target="_blank">Schedule a Call</a>
+        <a
+          class="schedule-call-button"
+          @click.prevent
+          rel="noopener"
+          data-cal-link="commercializer/30min"
+          data-cal-namespace="30min"
+          data-cal-config='{"layout":"month_view","theme":"dark"}'
+        >
+          Schedule a Call
+        </a>
       </div>
     </div>
   </section>
 </template>
+
+<script lang="ts" setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  // Initialize Cal.com after the component mounts
+  (function (C, A, L) {
+    let p = function (a: any, ar: any) { a.q.push(ar); };
+    let d = C.document;
+    (C as any).Cal = (C as any).Cal || function () {
+      let cal: any = (C as any).Cal;
+      cal.q = cal.q || [];
+
+      let ar = arguments;
+      if (!cal.loaded) {
+        cal.ns = {};
+        d.head.appendChild(d.createElement("script")).src = A;
+        cal.loaded = true;
+      }
+      if (ar[0] === L) {
+        const api: any = function () {
+          p(api, arguments);
+        };
+        api.q = api.q || [];
+
+        const namespace = ar[1];
+
+        if (typeof namespace === "string") {
+          cal.ns[namespace] = cal.ns[namespace] || api;
+          p(cal.ns[namespace], ar);
+          p(cal, ["initNamespace", namespace]);
+        } else p(cal, ar);
+        return;
+      }
+      p(cal, ar);
+    };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  (window as any).Cal("init", "30min", { origin: "https://cal.com" });
+  (window as any).Cal.ns["30min"]("ui", { "theme": "dark", "cssVarsPerTheme": { "dark": { "cal-brand": "#47c080" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+
+});
+
+</script>
 
 <style scoped lang="scss">
 #bottom-banner {
@@ -76,6 +129,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+     cursor: pointer;
   }
 }
 </style>
