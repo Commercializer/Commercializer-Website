@@ -186,3 +186,73 @@ const handleSubmit = async () => {
   border: none;
 }
 </style>
+
+<style>
+.vue-tel-input {
+  border-radius: 3px;
+  display: flex;
+  border: 1px solid #444; /* Changed border color to a darker gray */
+  text-align: left;
+}
+
+.vue-tel-input:focus-within {
+  box-shadow: inset 0 1px 1px #00000013; /* Changed focus box-shadow color */
+  border-color: #aeafb0; /* Changed focus border color */
+}
+
+.vti__dropdown.open {
+  background-color: #030202; /* Changed open background color to a dark gray */
+}
+
+.vti__dropdown.disabled {
+  cursor: no-drop;
+  outline: none;
+  background-color: #222; /* Changed disabled background color to a dark gray */
+}
+
+.vti__dropdown:hover {
+  background-color: #222; /* Changed hover background color to a dark gray */
+}
+.vti__selection .vti__country-code {
+  color: #aaa; /* Changed country code color to light gray */
+}
+.vti__dropdown-list {
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  list-style: none;
+  max-height: 200px;
+  overflow-y: scroll;
+  position: absolute;
+  left: -1px;
+  background-color: #333; /* Changed dropdown list background color to a darker gray */
+  border: 1px solid #555; /* Changed dropdown list border color */
+  width: 390px;
+}
+
+.vti__dropdown-item.highlighted {
+  background-color: #444;  /* Changed highlighted item background to a darker gray */
+}
+
+.vti__dropdown-item.last-preferred {
+  border-bottom: 1px solid #555; /* Changed last preferred item border color */
+}
+.vti__input {
+  border: none;
+  border-radius: 0 2px 2px 0;
+  width: 100%;
+  outline: none;
+  padding-left: 7px;
+  color: #fff;  /* Changed input text color to white */
+}
+
+.vti__search_box {
+  border: 1px solid #555; /* Changed search box border color */
+  width: 94%;
+  padding: 7px;
+  margin: 2px;
+  background-color: #222; /* Changed search box background color to a darker gray */
+  color: #fff; /* Changed search box text color to white */
+}
+</style>
