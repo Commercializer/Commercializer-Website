@@ -318,4 +318,7 @@ const footerLinks: FooterLinkType[] = [
     }
   }
 }
+.locations {
+        opacity: 1 !important;
+    }
 </style>
