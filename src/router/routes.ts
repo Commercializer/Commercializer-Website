@@ -19,28 +19,28 @@ import path from 'path'
 //   }
 // ]
 
-// const errorPageRoutes = [
-//   {
-//     path: '/error-404-1',
-//     name: 'pages.error-404-1',
-//     meta: {
-//       title: '404 Not Found v1 | Commercializer'
-//     },
-//     component: () => import('@/views/pages/error-404-1/index.vue')
-//   },
-//   {
-//     path: '/error-404-2',
-//     name: 'pages.error-404-2',
-//     meta: {
-//       title: '404 Not Found v2 | Commercializer'
-//     },
-//     component: () => import('@/views/pages/error-404-2/index.vue')
-//   },
-//   {
-//     path: '/:catchAll(.*)',
-//     redirect: 'pages.error-404-1'
-//   }
-// ]
+const errorPageRoutes = [
+    // {
+    //   path: '/error-404-1',
+    //   name: 'pages.error-404-1',
+    //   meta: {
+    //     title: '404 Not Found v1 | Commercializer'
+    //   },
+    //   component: () => import('@/views/pages/error-404-1/index.vue')
+    // },
+  {
+    path: '/error',
+    name: 'error',
+    meta: {
+      title: '404 Not Found | Commercializer'
+    },
+    component: () => import('@/views/Error404.vue')
+  },
+  {
+    path: '/:catchAll(.*)',
+    redirect: 'error'
+  }
+]
 
 const landingRoute = [
   {
@@ -874,7 +874,7 @@ const landingRoute = [
 
 export const allRoutes = [
   // ...authRoutes,
-  // ...errorPageRoutes,
+  ...errorPageRoutes,
   ...landingRoute
   // ...landingsRoutes,
   // ...pagesRoutes,
