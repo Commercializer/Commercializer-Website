@@ -16,7 +16,7 @@
             Transforming groundbreaking ideas into market-leading products.
           </p>
           <div
-            class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-4 locations"
+            class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-4 location"
             style="margin-top: 50px"
           >
             <p
@@ -318,7 +318,4 @@ const footerLinks: FooterLinkType[] = [
     }
   }
 }
-.locations {
-        opacity: 1 !important;
-    }
 </style>
