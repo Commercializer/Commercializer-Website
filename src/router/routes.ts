@@ -1,4 +1,5 @@
 import path from 'path'
+import OgTagImage from '@/assets/img/OgTag.png'
 
 // const authRoutes = [
 //   {
@@ -47,7 +48,16 @@ const landingRoute = [
     path: '',
     name: 'home-page',
     meta: {
-      title: 'Commercializer - Commercializing Innovations'
+      title: 'Commercializer | Venture Studio for Market-Leading Products ',
+      meta: [
+        { vmid: 'description', name: 'description', content: 'Transforming groundbreaking ideas into market-leading products. From strategy and branding to product innovation and launch - get commercialized with us!' },
+        { property: 'og:title', content: 'Commercializer | Venture Studio for Market-Leading Products' },
+        { property: 'og:description', content: 'Transforming groundbreaking ideas into market-leading products. From strategy and branding to product innovation and launch - get commercialized with us!' },
+        { property: 'og:url', content: 'https://www.commercializer.global' },
+        { property: 'og:image', content: OgTagImage },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Commercializer' }
+      ]
     },
     component: () => import('@/views/HomePage.vue')
   },
@@ -55,7 +65,16 @@ const landingRoute = [
     path: '/about',
     name: 'about-page',
     meta: {
-      title: 'About Us - Commercializer'
+      title: 'About Commercializer | Innovating, Building & Scaling Ventures',
+      meta: [
+        { vmid: 'description', name: 'description', content: 'Discover Commercializer’s mission to transform ideas into thriving businesses. We blend innovation, experience and commercial strategy to build market-leading products.' },
+        { property: 'og:title', content: 'About Commercializer | Innovating, Building & Scaling Ventures' },
+        { property: 'og:description', content: 'Discover Commercializer’s mission to transform ideas into thriving businesses. We blend innovation, experience and commercial strategy to build market-leading products.' },
+        { property: 'og:url', content: 'https://www.commercializer.global/about' },
+        { property: 'og:image', content: OgTagImage },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Commercializer' }
+      ]
     },
     component: () => import('@/views/AboutPage.vue')
   },
@@ -63,7 +82,16 @@ const landingRoute = [
   path: '/contact',
   name: 'contact-page',
   meta: {
-    title: 'Contacts Us | Commercializer'
+    title: 'Get Commercialized | Let’s Build Something Great Together',
+    meta: [
+      { vmid: 'description', name: 'description', content: 'Have an idea or project in mind? Get in touch with Commercializer for expert strategy, branding, and product innovation. Let’s turn your vision into reality!' },
+      { property: 'og:title', content: 'Get Commercialized | Let’s Build Something Great Together' },
+      { property: 'og:description', content: 'Have an idea or project in mind? Get in touch with Commercializer for expert strategy, branding, and product innovation. Let’s turn your vision into reality!' },
+      { property: 'og:url', content: 'https://www.commercializer.global/contact' },
+      { property: 'og:image', content: OgTagImage },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: 'Commercializer' }
+    ]
   },
   component: () => import('@/views/ContactPage.vue')
   },
@@ -80,7 +108,16 @@ const landingRoute = [
     path: '/privacy-policy',
     name: 'privacy-policy',
     meta: {
-      title: 'Privacy Policy | Commercializer',
+      title: 'Privacy Policy | How Commercializer Protects Your Data',
+      meta: [
+        { vmid: 'description', name: 'description', content: 'Your privacy matters. Learn how Commercializer collects, uses, and protects your data with transparency and security. Read our full Privacy Policy here.' },
+        { property: 'og:title', content: 'Privacy Policy | How Commercializer Protects Your Data' },
+        { property: 'og:description', content: 'Your privacy matters. Learn how Commercializer collects, uses, and protects your data with transparency and security. Read our full Privacy Policy here.' },
+        { property: 'og:url', content: 'https://www.commercializer.global/privacy-policy' },
+        { property: 'og:image', content: OgTagImage },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Commercializer' }
+      ],
       authRequired: false
     },
     component: () => import('../views/PrivacyPolicyPage.vue')
@@ -89,7 +126,16 @@ const landingRoute = [
     path: '/terms-of-use',
     name: 'terms-of-use',
     meta: {
-      title: 'Terms of Use | Commercializer',
+      title: 'Terms of Use | Commercializer’s Guidelines & Policies',
+      meta: [
+        { vmid: 'description', name: 'description', content: 'Understand the terms of using Commercializer’s services. Explore our guidelines, policies, and legal agreements to ensure a smooth experience.' },
+        { property: 'og:title', content: 'Terms of Use | Commercializer’s Guidelines & Policies' },
+        { property: 'og:description', content: 'Understand the terms of using Commercializer’s services. Explore our guidelines, policies, and legal agreements to ensure a smooth experience.' },
+        { property: 'og:url', content: 'https://www.commercializer.global/terms-of-use' },
+        { property: 'og:image', content: OgTagImage },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Commercializer' }
+      ],
       authRequired: false
     },
     component: () => import('../views/TermsOfUsePage.vue')
