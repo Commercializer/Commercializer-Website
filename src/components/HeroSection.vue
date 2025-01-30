@@ -206,19 +206,20 @@ onMounted(() => {
       scale: 1.1,
       x: (screenWidth.value/2) - ((logo.value?.getBoundingClientRect().x ?? 0) + (logo.value?.getBoundingClientRect().width ?? 0)/2),
       y: 3*(screenHeight.value/2)/2,
-      duration: 2,
+      duration: 4,
       ease: "power2.inOut",
-    });
+    }, 0);
 
     tl.fromTo(
-      [".text-col h1", ".text-col p", ".locations", ".discover-more",".box-card-wrapper"],
+      [".box-card-wrapper",".text-col h1", ".text-col p", ".locations", ".discover-more"],
       {x: 0, opacity: 1},
       {
         opacity: 0,
         x: -200,
         duration: 2,
         ease: "power1.inOut",
-        overwrite: true
+        overwrite: true,
+        stagger: 0.2
       },
       0
     );
