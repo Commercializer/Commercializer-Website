@@ -247,6 +247,8 @@
   
   let startY = 0;
   let scrollLeft = 0;
+  let lastScrollLeft = 0;
+  let isSwiping = false;
   
   // Lock mobile scroll
   const lockScroll = () => {
@@ -265,6 +267,8 @@
   
     startY = event.touches[0].pageY;
     scrollLeft = container.scrollLeft;
+    lastScrollLeft = scrollLeft;
+    isSwiping = true;
   
     lockScroll(); // Lock scroll on mobile devices
   };
@@ -272,17 +276,28 @@
   // Handle touch move for mobile scrolling
   const handleTouchMove = (event: TouchEvent) => {
     const container = swipeContainer.value;
-    if (!container) return;
+    if (!container || !isSwiping) return;
   
     const currentY = event.touches[0].pageY;
     const deltaY = startY - currentY;
-    const horizontalScroll = deltaY * 16;
+    const horizontalScroll = deltaY * 1.5;
   
-    container.scrollLeft = scrollLeft + horizontalScroll;
+    if (Math.abs(deltaY) > 5) {
+      const newScrollLeft = lastScrollLeft + horizontalScroll;
+  
+      requestAnimationFrame(() => {
+        if (container) {
+            container.scrollLeft = newScrollLeft;
+        }
+        
+      });
+  
+    }
   };
   
   // Handle touch end for mobile scrolling
   const handleTouchEnd = () => {
+    isSwiping = false;
     unlockScroll(); // Unlock scroll after swiping
   };
   
@@ -306,7 +321,7 @@
   
     unlockScroll(); // Ensure scroll unlocks on component destruction
   });
-  </script>  
+  </script>
   
   
   <style scoped>
@@ -321,7 +336,7 @@
   .container {
     position: relative;
   }
-
+  
   .heading {
     font-family: Ubuntu;
     font-size: 2rem;
@@ -336,7 +351,7 @@
     line-height: 1.8;
     max-width: 700px;
     margin: 20px auto 40px;
-    position: static; 
+    position: static;
   }
   
   .swipe-container {
@@ -412,7 +427,6 @@
     .swipe-row {
       justify-content: flex-start;
     }
-
   
     .checkmark {
       width: 32px;
