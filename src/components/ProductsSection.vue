@@ -12,7 +12,7 @@
               fontSize: '18px'
             }"
           >
-            <!-- Our tried and tested products! -->
+           <!-- Our tried and tested products! -->
             Crafted with innovation, experience, and strategic insight, Commercializer products are
             designed for corporates, entrepreneurs, professionals, and MSMEs. Trusted by thousands
             of businesses, our solutions embody quality and reliability, leveraging SaaS and
@@ -27,7 +27,7 @@
         }"
         id="commercial-prime"
       >
-        <div class="box box-1" id="products">
+        <div class="box box-1" id="products" @mousemove="handleMouseMove">
           <img src="/images/logos/commercial-prime.svg" alt="Commercial Prime" class="logo" />
           <h4>Empowering <span style="color: #d1b75f">Seamless Connections</span></h4>
           <p>NFC-Based One Tap Connect Digital Business Card</p>
@@ -37,7 +37,12 @@
             class="product-img"
           />
         </div>
-        <div class="box box-2">
+        <div
+          v-if="isLargerThanLarge || showMoreRow1"
+          class="box box-2"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
+        >
           <img
             src="/images/products/commercial-prime-2.png"
             alt="Commercial Prime 2"
@@ -54,7 +59,12 @@
             </p>
           </div>
         </div>
-        <div class="box box-3">
+        <div
+          v-if="isLargerThanLarge || showMoreRow1"
+          class="box box-3"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
+        >
           <div
             class="d-flex align-items-center gap-3"
             style="
@@ -106,7 +116,12 @@
             Visit Commercial Prime
           </a>
         </div>
-        <div class="box box-4">
+        <div
+          v-if="isLargerThanLarge || showMoreRow1"
+          class="box box-4"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
+        >
           <img
             src="/images/products/commercial-prime-4.png"
             alt="Commercial Prime 2"
@@ -130,8 +145,11 @@
           </div>
         </div>
         <div
+          v-if="isLargerThanLarge || showMoreRow1"
           class="box box-5"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
         >
           <img
             src="/images/logos/network-logo.svg"
@@ -144,8 +162,11 @@
           </div>
         </div>
         <div
+          v-if="isLargerThanLarge || showMoreRow1"
           class="box box-6"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
         >
           <img
             src="/images/logos/network-logo-2.svg"
@@ -157,6 +178,10 @@
             <p style="font-size: 14px; margin: 0">Architecture</p>
           </div>
         </div>
+        <div v-if="!isLargerThanLarge" class="mobile-toggle-buttons">
+          <button @click="toggleShowMoreRow1" v-if="!showMoreRow1">Show More</button>
+          <button @click="toggleShowMoreRow1" v-if="showMoreRow1">Show Less</button>
+        </div>
       </div>
       <div
         class="row-2"
@@ -165,7 +190,7 @@
         }"
         id="billable"
       >
-        <div class="box box-1">
+        <div class="box box-1" @mousemove="handleMouseMove">
           <img src="/images/logos/billable.png" alt="Commercial Prime" class="logo" />
           <h4>All in One Business Toolkit for MSMEs</h4>
           <p>
@@ -174,7 +199,12 @@
           </p>
           <img src="/images/products/billable.png" alt="Billable 1" class="product-img" />
         </div>
-        <div class="box box-2">
+        <div
+          v-if="isLargerThanLarge || showMoreRow2"
+          class="box box-2"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
+        >
           <img
             src="/images/products/billable-2-1.png"
             alt="Commercial Prime 3"
@@ -213,7 +243,12 @@
             Visit Billable
           </a>
         </div>
-        <div class="box box-3">
+        <div
+          v-if="isLargerThanLarge || showMoreRow2"
+          class="box box-3"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
+        >
           <img
             src="/images/products/billable-2.png"
             alt="Commercial Prime 2"
@@ -237,8 +272,11 @@
           </div>
         </div>
         <div
+          v-if="isLargerThanLarge || showMoreRow2"
           class="box box-4"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
         >
           <img
             src="/images/logos/credit-card.svg"
@@ -251,8 +289,11 @@
           </div>
         </div>
         <div
+          v-if="isLargerThanLarge || showMoreRow2"
           class="box box-5"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
         >
           <img src="/images/logos/hex.svg" alt="Network" style="width: 72px; height: 72px" />
           <div>
@@ -260,7 +301,12 @@
             <p style="font-size: 14px; margin: 0">Products</p>
           </div>
         </div>
-        <div class="box box-6">
+        <div
+          v-if="isLargerThanLarge || showMoreRow2"
+          class="box box-6"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
+        >
           <img
             src="/images/products/billable-4.png"
             alt="Commercial Prime 2"
@@ -284,21 +330,30 @@
             </div>
           </div>
         </div>
+        <div v-if="!isLargerThanLarge" class="mobile-toggle-buttons">
+          <button @click="toggleShowMoreRow2" v-if="!showMoreRow2">Show More</button>
+          <button @click="toggleShowMoreRow2" v-if="showMoreRow2">Show Less</button>
+        </div>
       </div>
       <div
         class="row-3"
         :style="{
           transform: `scale(${scale})`
         }"
-        id="agreementor"  
+        id="agreementor"
       >
-        <div class="box box-1">
+        <div class="box box-1" @mousemove="handleMouseMove">
           <img src="/images/logos/agreementor.png" alt="Commercial Prime" class="logo" />
           <h4>Complex Legal Jargon to Clarity</h4>
           <p>AI Based Legal Agreement Explainer</p>
           <img src="/images/products/agreementor.png" alt="Agreementor 1" class="product-img" />
         </div>
-        <div class="box box-2">
+        <div
+          v-if="isLargerThanLarge || showMoreRow3"
+          class="box box-2"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
+        >
           <img
             src="/images/products/agreementor-2.png"
             alt="Agreementor 2"
@@ -321,7 +376,12 @@
             </p>
           </div>
         </div>
-        <div class="box box-3">
+        <div
+          v-if="isLargerThanLarge || showMoreRow3"
+          class="box box-3"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
+        >
           <img
             src="/images/products/agreementor-3.png"
             alt="Agreementor 3"
@@ -351,7 +411,13 @@
             </div>
           </div>
         </div>
-        <div class="box box-4" style="overflow: hidden">
+        <div
+           v-if="isLargerThanLarge || showMoreRow3"
+          class="box box-4"
+          style="overflow: hidden"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
+        >
           <div
             class="d-flex align-items-center gap-3"
             style="
@@ -398,15 +464,18 @@
               text-align: center;
               text-decoration: none;
             "
-            href="https://agreementor-landing-page.vercel.app/"
+            href="https://www.agreementor.ai/"
             target="_blank"
           >
             Visit Agreementor
           </a>
         </div>
         <div
+           v-if="isLargerThanLarge || showMoreRow3"
           class="box box-5"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
         >
           <img
             src="/images/logos/inspection.svg"
@@ -419,8 +488,11 @@
           </div>
         </div>
         <div
+           v-if="isLargerThanLarge || showMoreRow3"
           class="box box-6"
           style="display: flex; align-items: center; justify-content: center; gap: 1rem"
+          @mousemove="handleMouseMove"
+          :class="{ 'mobile-dropdown-item': !isLargerThanLarge }"
         >
           <img
             src="/images/logos/network-layer.svg"
@@ -432,6 +504,10 @@
             <p style="font-size: 14px; margin: 0">Support available</p>
           </div>
         </div>
+         <div v-if="!isLargerThanLarge" class="mobile-toggle-buttons">
+          <button @click="toggleShowMoreRow3" v-if="!showMoreRow3">Show More</button>
+          <button @click="toggleShowMoreRow3" v-if="showMoreRow3">Show Less</button>
+        </div>
       </div>
     </b-container>
   </section>
@@ -440,12 +516,17 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import UserIcon from '@iconify/icons-bx/bx-user'
-import { useBreakpoints, useWindowSize, breakpointsBootstrapV5 } from '@vueuse/core'
-import { computed } from 'vue'
+import { useBreakpoints, breakpointsBootstrapV5 } from '@vueuse/core'
+import { computed, ref, onMounted } from 'vue'
 
 const breakpoints = useBreakpoints(breakpointsBootstrapV5)
 
 const isLargerThanLarge = breakpoints.greater('lg')
+
+const showMoreRow1 = ref(false);
+const showMoreRow2 = ref(false);
+const showMoreRow3 = ref(false);
+
 
 const scale = computed(() => {
   if (!isLargerThanLarge.value) {
@@ -454,6 +535,29 @@ const scale = computed(() => {
     return 0.88
   }
 })
+
+
+const toggleShowMoreRow1 = () => {
+  showMoreRow1.value = !showMoreRow1.value
+}
+const toggleShowMoreRow2 = () => {
+  showMoreRow2.value = !showMoreRow2.value
+}
+const toggleShowMoreRow3 = () => {
+    showMoreRow3.value = !showMoreRow3.value
+}
+
+const handleMouseMove = (event: MouseEvent) => {
+    const target = event.currentTarget as HTMLElement;
+    const rect = target.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    target.style.setProperty('--mouse-x', `${x}px`);
+    target.style.setProperty('--mouse-y', `${y}px`);
+};
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -464,10 +568,76 @@ const scale = computed(() => {
   background: radial-gradient(108.51% 131.17% at 13.08% 8.07%, #1c1c1c 0%, #414141 100%);
   position: relative;
   transition: all 0.3s ease-in-out;
+  --mouse-x: 0px;
+  --mouse-y: 0px;
+  overflow: hidden;
 
   &:hover {
     transform: scale(1.01);
   }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 96px;
+      height: 96px;
+      left: -48px;
+      top: -48px;
+      background-color: #481a96;
+      border-radius: 50%;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s, transform 0.5s;
+      transform: translate(var(--mouse-x), var(--mouse-y));
+      z-index: 30;
+      filter: blur(100px);
+    }
+
+    &:hover::before {
+       opacity: 0.2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.5s;
+      background: radial-gradient(
+        250px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.2),
+        transparent
+      );
+       z-index: 10;
+    }
+    &:hover::after {
+        opacity: 1;
+    }
+}
+.mobile-dropdown-item {
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+.mobile-toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    button {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-inline: 0.25rem;
+        transition: all 0.3s ease-in-out;
+        display: block;
+    }
 }
 
 .row {
@@ -477,11 +647,13 @@ const scale = computed(() => {
     grid-template-columns: 40% repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
+    transition: all 0.3s ease-in-out;
+
 
     @include mq(md) {
       margin-top: 3rem;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(12, 1fr);
+      grid-template-rows: auto;
       // row-gap: 2rem;
     }
 
@@ -495,6 +667,7 @@ const scale = computed(() => {
         @include mq(md) {
           grid-column: 1/ 2;
           grid-row: 1 / 5;
+          min-height: 600px;
           row-gap: 2rem;
         }
 
@@ -538,6 +711,7 @@ const scale = computed(() => {
         @include mq(md) {
           grid-column: 1/ 2;
           grid-row: 7 / 9;
+          min-height: 400px;
         }
       }
 
@@ -548,6 +722,7 @@ const scale = computed(() => {
         @include mq(md) {
           grid-column: 1/ 2;
           grid-row: 9 / 11;
+             min-height: 320px;
         }
       }
 
@@ -579,11 +754,12 @@ const scale = computed(() => {
     grid-template-columns: 40% repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
+    transition: all 0.3s ease-in-out;
 
     @include mq(md) {
       margin-top: 3rem;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(12, 1fr);
+      grid-template-rows: auto;
       // row-gap: 2rem;
     }
 
@@ -597,6 +773,7 @@ const scale = computed(() => {
         @include mq(md) {
           grid-column: 1/ 2;
           grid-row: 1 / 5;
+          min-height: 600px;
         }
 
         h4 {
@@ -641,6 +818,7 @@ const scale = computed(() => {
         @include mq(md) {
           grid-column: 1/ 2;
           grid-row: 7 / 9;
+          min-height: 400px;
         }
       }
 
@@ -661,7 +839,7 @@ const scale = computed(() => {
 
         @include mq(md) {
           grid-column: 1/ 2;
-          grid-row: 10 / 11;
+          grid-row: 10 / 11
         }
       }
 
@@ -671,6 +849,7 @@ const scale = computed(() => {
         @include mq(md) {
           grid-column: 1/ 2;
           grid-row: 11 / 13;
+          min-height: 400px;
         }
       }
     }
@@ -682,11 +861,12 @@ const scale = computed(() => {
     grid-template-columns: 40% repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
+    transition: all 0.3s ease-in-out;
 
     @include mq(md) {
       margin-top: 3rem;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(12, 1fr);
+      grid-template-rows: auto;
       // row-gap: 2rem;
     }
 
@@ -700,6 +880,7 @@ const scale = computed(() => {
         @include mq(md) {
           grid-column: 1/ 2;
           grid-row: 1 / 5;
+          min-height: 600px;
         }
 
         h4 {
@@ -743,6 +924,7 @@ const scale = computed(() => {
         @include mq(md) {
           grid-column: 1/ 2;
           grid-row: 7 / 9;
+          min-height: 360px;
         }
       }
 
@@ -753,6 +935,7 @@ const scale = computed(() => {
         @include mq(md) {
           grid-column: 1/ 2;
           grid-row: 9 / 11;
+          min-height: 360px;
         }
       }
 

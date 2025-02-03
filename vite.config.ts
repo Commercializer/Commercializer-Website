@@ -22,6 +22,11 @@ export default defineConfig({
         additionalData: `@import "@/assets/scss/_mixins.scss";`
       }
     }
-  }
+  },
+  
+  server: {
+    host: '0.0.0.0',
+    port: 8080,
+  },
 
 })

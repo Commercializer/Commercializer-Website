@@ -292,8 +292,8 @@ export const navbarLinkData: NavLinkType[] = [
   // },
   {
     title: 'Home',
-    href: '/'
-    // link: { name: 'home-page' }
+    href: '/',
+    link: { name: 'home-page' }
 
     // links: [
     //   {
@@ -314,14 +314,20 @@ export const navbarLinkData: NavLinkType[] = [
     //   }
     // ]
   },
-  // {
-  //   title: 'About',
-  //   link: { name: 'about-page' }
-  // },
+  {
+    title: 'About',
+    link: { name: 'about-page' },
+    href: '/about'
+  },
   {
     title: 'Products',
-    href: '#products'
-  }
+   link: { name: 'home-page', hash: '#products' }
+  },
+  {
+    title: 'Contact',
+    link: { name: 'contact-page' },
+    href: '/contact'
+  },
   // {
   //   title: 'Portfolio',
   //   link: { name: 'ui.typography' }
