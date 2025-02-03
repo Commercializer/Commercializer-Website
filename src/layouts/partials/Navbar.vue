@@ -25,10 +25,10 @@
         <div v-if="!isMobileView">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li v-for="(item, idx) in navbarLinkData" :key="item.title" class="nav-item dropdown">
-              <router-link v-if="item.link" class="nav-link" :to="{ name: item.link.name }">
+              <router-link v-if="item.link" class="nav-link" :to="item.link" @click="handleClick(item)">
                 {{ item.title }}
               </router-link>
-              <a v-else-if="item.href" class="nav-link" :href="item.href">
+               <a v-else-if="item.href" class="nav-link" :href="item.href">
                 {{ item.title }}
               </a>
 
@@ -104,7 +104,7 @@
     <template v-slot:default>
       <ul class="navbar-nav me-auto">
         <li v-for="(item, idx) in navbarLinkData" :key="item.title" class="nav-item dropdown">
-          <router-link v-if="item.link" class="nav-link" :to="{ name: item.link.name }" @click="handleMobileNavigation">{{
+          <router-link v-if="item.link" class="nav-link" :to="item.link" @click="handleMobileNavigation(item.link?.hash)">{{
             item.title
           }}</router-link>
 
@@ -163,12 +163,14 @@
 
 <script lang="ts" setup>
 import logoImg from '@/assets/img/logo.png'
-import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { onBeforeUnmount, onMounted, ref, watch, nextTick  } from 'vue'
 
 import { navbarLinkData } from '@/layouts/data'
 import { Icon } from '@iconify/vue'
 import CartIcon from '@iconify/icons-bx/cart'
 import router from '@/router'
+import type { NavLinkType } from '@/layouts/type'
+import scrollToElement from 'scroll-to-element';
 
 const props = defineProps({
     isDark: {
@@ -214,6 +216,21 @@ const logoRef = ref<HTMLElement | null>(null);
 const headerRef = ref<HTMLElement | null>(null);
 const isHomePage = ref(router.currentRoute.value.name === 'home-page')
 
+const handleClick = (item: NavLinkType) => {
+     if (item.title === 'Products') {
+         router.push({ name: 'home-page', hash: '#products' }).then(() => {
+             nextTick(() => {
+             const targetElement = document.querySelector('#products');
+             if (targetElement) {
+                 scrollToElement(targetElement, {
+                     duration: 1500,
+                     offset: -100,
+                 })
+             }
+         })
+     });
+     }
+ }
 const handleMobileNavigation = (href?: string) => {
     if (href) {
         if (href.startsWith('#')) {

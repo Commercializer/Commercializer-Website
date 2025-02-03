@@ -320,14 +320,14 @@ export const navbarLinkData: NavLinkType[] = [
     href: '/about'
   },
   {
+    title: 'Products',
+   link: { name: 'home-page', hash: '#products' }
+  },
+  {
     title: 'Contact',
     link: { name: 'contact-page' },
     href: '/contact'
   },
-  {
-    title: 'Products',
-    href: '#products'
-  }
   // {
   //   title: 'Portfolio',
   //   link: { name: 'ui.typography' }

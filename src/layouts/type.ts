@@ -4,6 +4,7 @@ import type { RouteParamsRaw } from 'vue-router'
 export type LinkType = {
   name: string
   params?: RouteParamsRaw
+  hash?: string
 }
 
 // navbar
