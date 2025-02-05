@@ -109,6 +109,7 @@
               transform: translateX(50%);
               width: 70%;
               text-decoration: none;
+              z-index: 3;
             "
             target="_blank"
             href="https://commercialprime.co.uk/"
@@ -236,6 +237,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              z-index: 3;
             "
             href="https://billable.global"
             target="_blank"
@@ -463,6 +465,7 @@
               width: 70%;
               text-align: center;
               text-decoration: none;
+              z-index: 3;
             "
             href="https://www.agreementor.ai/"
             target="_blank"
@@ -589,7 +592,7 @@ const handleMouseMove = (event: MouseEvent) => {
       pointer-events: none;
       transition: opacity 0.5s, transform 0.5s;
       transform: translate(var(--mouse-x), var(--mouse-y));
-      z-index: 30;
+      z-index: 2;
       filter: blur(100px);
     }
 
@@ -609,7 +612,7 @@ const handleMouseMove = (event: MouseEvent) => {
         rgba(255, 255, 255, 0.2),
         transparent
       );
-       z-index: 10;
+       z-index: 1;
     }
     &:hover::after {
         opacity: 1;

@@ -1,5 +1,4 @@
 import path from 'path'
-import OgTagImage from '@/assets/img/OgTag.png'
 
 // const authRoutes = [
 //   {
@@ -54,9 +53,15 @@ const landingRoute = [
         { property: 'og:title', content: 'Commercializer | Venture Studio for Market-Leading Products' },
         { property: 'og:description', content: 'Transforming groundbreaking ideas into market-leading products. From strategy and branding to product innovation and launch - get commercialized with us!' },
         { property: 'og:url', content: 'https://www.commercializer.global' },
-        { property: 'og:image', content: OgTagImage },
+        { property: 'og:image', content: "https://opengraph.b-cdn.net/production/images/0faa5c61-b1ce-40b3-97fd-3e2173469fc1.png?token=mh1AG4KVf4qqp_sjW2ZxtBXhIq-2ADYt1S4nrSiExro&height=630&width=1200&expires=33274664896"},
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Commercializer' }
+        { property: 'og:site_name', content: 'Commercializer' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:domain', content: 'commercializer.global' },
+        { property: 'twitter:url', content: 'https://www.commercializer.global' },
+        { name: 'twitter:title', content: 'Commercializer | Venture Studio for Market-Leading Products' },
+        { name: 'twitter:description', content: 'Transforming groundbreaking ideas into market-leading products. From strategy and branding to product innovation and launch - get commercialized with us!' },
+        { name: 'twitter:image', content: "https://opengraph.b-cdn.net/production/images/0faa5c61-b1ce-40b3-97fd-3e2173469fc1.png?token=mh1AG4KVf4qqp_sjW2ZxtBXhIq-2ADYt1S4nrSiExro&height=630&width=1200&expires=33274664896"}
       ]
     },
     component: () => import('@/views/HomePage.vue')
@@ -71,9 +76,15 @@ const landingRoute = [
         { property: 'og:title', content: 'About Commercializer | Innovating, Building & Scaling Ventures' },
         { property: 'og:description', content: 'Discover Commercializer’s mission to transform ideas into thriving businesses. We blend innovation, experience and commercial strategy to build market-leading products.' },
         { property: 'og:url', content: 'https://www.commercializer.global/about' },
-        { property: 'og:image', content: OgTagImage },
+        { property: 'og:image', content: "https://opengraph.b-cdn.net/production/images/0faa5c61-b1ce-40b3-97fd-3e2173469fc1.png?token=mh1AG4KVf4qqp_sjW2ZxtBXhIq-2ADYt1S4nrSiExro&height=630&width=1200&expires=33274664896"},
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Commercializer' }
+        { property: 'og:site_name', content: 'Commercializer' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:domain', content: 'commercializer.global' },
+        { property: 'twitter:url', content: 'https://www.commercializer.global/about' },
+        { name: 'twitter:title', content: 'About Commercializer  | Innovating, Building & Scaling Ventures' },
+        { name: 'twitter:description', content: 'Discover Commercializer’s mission to transform ideas into thriving businesses. We blend innovation, experience and commercial strategy to build market-leading products.' },
+        { name: 'twitter:image', content: "https://opengraph.b-cdn.net/production/images/0faa5c61-b1ce-40b3-97fd-3e2173469fc1.png?token=mh1AG4KVf4qqp_sjW2ZxtBXhIq-2ADYt1S4nrSiExro&height=630&width=1200&expires=33274664896"}
       ]
     },
     component: () => import('@/views/AboutPage.vue')
@@ -88,9 +99,15 @@ const landingRoute = [
       { property: 'og:title', content: 'Get Commercialized | Let’s Build Something Great Together' },
       { property: 'og:description', content: 'Have an idea or project in mind? Get in touch with Commercializer for expert strategy, branding, and product innovation. Let’s turn your vision into reality!' },
       { property: 'og:url', content: 'https://www.commercializer.global/contact' },
-      { property: 'og:image', content: OgTagImage },
+      { property: 'og:image', content: "https://opengraph.b-cdn.net/production/images/0faa5c61-b1ce-40b3-97fd-3e2173469fc1.png?token=mh1AG4KVf4qqp_sjW2ZxtBXhIq-2ADYt1S4nrSiExro&height=630&width=1200&expires=33274664896" },
       { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'Commercializer' }
+      { property: 'og:site_name', content: 'Commercializer' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:domain', content: 'commercializer.global' },
+      { property: 'twitter:url', content: 'https://www.commercializer.global/contact' },
+      { name: 'twitter:title', content: 'Contact Commercializer | Let’s Build Something Great Together' },
+      { name: 'twitter:description', content: 'Have an idea or project in mind? Get in touch with Commercializer for expert strategy, branding, and product innovation. Let’s turn your vision into reality!' },
+      { name: 'twitter:image', content: "https://opengraph.b-cdn.net/production/images/0faa5c61-b1ce-40b3-97fd-3e2173469fc1.png?token=mh1AG4KVf4qqp_sjW2ZxtBXhIq-2ADYt1S4nrSiExro&height=630&width=1200&expires=33274664896"}
     ]
   },
   component: () => import('@/views/ContactPage.vue')
@@ -114,9 +131,15 @@ const landingRoute = [
         { property: 'og:title', content: 'Privacy Policy | How Commercializer Protects Your Data' },
         { property: 'og:description', content: 'Your privacy matters. Learn how Commercializer collects, uses, and protects your data with transparency and security. Read our full Privacy Policy here.' },
         { property: 'og:url', content: 'https://www.commercializer.global/privacy-policy' },
-        { property: 'og:image', content: OgTagImage },
+        { property: 'og:image', content: "https://opengraph.b-cdn.net/production/images/0faa5c61-b1ce-40b3-97fd-3e2173469fc1.png?token=mh1AG4KVf4qqp_sjW2ZxtBXhIq-2ADYt1S4nrSiExro&height=630&width=1200&expires=33274664896" },
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Commercializer' }
+        { property: 'og:site_name', content: 'Commercializer' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:domain', content: 'commercializer.global' },
+        { property: 'twitter:url', content: 'https://www.commercializer.global/privacy-policy' },
+        { name: 'twitter:title', content: 'Privacy Policy | How Commercializer Protects Your Data' },
+        { name: 'twitter:description', content: 'Your privacy matters. Learn how Commercializer collects, uses, and protects your data with transparency and security. Read our full Privacy Policy here.' },
+        { name: 'twitter:image', content: "https://opengraph.b-cdn.net/production/images/0faa5c61-b1ce-40b3-97fd-3e2173469fc1.png?token=mh1AG4KVf4qqp_sjW2ZxtBXhIq-2ADYt1S4nrSiExro&height=630&width=1200&expires=33274664896"}
       ],
       authRequired: false
     },
@@ -132,9 +155,15 @@ const landingRoute = [
         { property: 'og:title', content: 'Terms of Use | Commercializer’s Guidelines & Policies' },
         { property: 'og:description', content: 'Understand the terms of using Commercializer’s services. Explore our guidelines, policies, and legal agreements to ensure a smooth experience.' },
         { property: 'og:url', content: 'https://www.commercializer.global/terms-of-use' },
-        { property: 'og:image', content: OgTagImage },
+        { property: 'og:image', content: "https://opengraph.b-cdn.net/production/images/0faa5c61-b1ce-40b3-97fd-3e2173469fc1.png?token=mh1AG4KVf4qqp_sjW2ZxtBXhIq-2ADYt1S4nrSiExro&height=630&width=1200&expires=33274664896" },
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Commercializer' }
+        { property: 'og:site_name', content: 'Commercializer' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:domain', content: 'commercializer.global' },
+        { property: 'twitter:url', content: 'https://www.commercializer.global/terms-of-use' },
+        { name: 'twitter:title', content: 'Terms of Use | Commercializer’s Guidelines & Policies' },
+        { name: 'twitter:description', content: 'Understand the terms of using Commercializer’s services. Explore our guidelines, policies, and legal agreements to ensure a smooth experience.' },
+        { name: 'twitter:image', content: "https://opengraph.b-cdn.net/production/images/0faa5c61-b1ce-40b3-97fd-3e2173469fc1.png?token=mh1AG4KVf4qqp_sjW2ZxtBXhIq-2ADYt1S4nrSiExro&height=630&width=1200&expires=33274664896"}
       ],
       authRequired: false
     },
