@@ -1,6 +1,6 @@
 <template>
-  <CookieBanner />
   <RouterView />
+  <CookieBanner />
 </template>
 
 <script lang="ts" setup>
