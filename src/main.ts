@@ -11,6 +11,8 @@ import Vue3Lottie from 'vue3-lottie'
 import VueTelInput from 'vue-tel-input';
 import 'vue-tel-input/vue-tel-input.css';
 
+import { createHead } from '@vueuse/head'
+
 import 'boxicons'
 import 'jarallax/dist/jarallax.min.css'
 import 'lightgallery/css/lg-fullscreen.css'
@@ -39,6 +41,8 @@ const globalOptions = {
     mode: 'auto', 
 };
 
+const head = createHead() 
+app.use(head)
 app.use(createPinia())
 app.use(router)
 app.use(VueTheMask)
