@@ -363,6 +363,28 @@ const securities: Record<string, string[]> = {
   '0.3. To stop selling your personal information. We don’t sell or rent your personal information to any third parties for any purpose. We do not sell your personal information for monetary consideration. However, under some circumstances, a transfer of personal information to a third party, or within our family of companies, without monetary consideration may be considered a “sale” under California law. You are the only owner of your Personal Data and can request disclosure or deletion at any time. If you submit a request to stop selling your personal information, we will stop making such transfers.':
     []
 }
+
+
+import { useHead } from '@vueuse/head';
+
+useHead({
+  title: 'Privacy Policy | How Commercializer Protects Your Data',
+  meta: [
+    { name: 'description', content: 'Your privacy matters. Learn how Commercializer collects, uses, and protects your data with transparency and security. Read our full Privacy Policy here.' },
+    { property: 'og:title', content: 'Privacy Policy | How Commercializer Protects Your Data' },
+    { property: 'og:description', content: 'Your privacy matters. Learn how Commercializer collects, uses, and protects your data with transparency and security. Read our full Privacy Policy here.' },
+    { property: 'og:url', content: 'https://www.commercializer.global/privacy-policy' },
+    { property: 'og:image', content: "https://opengraph.b-cdn.net/production/images/0faa5c61-b1ce-40b3-97fd-3e2173469fc1.png?token=mh1AG4KVf4qqp_sjW2ZxtBXhIq-2ADYt1S4nrSiExro&height=630&width=1200&expires=33274664896" },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:site_name', content: 'Commercializer' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { property: 'twitter:domain', content: 'commercializer.global' },
+    { property: 'twitter:url', content: 'https://www.commercializer.global/privacy-policy' },
+    { name: 'twitter:title', content: 'Privacy Policy | How Commercializer Protects Your Data' },
+    { name: 'twitter:description', content: 'Your privacy matters. Learn how Commercializer collects, uses, and protects your data with transparency and security. Read our full Privacy Policy here.' },
+    { name: 'twitter:image', content: "https://opengraph.b-cdn.net/production/images/0faa5c61-b1ce-40b3-97fd-3e2173469fc1.png?token=mh1AG4KVf4qqp_sjW2ZxtBXhIq-2ADYt1S4nrSiExro&height=630&width=1200&expires=33274664896"}
+  ]
+});
 </script>
 
 <style lang="scss" scoped>
