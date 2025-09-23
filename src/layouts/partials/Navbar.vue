@@ -164,11 +164,11 @@
 <script lang="ts" setup>
 import logoImg from '@/assets/img/logo.png'
 import { onBeforeUnmount, onMounted, ref, watch, nextTick  } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 
 import { navbarLinkData } from '@/layouts/data'
 import { Icon } from '@iconify/vue'
 import CartIcon from '@iconify/icons-bx/cart'
-import router from '@/router'
 import type { NavLinkType } from '@/layouts/type'
 import scrollToElement from 'scroll-to-element';
 
@@ -214,7 +214,10 @@ const isMobileView = ref(false)
 const showMobileNav = ref(false)
 const logoRef = ref<HTMLElement | null>(null);
 const headerRef = ref<HTMLElement | null>(null);
-const isHomePage = ref(router.currentRoute.value.name === 'home-page')
+
+const router = useRouter()
+const route = useRoute()
+const isHomePage = ref(route.name === 'home-page')
 
 const handleClick = (item: NavLinkType) => {
      if (item.title === 'Products') {
@@ -324,7 +327,7 @@ onMounted(() => {
 });
 
 
-watch(() => router.currentRoute.value.name, (newRouteName) => {
+watch(() => route.name, (newRouteName) => {
     isHomePage.value = newRouteName === 'home-page';
     if (!isHomePage.value && logoRef.value) {
         logoRef.value.classList.remove('mobile-logo-hidden');
@@ -354,7 +357,7 @@ const makeChunk = (input: Array<any> | undefined) => {
     }, [])
 }
 
-const currentRouteName = router.currentRoute.value.name
+const currentRouteName = route.name
 </script>
 
 <style lang="scss" scoped>
