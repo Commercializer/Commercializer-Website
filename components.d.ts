@@ -10,8 +10,6 @@ declare module 'vue' {
     AboutTitle: typeof import('./src/components/about/AboutTitle.vue')['default']
     AnchorNavigation: typeof import('./src/components/AnchorNavigation.vue')['default']
     AwardsSection: typeof import('./src/components/AwardsSection.vue')['default']
-    BBreadcrumb: typeof import('bootstrap-vue-next/components/BBreadcrumb')['BBreadcrumb']
-    BBreadcrumbItem: typeof import('bootstrap-vue-next/components/BBreadcrumb')['BBreadcrumbItem']
     BButton: typeof import('bootstrap-vue-next/components/BButton')['BButton']
     BCol: typeof import('bootstrap-vue-next/components/BContainer')['BCol']
     BCollapse: typeof import('bootstrap-vue-next/components/BCollapse')['BCollapse']
@@ -21,19 +19,13 @@ declare module 'vue' {
     BFormGroup: typeof import('bootstrap-vue-next/components/BFormGroup')['BFormGroup']
     BFormInput: typeof import('bootstrap-vue-next/components/BFormInput')['BFormInput']
     BFormInvalidFeedback: typeof import('bootstrap-vue-next/components/BForm')['BFormInvalidFeedback']
-    BFormSelect: typeof import('bootstrap-vue-next/components/BFormSelect')['BFormSelect']
     BFormTextarea: typeof import('bootstrap-vue-next/components/BFormTextarea')['BFormTextarea']
-    BInputGroup: typeof import('bootstrap-vue-next/components/BInputGroup')['BInputGroup']
-    BLink: typeof import('bootstrap-vue-next/components/BLink')['BLink']
-    BNav: typeof import('bootstrap-vue-next/components/BNav')['BNav']
     BOffcanvas: typeof import('bootstrap-vue-next/components/BOffcanvas')['BOffcanvas']
     BottomBannerSection: typeof import('./src/components/BottomBannerSection.vue')['default']
     Branches: typeof import('./src/components/contact/Branches.vue')['default']
     BrandsSection: typeof import('./src/components/BrandsSection.vue')['default']
     Breadcrumb: typeof import('./src/components/Breadcrumb.vue')['default']
     BRow: typeof import('bootstrap-vue-next/components/BContainer')['BRow']
-    BTab: typeof import('bootstrap-vue-next/components/BTabs')['BTab']
-    BTabs: typeof import('bootstrap-vue-next/components/BTabs')['BTabs']
     ContactForm: typeof import('./src/components/contact/ContactForm.vue')['default']
     CookieBanner: typeof import('./src/components/CookieBanner.vue')['default']
     CustomSyntax: typeof import('./src/components/CustomSyntax.vue')['default']
@@ -58,6 +50,5 @@ declare module 'vue' {
   }
   export interface ComponentCustomProperties {
     vBToggle: typeof import('bootstrap-vue-next/directives/BToggle')['vBToggle']
-    vBTooltip: typeof import('bootstrap-vue-next/directives/BTooltip')['vBTooltip']
   }
 }
